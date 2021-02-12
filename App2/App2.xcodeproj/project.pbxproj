@@ -14,6 +14,8 @@
 		0467032F25D693A7001BE5C2 /* App2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0467032D25D693A7001BE5C2 /* App2.xcdatamodeld */; };
 		0467033125D693A8001BE5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0467033025D693A8001BE5C2 /* Assets.xcassets */; };
 		0467033425D693A8001BE5C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467033225D693A8001BE5C2 /* LaunchScreen.storyboard */; };
+		DC47F60825D6A205001764C8 /* button-nuovapartita.png in Resources */ = {isa = PBXBuildFile; fileRef = DC47F60725D6A205001764C8 /* button-nuovapartita.png */; };
+		DC47F60B25D6A370001764C8 /* NuovoUtenteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC47F60A25D6A370001764C8 /* NuovoUtenteController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		0467033025D693A8001BE5C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0467033325D693A8001BE5C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0467033525D693A8001BE5C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC47F60725D6A205001764C8 /* button-nuovapartita.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-nuovapartita.png"; path = "Assets.xcassets/button-nuovapartita.png"; sourceTree = "<group>"; };
+		DC47F60A25D6A370001764C8 /* NuovoUtenteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuovoUtenteController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 		0467031825D693A7001BE5C2 = {
 			isa = PBXGroup;
 			children = (
+				DC47F60A25D6A370001764C8 /* NuovoUtenteController.swift */,
 				0467032325D693A7001BE5C2 /* App2 */,
 				0467032225D693A7001BE5C2 /* Products */,
 			);
@@ -66,6 +71,7 @@
 				0467033225D693A8001BE5C2 /* LaunchScreen.storyboard */,
 				0467033525D693A8001BE5C2 /* Info.plist */,
 				0467032D25D693A7001BE5C2 /* App2.xcdatamodeld */,
+				DC47F60725D6A205001764C8 /* button-nuovapartita.png */,
 			);
 			path = App2;
 			sourceTree = "<group>";
@@ -128,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0467033425D693A8001BE5C2 /* LaunchScreen.storyboard in Resources */,
+				DC47F60825D6A205001764C8 /* button-nuovapartita.png in Resources */,
 				0467033125D693A8001BE5C2 /* Assets.xcassets in Resources */,
 				0467032C25D693A7001BE5C2 /* Main.storyboard in Resources */,
 			);
@@ -143,6 +150,7 @@
 				0467032F25D693A7001BE5C2 /* App2.xcdatamodeld in Sources */,
 				0467032925D693A7001BE5C2 /* ViewController.swift in Sources */,
 				0467032525D693A7001BE5C2 /* AppDelegate.swift in Sources */,
+				DC47F60B25D6A370001764C8 /* NuovoUtenteController.swift in Sources */,
 				0467032725D693A7001BE5C2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
