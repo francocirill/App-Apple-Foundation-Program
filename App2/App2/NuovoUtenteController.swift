@@ -23,8 +23,13 @@ class NuovoUtenteController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
         // Do any additional setup after loading the view.
-        userProfile = UserProfile()
+        userProfile = UserProfile.init(context: context)
+        userProfile?.avatar=""
+        appDelegate.saveContext()
+        //userProfile!.setValue("default", forKey: "avatar")
         //userProfile.avatar = "default"
     }
     
@@ -33,9 +38,9 @@ class NuovoUtenteController: UIViewController {
         super.viewWillAppear(animated)
         
         
-        //if userProfile.avatar != "default" {
-        avatarbutton.setImage(UIImage(named: NSString(string: userProfile.avatar ?? "avatar-default") as String), for: .normal)
-        //}
+        if userProfile?.avatar != "" {
+            avatarbutton.setImage(UIImage(named: userProfile!.avatar!) , for: .normal)
+        }
     }
     // MARK: - Navigation
 
@@ -57,3 +62,4 @@ class NuovoUtenteController: UIViewController {
     
 
 }
+

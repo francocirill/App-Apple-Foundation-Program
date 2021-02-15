@@ -93,7 +93,7 @@ class CollectionViewController: UICollectionViewController{
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell {
             //salvare in memoria
-            user.avatar = cell.avatarName.text
+            user.avatar = cell.avatarName.text!
             _ = navigationController?.popViewController(animated: true)
         }
     }
