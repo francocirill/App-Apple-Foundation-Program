@@ -144,9 +144,9 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kb3-lZ-MdK">
                                                 <rect key="frame" x="165" y="0.0" width="180.5" height="150"/>
-                                                <state key="normal" image="icon-profile copia.png"/>
+                                                <state key="normal" image="avatar-default"/>
                                                 <connections>
-                                                    <segue destination="f5R-Zd-EaD" kind="show" id="pTK-HG-Y2j"/>
+                                                    <segue destination="f5R-Zd-EaD" kind="show" identifier="showAvatar" id="pTK-HG-Y2j"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -199,8 +199,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Nuova partita" id="J6f-ka-Zk9">
                         <barButtonItem key="backBarButtonItem" title="Indietro" id="bHP-Jz-e5p"/>
+                        <barButtonItem key="rightBarButtonItem" title="Crea" style="plain" id="5CM-E7-7TD">
+                            <connections>
+                                <action selector="crea:" destination="ZQe-Hd-bRQ" id="Ciy-eY-GvI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="avatarbutton" destination="kb3-lZ-MdK" id="Bn9-nN-ZwZ"/>
                         <outlet property="pictureSwitch" destination="ZcU-FO-ve3" id="0jx-fz-q1l"/>
                         <outlet property="speechSwitch" destination="bu8-R2-xXz" id="tZI-b4-6Im"/>
                         <outlet property="userNameTextField" destination="VGz-Be-GxL" id="aGr-zY-Bkp"/>
@@ -265,7 +271,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I2d-si-Wuw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1227.536231884058" y="-140.625"/>
+            <point key="canvasLocation" x="1258" y="-424"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2aS-RB-pYs">
@@ -323,12 +329,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gJ-6H-16J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="378.26086956521743" y="529.01785714285711"/>
+            <point key="canvasLocation" x="1258" y="282"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rtt-h7-TPh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wD6-e7-3sM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p2w-3Y-Rol" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wSO-XQ-OCa">
@@ -340,12 +345,13 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0ts-CP-gN1"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wD6-e7-3sM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1321.5384615384614" y="-139.33649289099526"/>
         </scene>
     </scenes>
     <resources>
-        <image name="icon-profile copia.png" width="150" height="150"/>
+        <image name="avatar-default" width="150" height="150"/>
         <image name="microfono" width="1668" height="2154"/>
         <image name="nuova_partita" width="534.33331298828125" height="153"/>
         <image name="report" width="521.33331298828125" height="144"/>

@@ -11,22 +11,23 @@ private let reuseIdentifier = "Cell"
 
 class CollectionViewController: UICollectionViewController{
 
-    var avatars = [UIImage(named: "icons8-captain-america-100"),
-                   UIImage(named: "icons8-hulk-100"),
-                   UIImage(named: "icons8-batman-100"),
-                   UIImage(named: "icons8-catwoman-100"),
-                   UIImage(named: "icons8-groot-100"),
-                   UIImage(named: "icons8-harley-quinn-dc-100"),
-                   UIImage(named: "icons8-iron-man-100"),
-                   UIImage(named: "icons8-joker-dc-100"),
-                   UIImage(named: "icons8-magneto-100"),
-                   UIImage(named: "icons8-professor-x-100"),
-                   UIImage(named: "icons8-thor-100"),
-                   UIImage(named: "icons8-spider-man-head-100"),
-                   UIImage(named: "icons8-thanos-100"),
-                   UIImage(named: "icons8-wolverine-100")]
+    var avatars = [UIImage(named: "Captain America"),
+                   UIImage(named: "Hulk"),
+                   UIImage(named: "Batman"),
+                   UIImage(named: "Catwoman"),
+                   UIImage(named: "Groot"),
+                   UIImage(named: "Harley Quinn"),
+                   UIImage(named: "Iron Man"),
+                   UIImage(named: "Joker"),
+                   UIImage(named: "Magneto"),
+                   UIImage(named: "Professor X"),
+                   UIImage(named: "Thor"),
+                   UIImage(named: "Spiderman"),
+                   UIImage(named: "Thanos"),
+                   UIImage(named: "Wolverine")]
     var avatarsNames = ["Captain America", "Hulk", "Batman", "Catwoman", "Groot", "Harley Quinn", "Iron Man", "Joker", "Magneto", "Professor X", "Thor", "Spiderman", "Thanos", "Wolverine"]
     
+    var user: UserProfile!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,9 +93,11 @@ class CollectionViewController: UICollectionViewController{
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell {
             //salvare in memoria
+            user.avatar = cell.avatarName.text
             _ = navigationController?.popViewController(animated: true)
         }
     }
+    
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
