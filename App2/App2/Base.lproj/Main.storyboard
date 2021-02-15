@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p2w-3Y-Rol">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EwY-to-DXc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -273,42 +273,48 @@
             </objects>
             <point key="canvasLocation" x="1258" y="-424"/>
         </scene>
-        <!--View Controller-->
+        <!--Speech Detection View Controller-->
         <scene sceneID="2aS-RB-pYs">
             <objects>
-                <viewController id="EwY-to-DXc" sceneMemberID="viewController">
+                <viewController id="EwY-to-DXc" customClass="SpeechDetectionViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cmL-BY-y5U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Livello 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgH-kp-fWG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Livello 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgH-kp-fWG">
                                 <rect key="frame" x="150.5" y="98" width="113" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Frase da ripetere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf8-5F-3j6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frase da ripetere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf8-5F-3j6">
                                 <rect key="frame" x="142.5" y="220" width="129" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="Color1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="it0-cM-Rf5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="it0-cM-Rf5">
                                 <rect key="frame" x="187.5" y="354" width="39" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7ZC-qg-PhK"/>
+                                </constraints>
                                 <state key="normal" title="Ripeti">
                                     <color key="titleColor" name="Color1"/>
                                 </state>
+                                <connections>
+                                    <action selector="ripetiTapped:" destination="EwY-to-DXc" eventType="touchUpInside" id="3Ct-g4-cGp"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Frase pronunciata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmP-4N-He8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frase pronunciata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmP-4N-He8">
                                 <rect key="frame" x="138.5" y="578" width="137" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="Color1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OYe-8g-hQU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OYe-8g-hQU">
                                 <rect key="frame" x="87" y="624" width="240" height="128"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN5-BC-eku">
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN5-BC-eku">
                                 <rect key="frame" x="170" y="455" width="75" height="89"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="microfono" image="microfono"/>
@@ -317,15 +323,30 @@
                         <viewLayoutGuide key="safeArea" id="kkC-jg-1BR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="yN5-BC-eku" firstAttribute="top" secondItem="it0-cM-Rf5" secondAttribute="bottom" constant="71" id="0OJ-8S-MYi"/>
+                            <constraint firstItem="dmP-4N-He8" firstAttribute="centerX" secondItem="OYe-8g-hQU" secondAttribute="centerX" id="44O-t7-wrm"/>
                             <constraint firstItem="it0-cM-Rf5" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="45x-36-pP1"/>
+                            <constraint firstItem="Bf8-5F-3j6" firstAttribute="top" secondItem="cmL-BY-y5U" secondAttribute="top" constant="220" id="8wZ-fd-KD8"/>
                             <constraint firstItem="yN5-BC-eku" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="A6e-ry-BFu"/>
+                            <constraint firstAttribute="bottom" secondItem="dmP-4N-He8" secondAttribute="bottom" constant="297" id="EEJ-Om-uNR"/>
                             <constraint firstItem="OYe-8g-hQU" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="LcD-G5-zwA"/>
+                            <constraint firstItem="OYe-8g-hQU" firstAttribute="top" secondItem="dmP-4N-He8" secondAttribute="bottom" constant="25" id="N6q-Gg-EZK"/>
                             <constraint firstItem="HgH-kp-fWG" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="V8U-g0-qu9"/>
+                            <constraint firstItem="OYe-8g-hQU" firstAttribute="leading" secondItem="kkC-jg-1BR" secondAttribute="leading" constant="87" id="a8r-Bm-4aw"/>
+                            <constraint firstItem="it0-cM-Rf5" firstAttribute="top" secondItem="cmL-BY-y5U" secondAttribute="top" constant="354" id="cmH-9d-ZOL"/>
                             <constraint firstItem="dmP-4N-He8" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="dSb-ow-EDC"/>
+                            <constraint firstItem="kkC-jg-1BR" firstAttribute="bottom" secondItem="OYe-8g-hQU" secondAttribute="bottom" constant="110" id="fRE-E4-c6R"/>
                             <constraint firstItem="yN5-BC-eku" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="iUU-PZ-CtK"/>
                             <constraint firstItem="Bf8-5F-3j6" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="l9H-03-kne"/>
+                            <constraint firstItem="dmP-4N-He8" firstAttribute="top" secondItem="yN5-BC-eku" secondAttribute="bottom" constant="34" id="lAx-TR-8Cr"/>
+                            <constraint firstItem="Bf8-5F-3j6" firstAttribute="top" secondItem="HgH-kp-fWG" secondAttribute="bottom" constant="82" id="qtW-2B-nWB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="frase" destination="Bf8-5F-3j6" id="C9K-jp-VOe"/>
+                        <outlet property="pronunciata" destination="dmP-4N-He8" id="TX1-ic-hHR"/>
+                        <outlet property="ripeti" destination="it0-cM-Rf5" id="joF-Pq-y4M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gJ-6H-16J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
