@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  App2
+
+  Created by Marco Venere on 16/02/21.
+  
+*/
+
+"level1" = "ciao";
+"level2" = "arrivederci";

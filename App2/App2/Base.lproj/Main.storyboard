@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EwY-to-DXc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EwY-to-DXc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -273,6 +273,47 @@
             </objects>
             <point key="canvasLocation" x="1258" y="-424"/>
         </scene>
+        <!--Livello Superato View Controller-->
+        <scene sceneID="roX-FL-Qcm">
+            <objects>
+                <viewController storyboardIdentifier="LivelloSuperatoViewController" id="YGh-B3-jfI" customClass="LivelloSuperatoViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tTB-b2-j8a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Livello superato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyb-sI-GU8">
+                                <rect key="frame" x="113" y="124" width="189" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="2dF-hy-Ob7">
+                                <rect key="frame" x="54" y="196" width="298" height="92"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wYF-Vi-d0c">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LWq-WO-A2J">
+                                        <rect key="frame" x="103" y="0.0" width="92" height="92"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gs8-XE-9eh">
+                                        <rect key="frame" x="206" y="0.0" width="92" height="92"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bjC-B6-Ctq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2dF-hy-Ob7" firstAttribute="centerX" secondItem="tTB-b2-j8a" secondAttribute="centerX" id="wZL-DE-rFa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wqa-SS-1u4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2204" y="282"/>
+        </scene>
         <!--Speech Detection View Controller-->
         <scene sceneID="2aS-RB-pYs">
             <objects>
@@ -314,10 +355,17 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OYe-8g-hQU">
                                 <rect key="frame" x="87" y="624" width="240" height="128"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN5-BC-eku">
-                                <rect key="frame" x="170" y="455" width="75" height="89"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN5-BC-eku">
+                                <rect key="frame" x="162.5" y="455" width="89" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="aQJ-nt-Vla"/>
+                                    <constraint firstAttribute="width" constant="89" id="xD0-PN-NjQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="microfono" image="microfono"/>
+                                <state key="normal" title="microfono" image="microfono (1)"/>
+                                <connections>
+                                    <action selector="pronuncia:" destination="EwY-to-DXc" eventType="touchUpInside" id="IIx-YG-EDh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kkC-jg-1BR"/>
@@ -328,6 +376,7 @@
                             <constraint firstItem="it0-cM-Rf5" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="45x-36-pP1"/>
                             <constraint firstItem="Bf8-5F-3j6" firstAttribute="top" secondItem="cmL-BY-y5U" secondAttribute="top" constant="220" id="8wZ-fd-KD8"/>
                             <constraint firstItem="yN5-BC-eku" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="A6e-ry-BFu"/>
+                            <constraint firstItem="yN5-BC-eku" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="CiX-BA-aPr"/>
                             <constraint firstAttribute="bottom" secondItem="dmP-4N-He8" secondAttribute="bottom" constant="297" id="EEJ-Om-uNR"/>
                             <constraint firstItem="OYe-8g-hQU" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="LcD-G5-zwA"/>
                             <constraint firstItem="OYe-8g-hQU" firstAttribute="top" secondItem="dmP-4N-He8" secondAttribute="bottom" constant="25" id="N6q-Gg-EZK"/>
@@ -350,7 +399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gJ-6H-16J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1258" y="282"/>
+            <point key="canvasLocation" x="1257.9710144927537" y="281.91964285714283"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rtt-h7-TPh">
@@ -373,7 +422,7 @@
     </scenes>
     <resources>
         <image name="avatar-default" width="150" height="150"/>
-        <image name="microfono" width="1668" height="2154"/>
+        <image name="microfono (1)" width="494" height="496.66665649414062"/>
         <image name="nuova_partita" width="534.33331298828125" height="153"/>
         <image name="report" width="521.33331298828125" height="144"/>
         <image name="shopping" width="523.66668701171875" height="148"/>

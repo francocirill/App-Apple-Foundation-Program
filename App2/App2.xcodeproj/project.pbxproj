@@ -22,6 +22,8 @@
 		DC2954E725DAC8410087907E /* App2.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = DC2954D625DAC49C0087907E /* App2.xcdatamodeld */; };
 		DC2954EA25DAC8910087907E /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2954E925DAC8910087907E /* PreferenceManager.swift */; };
 		DC2954F025DAD0380087907E /* NuovoUtenteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2954EF25DAD0380087907E /* NuovoUtenteController.swift */; };
+		DC2954F425DC0F210087907E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC2954F325DC0F210087907E /* Localizable.strings */; };
+		DC2954F725DC213B0087907E /* LivelloSuperatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2954F625DC213B0087907E /* LivelloSuperatoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		DC2954DF25DAC5250087907E /* UserProfile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserProfile+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DC2954E925DAC8910087907E /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
 		DC2954EF25DAD0380087907E /* NuovoUtenteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuovoUtenteController.swift; sourceTree = "<group>"; };
+		DC2954F325DC0F210087907E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		DC2954F625DC213B0087907E /* LivelloSuperatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivelloSuperatoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 				DC29548B25DA854B0087907E /* CollectionViewCell.swift */,
 				DC29549225DA8C7F0087907E /* CollectionViewController.swift */,
 				DC2954E925DAC8910087907E /* PreferenceManager.swift */,
+				DC2954F325DC0F210087907E /* Localizable.strings */,
+				DC2954F625DC213B0087907E /* LivelloSuperatoViewController.swift */,
 			);
 			path = App2;
 			sourceTree = "<group>";
@@ -159,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC2954F425DC0F210087907E /* Localizable.strings in Resources */,
 				DC2954E725DAC8410087907E /* App2.xcdatamodeld in Resources */,
 				0467033425D693A8001BE5C2 /* LaunchScreen.storyboard in Resources */,
 				0467033125D693A8001BE5C2 /* Assets.xcassets in Resources */,
@@ -184,6 +191,7 @@
 				DC2954E025DAC5250087907E /* UserProfile+CoreDataClass.swift in Sources */,
 				DC2954F025DAD0380087907E /* NuovoUtenteController.swift in Sources */,
 				0467032725D693A7001BE5C2 /* SceneDelegate.swift in Sources */,
+				DC2954F725DC213B0087907E /* LivelloSuperatoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,13 +339,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C962Y7UM4;
+				DEVELOPMENT_TEAM = RPKHLTD7H2;
 				INFOPLIST_FILE = App2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = it.unisa.applefoundationprogram.App2.App2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.App2.App2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
