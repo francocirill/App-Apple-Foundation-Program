@@ -11,6 +11,9 @@ import AVFoundation
 
 class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegate{
     //Processa lo stream audio
+    @IBAction func backHomeFromLevel(_ sender: UIButton) {
+        performSegue(withIdentifier: "backHomeFromLevel", sender: self)
+    }
     @IBOutlet weak var navigation: UINavigationItem!
     let audioEngine = AVAudioEngine()
     //Riconosce le parole
@@ -19,12 +22,14 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     @IBOutlet weak var microphone: UIButton!
     let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "it-IT"))
     //Riconoscimento in tempo reale
+    var user : UserProfile! = nil
     var request = SFSpeechAudioBufferRecognitionRequest()
     var isRecording = false
     //Gestire il riconoscimento
     var recognitionTask: SFSpeechRecognitionTask?
     @IBOutlet weak var frase: UILabel!
     @IBOutlet weak var ripeti: UIButton!
+    @IBOutlet weak var image: UIImageView!
     @IBAction func ripetiTapped(_ sender: UIButton) {
         DispatchQueue.main.async {
             self.speak(self.frase.text ?? "errore")
@@ -44,22 +49,25 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
               node.removeTap(onBus: 0)
               //  }
                 recognitionTask?.cancel()
-
+            
+            microphone.setImage(UIImage(named: "mic_spento"), for: .normal)
                 isRecording = false
                 //startButton.backgroundColor = UIColor.gray
 
             } else {
-
+                self.pronunciata.textColor = UIColor(named: "Color1")
                 self.recordAndRecognizeSpeech()
                 isRecording = true
+                microphone.setImage(UIImage(named: "mic_acceso"), for: .normal)
                // startButton.backgroundColor = UIColor.red
             }
     }
-    @IBOutlet weak var pronunciata: UILabel!
+    
     
     
 
     //text to speech
+    @IBOutlet weak var pronunciata: UILabel!
     
     
     override func viewDidLoad() {
@@ -71,7 +79,13 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         self.navigationItem.hidesBackButton = true;
         self.navigationController?.navigationItem.backBarButtonItem?.isEnabled = false;
         self.navigationController!.interactivePopGestureRecognizer!.isEnabled = false;
-
+        user = PersistenceManager.fetchData()[0]
+        print(PersistenceManager.fetchData().count)
+        for user in PersistenceManager.fetchData() {
+            print("User: \(user.name) \(user.showPics) \(user.outLoud) \(user.avatar)")
+        }
+        image.isHidden = !user.showPics
+        
 //        microphone.isUserInteractionEnabled = true
 //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SpeechDetectionViewController.addPulse))
 //        tapGestureRecognizer.numberOfTouchesRequired = 1
@@ -103,6 +117,12 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         
         frase.text = NSLocalizedString("level\(livello)", comment: "")
     
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if user.outLoud {
+            speak(frase.text!)
+        }
     }
     
     func recordAndRecognizeSpeech(){
@@ -204,7 +224,17 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                                         cont.numero = 1
                                     }
                                     })
-                                }
+                            } else {
+                                self.pronunciata.textColor = UIColor.red
+                                let animation = CABasicAnimation(keyPath: "position")
+                                animation.duration = 0.1
+                                animation.repeatCount = 5
+                                animation.autoreverses = true
+                                animation.fromValue = NSValue(cgPoint: CGPoint(x: self.pronunciata.center.x-10, y: self.pronunciata.center.y))
+                                animation.toValue = NSValue(cgPoint: CGPoint(x: self.pronunciata.center.x+10, y: self.pronunciata.center.y))
+                                
+                                self.pronunciata.layer.add(animation, forKey: "position")
+                            }
                                 
             //                if let result = result, result.isFinal {
             //                    print("Result: \(result.bestTranscription.formattedString)")
@@ -227,6 +257,15 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
             })
         
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        switch segue.identifier {
+//        case "backHomeFromLevel" :
+//            
+//        default: print(#function)
+//            
+//        }
+//    }
 
 }
     /*

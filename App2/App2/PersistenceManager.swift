@@ -16,7 +16,7 @@ class PersistenceManager {
     }
     static func newProfile (name: String, outLoud: Bool, showPics: Bool, avatar: String) -> UserProfile {
         let context = getContext()
-        let profile = NSEntityDescription.insertNewObject(forEntityName: name, into: context) as! UserProfile
+        let profile = NSEntityDescription.insertNewObject(forEntityName: self.name, into: context) as! UserProfile
         profile.name = name
         profile.outLoud = outLoud
         profile.showPics = showPics

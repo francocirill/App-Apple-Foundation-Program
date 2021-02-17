@@ -13,7 +13,6 @@
 		0467032C25D693A7001BE5C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467032A25D693A7001BE5C2 /* Main.storyboard */; };
 		0467033125D693A8001BE5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0467033025D693A8001BE5C2 /* Assets.xcassets */; };
 		0467033425D693A8001BE5C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467033225D693A8001BE5C2 /* LaunchScreen.storyboard */; };
-		04C74CDA25DAF73300C1915F /* SpeechDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C74CD925DAF73300C1915F /* SpeechDetectionViewController.swift */; };
 		DC29548C25DA854B0087907E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC29548B25DA854B0087907E /* CollectionViewCell.swift */; };
 		DC29549325DA8C7F0087907E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC29549225DA8C7F0087907E /* CollectionViewController.swift */; };
 		DC2954B225DABD2E0087907E /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2954B125DABD2E0087907E /* PersistenceManager.swift */; };
@@ -25,6 +24,10 @@
 		DC2954F425DC0F210087907E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC2954F325DC0F210087907E /* Localizable.strings */; };
 		DC2954F725DC213B0087907E /* LivelloSuperatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2954F625DC213B0087907E /* LivelloSuperatoViewController.swift */; };
 		DC92936D25DD3A4000311BA4 /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92936C25DD3A4000311BA4 /* Pulsing.swift */; };
+		DC92937225DD5F6700311BA4 /* SpeechDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92937125DD5F6700311BA4 /* SpeechDetectionViewController.swift */; };
+		DC92937525DD661300311BA4 /* ShakingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92937425DD661300311BA4 /* ShakingLabel.swift */; };
+		DC92937C25DD76CC00311BA4 /* MyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92937B25DD76CC00311BA4 /* MyString.swift */; };
+		DC92938325DD7B7500311BA4 /* imgpsh_fullsize (1).jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DC92938225DD7B7500311BA4 /* imgpsh_fullsize (1).jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +39,6 @@
 		0467033025D693A8001BE5C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0467033325D693A8001BE5C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0467033525D693A8001BE5C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04C74CD925DAF73300C1915F /* SpeechDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechDetectionViewController.swift; sourceTree = "<group>"; };
 		DC29548B25DA854B0087907E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		DC29549225DA8C7F0087907E /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		DC2954B125DABD2E0087907E /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
@@ -48,6 +50,10 @@
 		DC2954F325DC0F210087907E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		DC2954F625DC213B0087907E /* LivelloSuperatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivelloSuperatoViewController.swift; sourceTree = "<group>"; };
 		DC92936C25DD3A4000311BA4 /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
+		DC92937125DD5F6700311BA4 /* SpeechDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechDetectionViewController.swift; sourceTree = "<group>"; };
+		DC92937425DD661300311BA4 /* ShakingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakingLabel.swift; sourceTree = "<group>"; };
+		DC92937B25DD76CC00311BA4 /* MyString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyString.swift; sourceTree = "<group>"; };
+		DC92938225DD7B7500311BA4 /* imgpsh_fullsize (1).jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "imgpsh_fullsize (1).jpeg"; path = "../../../../../Downloads/imgpsh_fullsize (1).jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,13 +88,13 @@
 		0467032325D693A7001BE5C2 /* App2 */ = {
 			isa = PBXGroup;
 			children = (
+				DC92937125DD5F6700311BA4 /* SpeechDetectionViewController.swift */,
 				DC2954EF25DAD0380087907E /* NuovoUtenteController.swift */,
 				0467032425D693A7001BE5C2 /* AppDelegate.swift */,
 				0467032625D693A7001BE5C2 /* SceneDelegate.swift */,
 				0467032825D693A7001BE5C2 /* ViewController.swift */,
 				0467032A25D693A7001BE5C2 /* Main.storyboard */,
 				DC2954B125DABD2E0087907E /* PersistenceManager.swift */,
-				04C74CD925DAF73300C1915F /* SpeechDetectionViewController.swift */,
 				0467033025D693A8001BE5C2 /* Assets.xcassets */,
 				0467033225D693A8001BE5C2 /* LaunchScreen.storyboard */,
 				0467033525D693A8001BE5C2 /* Info.plist */,
@@ -96,9 +102,12 @@
 				DC29548B25DA854B0087907E /* CollectionViewCell.swift */,
 				DC29549225DA8C7F0087907E /* CollectionViewController.swift */,
 				DC2954E925DAC8910087907E /* PreferenceManager.swift */,
+				DC92938225DD7B7500311BA4 /* imgpsh_fullsize (1).jpeg */,
 				DC2954F325DC0F210087907E /* Localizable.strings */,
 				DC2954F625DC213B0087907E /* LivelloSuperatoViewController.swift */,
 				DC92936C25DD3A4000311BA4 /* Pulsing.swift */,
+				DC92937425DD661300311BA4 /* ShakingLabel.swift */,
+				DC92937B25DD76CC00311BA4 /* MyString.swift */,
 			);
 			path = App2;
 			sourceTree = "<group>";
@@ -165,6 +174,7 @@
 				0467033425D693A8001BE5C2 /* LaunchScreen.storyboard in Resources */,
 				0467033125D693A8001BE5C2 /* Assets.xcassets in Resources */,
 				0467032C25D693A7001BE5C2 /* Main.storyboard in Resources */,
+				DC92938325DD7B7500311BA4 /* imgpsh_fullsize (1).jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +188,7 @@
 				DC92936D25DD3A4000311BA4 /* Pulsing.swift in Sources */,
 				DC2954EA25DAC8910087907E /* PreferenceManager.swift in Sources */,
 				0467032925D693A7001BE5C2 /* ViewController.swift in Sources */,
-				04C74CDA25DAF73300C1915F /* SpeechDetectionViewController.swift in Sources */,
+				DC92937225DD5F6700311BA4 /* SpeechDetectionViewController.swift in Sources */,
 				0467032525D693A7001BE5C2 /* AppDelegate.swift in Sources */,
 				DC2954B225DABD2E0087907E /* PersistenceManager.swift in Sources */,
 				DC29548C25DA854B0087907E /* CollectionViewCell.swift in Sources */,
@@ -186,7 +196,9 @@
 				DC29549325DA8C7F0087907E /* CollectionViewController.swift in Sources */,
 				DC2954E025DAC5250087907E /* UserProfile+CoreDataClass.swift in Sources */,
 				DC2954F025DAD0380087907E /* NuovoUtenteController.swift in Sources */,
+				DC92937C25DD76CC00311BA4 /* MyString.swift in Sources */,
 				0467032725D693A7001BE5C2 /* SceneDelegate.swift in Sources */,
+				DC92937525DD661300311BA4 /* ShakingLabel.swift in Sources */,
 				DC2954F725DC213B0087907E /* LivelloSuperatoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

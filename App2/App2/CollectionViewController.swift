@@ -27,7 +27,7 @@ class CollectionViewController: UICollectionViewController{
                    UIImage(named: "Wolverine")]
     var avatarsNames = ["Captain America", "Hulk", "Batman", "Catwoman", "Groot", "Harley Quinn", "Iron Man", "Joker", "Magneto", "Professor X", "Thor", "Spiderman", "Thanos", "Wolverine"]
     
-    var user: UserProfile!
+    var  avatar:  MyString?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,7 +93,7 @@ class CollectionViewController: UICollectionViewController{
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell {
             //salvare in memoria
-            user.avatar = cell.avatarName.text!
+            avatar!.str = cell.avatarName.text!
             _ = navigationController?.popViewController(animated: true)
         }
     }

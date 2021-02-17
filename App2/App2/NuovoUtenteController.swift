@@ -14,10 +14,9 @@ class NuovoUtenteController: UIViewController {
     @IBOutlet weak var speechSwitch: UISwitch!
     
    
-    @IBAction func crea(_ sender: Any) {
-    }
     
-    var userProfile : UserProfile?
+    
+    var avatar: MyString?
     
     @IBOutlet weak var avatarbutton: UIButton!
     override func viewDidLoad() {
@@ -26,9 +25,8 @@ class NuovoUtenteController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         // Do any additional setup after loading the view.
-        userProfile = UserProfile.init(context: context)
-        userProfile?.avatar=""
-        appDelegate.saveContext()
+        avatar = MyString()
+        avatar!.str = ""
         //userProfile!.setValue("default", forKey: "avatar")
         //userProfile.avatar = "default"
     }
@@ -38,8 +36,8 @@ class NuovoUtenteController: UIViewController {
         super.viewWillAppear(animated)
         
         
-        if userProfile?.avatar != "" {
-            avatarbutton.setImage(UIImage(named: userProfile!.avatar!) , for: .normal)
+        if avatar!.str != "" {
+            avatarbutton.setImage(UIImage(named: avatar!.str) , for: .normal)
         }
     }
     // MARK: - Navigation
@@ -52,7 +50,11 @@ class NuovoUtenteController: UIViewController {
         switch segue.identifier {
         case "showAvatar" :
             let dstView = segue.destination as! CollectionViewController
-            dstView.user = userProfile
+            dstView.avatar = avatar
+        case "create":
+            print("\(userNameTextField.text!) \(speechSwitch.isOn) \(pictureSwitch.isOn) \(avatar!.str)")
+            PersistenceManager.newProfile(name: userNameTextField.text!, outLoud: speechSwitch.isOn, showPics: pictureSwitch.isOn, avatar: (avatar!.str))
+            PersistenceManager.saveContext()
         default: print(#function)
             
         }
