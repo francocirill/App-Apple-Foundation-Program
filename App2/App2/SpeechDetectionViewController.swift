@@ -11,10 +11,12 @@ import AVFoundation
 
 class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegate{
     //Processa lo stream audio
+    @IBOutlet weak var navigation: UINavigationItem!
     let audioEngine = AVAudioEngine()
     //Riconosce le parole
     //let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
     //Utile per cambiare lingua
+    @IBOutlet weak var microphone: UIButton!
     let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "it-IT"))
     //Riconoscimento in tempo reale
     var request = SFSpeechAudioBufferRecognitionRequest()
@@ -28,8 +30,10 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
             self.speak(self.frase.text ?? "errore")
         }
     }
+    var newViewController : UIViewController?
     
-    var num = 0
+    var tentativi = 0
+    var livello = 1
     @IBAction func pronuncia(_ sender: Any) {
         if isRecording {
 
@@ -62,9 +66,25 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        frase.text = NSLocalizedString("level1", comment: "")
         
+        self.navigationItem.leftBarButtonItem = nil;
+        self.navigationItem.hidesBackButton = true;
+        self.navigationController?.navigationItem.backBarButtonItem?.isEnabled = false;
+        self.navigationController!.interactivePopGestureRecognizer!.isEnabled = false;
+
+//        microphone.isUserInteractionEnabled = true
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SpeechDetectionViewController.addPulse))
+//        tapGestureRecognizer.numberOfTouchesRequired = 1
+//        microphone.addGestureRecognizer(tapGestureRecognizer)
         
+    }
+    
+    @objc func addPulse(){
+        let pulse = Pulsing(numberOfPulses: 1, radius: 110, position: microphone.center)
+        pulse.animationDuration = 0.8
+        pulse.backgroundColor = UIColor(named: "Color3")?.cgColor
+        
+        self.view.layer.insertSublayer(pulse, below: microphone.layer)
     }
     
     func speak(_ msg : String) {
@@ -78,7 +98,12 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         synthesizer.speak(utterance)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigation!.title = "Livello \(livello)"
+        
+        frase.text = NSLocalizedString("level\(livello)", comment: "")
     
+    }
     
     func recordAndRecognizeSpeech(){
         
@@ -145,9 +170,13 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
                 if result != nil { // check to see if result is empty (i.e. no speech found)
                     if let result = result {
+                        self.addPulse()
                         self.pronunciata.text = (result.transcriptions[0].segments[0].substring).lowercased()
                         //print(self.num)
+                        
                         if (result.transcriptions[0].segments.count) == 1 {
+                            self.tentativi += 1
+                           // print(String(result.transcriptions[0].segments[0].confidence * 100) + "%" )
                             
                             self.audioEngine.stop()
                             DispatchQueue.main.async { [unowned self] in
@@ -162,8 +191,18 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                             if self.frase.text?.lowercased() == self.pronunciata.text {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                       let newViewController = storyBoard.instantiateViewController(withIdentifier: "LivelloSuperatoViewController") as! LivelloSuperatoViewController
-                                       self.present(newViewController, animated: true, completion: nil)
+                                    self.newViewController = storyBoard.instantiateViewController(withIdentifier: "LivelloSuperatoViewController") as! LivelloSuperatoViewController
+                                    //self.newViewController?.isModalInPresentation = true
+                                    self.navigationController?.pushViewController(self.newViewController!, animated: true)
+                                    let cont = self.newViewController as! LivelloSuperatoViewController
+                                    switch self.tentativi {
+                                    case 1:
+                                        cont.numero = 3
+                                    case 2, 3:
+                                        cont.numero = 2
+                                    default:
+                                        cont.numero = 1
+                                    }
                                     })
                                 }
                                 
@@ -189,6 +228,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         
     }
 
+}
     /*
     // MARK: - Navigation
 
@@ -196,7 +236,27 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
-    */
+        print("Tentativi \(tentativi)")
+        if let controller = newViewController {
+            let cont = controller as! LivelloSuperatoViewController
+            switch tentativi {
+            case 1:
+                cont.numero = 3
+            case 2, 3:
+                cont.numero = 2
+            default:
+                cont.numero = 1
+            }
+        }/*
+        switch segue.identifier {
+        case "showAvatar" :
+            let dstView = segue.destination as! CollectionViewController
+            dstView.user = userProfile
+        default: print(#function)
+            
+        }
 
-}
+    }
+    
+
+ }*/*/

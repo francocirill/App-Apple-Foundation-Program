@@ -24,6 +24,7 @@
 		DC2954F025DAD0380087907E /* NuovoUtenteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2954EF25DAD0380087907E /* NuovoUtenteController.swift */; };
 		DC2954F425DC0F210087907E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC2954F325DC0F210087907E /* Localizable.strings */; };
 		DC2954F725DC213B0087907E /* LivelloSuperatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2954F625DC213B0087907E /* LivelloSuperatoViewController.swift */; };
+		DC92936D25DD3A4000311BA4 /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92936C25DD3A4000311BA4 /* Pulsing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		DC2954EF25DAD0380087907E /* NuovoUtenteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuovoUtenteController.swift; sourceTree = "<group>"; };
 		DC2954F325DC0F210087907E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		DC2954F625DC213B0087907E /* LivelloSuperatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivelloSuperatoViewController.swift; sourceTree = "<group>"; };
+		DC92936C25DD3A4000311BA4 /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				DC2954EF25DAD0380087907E /* NuovoUtenteController.swift */,
-				DC29548425DA81790087907E /* Avatars */,
 				0467032425D693A7001BE5C2 /* AppDelegate.swift */,
 				0467032625D693A7001BE5C2 /* SceneDelegate.swift */,
 				0467032825D693A7001BE5C2 /* ViewController.swift */,
@@ -97,15 +98,9 @@
 				DC2954E925DAC8910087907E /* PreferenceManager.swift */,
 				DC2954F325DC0F210087907E /* Localizable.strings */,
 				DC2954F625DC213B0087907E /* LivelloSuperatoViewController.swift */,
+				DC92936C25DD3A4000311BA4 /* Pulsing.swift */,
 			);
 			path = App2;
-			sourceTree = "<group>";
-		};
-		DC29548425DA81790087907E /* Avatars */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Avatars;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC92936D25DD3A4000311BA4 /* Pulsing.swift in Sources */,
 				DC2954EA25DAC8910087907E /* PreferenceManager.swift in Sources */,
 				0467032925D693A7001BE5C2 /* ViewController.swift in Sources */,
 				04C74CDA25DAF73300C1915F /* SpeechDetectionViewController.swift in Sources */,
