@@ -11,7 +11,11 @@ import AVFoundation
 
 class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegate{
     //Processa lo stream audio
-    @IBAction func backHomeFromLevel(_ sender: UIButton) {
+  
+    
+    var player: AVAudioPlayer?
+    
+    @IBAction func backHome(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "backHomeFromLevel", sender: self)
     }
     @IBOutlet weak var navigation: UINavigationItem!
@@ -65,7 +69,8 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     
     
     
-
+    @IBOutlet weak var ripetiButton: UIButton!
+    
     //text to speech
     @IBOutlet weak var pronunciata: UILabel!
     
@@ -74,23 +79,24 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
-        self.navigationItem.leftBarButtonItem = nil;
-        self.navigationItem.hidesBackButton = true;
-        self.navigationController?.navigationItem.backBarButtonItem?.isEnabled = false;
-        self.navigationController!.interactivePopGestureRecognizer!.isEnabled = false;
+        self.navigationItem.hidesBackButton = true
         user = PersistenceManager.fetchData()[0]
-        print(PersistenceManager.fetchData().count)
-        for user in PersistenceManager.fetchData() {
-            print("User: \(user.name) \(user.showPics) \(user.outLoud) \(user.avatar)")
-        }
+      
         image.isHidden = !user.showPics
         
 //        microphone.isUserInteractionEnabled = true
 //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SpeechDetectionViewController.addPulse))
 //        tapGestureRecognizer.numberOfTouchesRequired = 1
 //        microphone.addGestureRecognizer(tapGestureRecognizer)
+        Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.pulseRipetiButton), userInfo: nil, repeats: true)
+           
+    }
+    @objc func pulseRipetiButton() {
+        let pulse = Pulsing(numberOfPulses: 2, radius: 50, position: ripetiButton.center)
+        pulse.animationDuration = 0.8
+        pulse.backgroundColor = UIColor(named: "Color2")?.cgColor
         
+        self.view.layer.insertSublayer(pulse, below: ripetiButton.layer)
     }
     
     @objc func addPulse(){
@@ -234,6 +240,25 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                                 animation.toValue = NSValue(cgPoint: CGPoint(x: self.pronunciata.center.x+10, y: self.pronunciata.center.y))
                                 
                                 self.pronunciata.layer.add(animation, forKey: "position")
+                                guard let url = Bundle.main.url(forResource: "zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381", withExtension: "mp3") else { return }
+
+                                do {
+                                    try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+                                    try AVAudioSession.sharedInstance().setActive(true)
+
+                                    /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+                                    self.player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+                                    /* iOS 10 and earlier require the following line:
+                                    player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+
+                                    guard let player = self.player else { return }
+
+                                    player.play()
+
+                                } catch let error {
+                                    print(error.localizedDescription)
+                                }
                             }
                                 
             //                if let result = result, result.isFinal {

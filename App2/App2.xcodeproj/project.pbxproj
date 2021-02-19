@@ -28,6 +28,8 @@
 		DC92937525DD661300311BA4 /* ShakingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92937425DD661300311BA4 /* ShakingLabel.swift */; };
 		DC92937C25DD76CC00311BA4 /* MyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92937B25DD76CC00311BA4 /* MyString.swift */; };
 		DC92938325DD7B7500311BA4 /* imgpsh_fullsize (1).jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DC92938225DD7B7500311BA4 /* imgpsh_fullsize (1).jpeg */; };
+		DC92938725E0339100311BA4 /* zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC92938525E0339100311BA4 /* zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3 */; };
+		DC92938825E0339100311BA4 /* mixkit-game-level-completed-2059.wav in Resources */ = {isa = PBXBuildFile; fileRef = DC92938625E0339100311BA4 /* mixkit-game-level-completed-2059.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		DC92937425DD661300311BA4 /* ShakingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakingLabel.swift; sourceTree = "<group>"; };
 		DC92937B25DD76CC00311BA4 /* MyString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyString.swift; sourceTree = "<group>"; };
 		DC92938225DD7B7500311BA4 /* imgpsh_fullsize (1).jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "imgpsh_fullsize (1).jpeg"; path = "../../../../../Downloads/imgpsh_fullsize (1).jpeg"; sourceTree = "<group>"; };
+		DC92938525E0339100311BA4 /* zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3; path = ../../../../Downloads/zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3; sourceTree = "<group>"; };
+		DC92938625E0339100311BA4 /* mixkit-game-level-completed-2059.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "mixkit-game-level-completed-2059.wav"; path = "../../../../Downloads/mixkit-game-level-completed-2059.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 		0467031825D693A7001BE5C2 = {
 			isa = PBXGroup;
 			children = (
+				DC92938625E0339100311BA4 /* mixkit-game-level-completed-2059.wav */,
+				DC92938525E0339100311BA4 /* zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3 */,
 				DC2954DE25DAC5250087907E /* UserProfile+CoreDataClass.swift */,
 				DC2954DF25DAC5250087907E /* UserProfile+CoreDataProperties.swift */,
 				0467032325D693A7001BE5C2 /* App2 */,
@@ -169,6 +175,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC92938725E0339100311BA4 /* zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3 in Resources */,
+				DC92938825E0339100311BA4 /* mixkit-game-level-completed-2059.wav in Resources */,
 				DC2954F425DC0F210087907E /* Localizable.strings in Resources */,
 				DC2954E725DAC8410087907E /* App2.xcdatamodeld in Resources */,
 				0467033425D693A8001BE5C2 /* LaunchScreen.storyboard in Resources */,

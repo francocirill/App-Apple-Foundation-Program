@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         self.navigationItem.hidesBackButton = true;
         self.navigationController?.navigationItem.backBarButtonItem?.isEnabled = false;
         self.navigationController!.interactivePopGestureRecognizer!.isEnabled = false;
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "imgpsh_fullsize (2)")!)
+    self.view.backgroundColor = UIColor(patternImage: UIImage(named: "imgpsh_fullsize (2)")!)
     }
 
     @IBAction func unwind( _ seg: UIStoryboardSegue) {

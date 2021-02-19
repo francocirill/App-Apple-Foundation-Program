@@ -15,9 +15,9 @@ class NuovoUtenteController: UIViewController {
     
    
     
+    @IBOutlet weak var creaButton: UIBarButtonItem!
     
     var avatar: MyString?
-    
     @IBOutlet weak var avatarbutton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +29,13 @@ class NuovoUtenteController: UIViewController {
         avatar!.str = ""
         //userProfile!.setValue("default", forKey: "avatar")
         //userProfile.avatar = "default"
+        creaButton.isEnabled = false
     }
     
-
+    @IBAction func textChanged(_ sender: UITextField) {
+        creaButton.isEnabled = sender.text != ""
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -52,7 +56,6 @@ class NuovoUtenteController: UIViewController {
             let dstView = segue.destination as! CollectionViewController
             dstView.avatar = avatar
         case "create":
-            print("\(userNameTextField.text!) \(speechSwitch.isOn) \(pictureSwitch.isOn) \(avatar!.str)")
             PersistenceManager.newProfile(name: userNameTextField.text!, outLoud: speechSwitch.isOn, showPics: pictureSwitch.isOn, avatar: (avatar!.str))
             PersistenceManager.saveContext()
         default: print(#function)
