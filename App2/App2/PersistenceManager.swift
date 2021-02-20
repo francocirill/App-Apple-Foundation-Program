@@ -21,6 +21,9 @@ class PersistenceManager {
         profile.outLoud = outLoud
         profile.showPics = showPics
         profile.avatar = avatar
+        profile.lastLevel = 0
+        profile.points = 0
+        saveContext()
         return profile
     }
     static func fetchData() -> [UserProfile] {
@@ -32,6 +35,7 @@ class PersistenceManager {
         } catch let error as NSError {
             print("Errore in fetch \(error.code)")
         }
+        saveContext()
         return users
     }
     static func saveContext() {

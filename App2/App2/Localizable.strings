@@ -6,5 +6,10 @@
   
 */
 
-"level1" = "ciao";
-"level2" = "arrivederci";
+"level1" = "casa";
+"level2" = "cane";
+"level3" = "mela";
+"level4" = "fragola";
+"level5" = "criceto";
+"level6" = "scacchi";
+"level7" = "dromedario";

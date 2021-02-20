@@ -18,6 +18,8 @@ class NuovoUtenteController: UIViewController {
     @IBOutlet weak var creaButton: UIBarButtonItem!
     
     var avatar: MyString?
+    var textChanged = false
+    var avatarChanged = false
     @IBOutlet weak var avatarbutton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +35,10 @@ class NuovoUtenteController: UIViewController {
     }
     
     @IBAction func textChanged(_ sender: UITextField) {
-        creaButton.isEnabled = sender.text != ""
+        textChanged = sender.text != ""
+        creaButton.isEnabled = textChanged && avatarChanged
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -42,6 +46,11 @@ class NuovoUtenteController: UIViewController {
         
         if avatar!.str != "" {
             avatarbutton.setImage(UIImage(named: avatar!.str) , for: .normal)
+            avatarChanged = true
+            creaButton.isEnabled = textChanged && avatarChanged
+        } else {
+            avatarChanged = false
+            creaButton.isEnabled = false
         }
     }
     // MARK: - Navigation

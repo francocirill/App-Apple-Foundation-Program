@@ -42,7 +42,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     var newViewController : UIViewController?
     
     var tentativi = 0
-    var livello = 1
+    var livello : Int!
     @IBAction func pronuncia(_ sender: Any) {
         if isRecording {
 
@@ -80,9 +80,6 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         
         // Do any additional setup after loading the view.
         self.navigationItem.hidesBackButton = true
-        user = PersistenceManager.fetchData()[0]
-      
-        image.isHidden = !user.showPics
         
 //        microphone.isUserInteractionEnabled = true
 //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SpeechDetectionViewController.addPulse))
@@ -119,16 +116,17 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigation!.title = "Livello \(livello)"
-        
-        frase.text = NSLocalizedString("level\(livello)", comment: "")
+        livello = Int(PersistenceManager.fetchData()[0].lastLevel + 1)
+        user = PersistenceManager.fetchData()[0]
+        image.isHidden = !user.showPics
+        self.navigation!.title = "Livello \(livello!)"
+        self.image.image = UIImage(named: "level\(livello!)")
+        frase.text = NSLocalizedString("level\(livello!)", comment: "")
     
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if user.outLoud {
-            speak(frase.text!)
-        }
+        speak(frase.text!)
     }
     
     func recordAndRecognizeSpeech(){
@@ -219,16 +217,21 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                     self.newViewController = storyBoard.instantiateViewController(withIdentifier: "LivelloSuperatoViewController") as! LivelloSuperatoViewController
                                     //self.newViewController?.isModalInPresentation = true
-                                    self.navigationController?.pushViewController(self.newViewController!, animated: true)
+                                    PersistenceManager.fetchData()[0].lastLevel += 1
                                     let cont = self.newViewController as! LivelloSuperatoViewController
                                     switch self.tentativi {
                                     case 1:
                                         cont.numero = 3
+                                        PersistenceManager.fetchData()[0].points +=  3
                                     case 2, 3:
                                         cont.numero = 2
+                                        PersistenceManager.fetchData()[0].points +=  2
                                     default:
                                         cont.numero = 1
+                                        PersistenceManager.fetchData()[0].points +=  1
                                     }
+                                    PersistenceManager.saveContext()
+                                    self.navigationController?.pushViewController(self.newViewController!, animated: true)
                                     })
                             } else {
                                 self.pronunciata.textColor = UIColor.red
