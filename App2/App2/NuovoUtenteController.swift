@@ -8,12 +8,12 @@
 import UIKit
 
 class NuovoUtenteController: UIViewController {
-
+    
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var pictureSwitch: UISwitch!
     @IBOutlet weak var speechSwitch: UISwitch!
     
-   
+    
     
     @IBOutlet weak var creaButton: UIBarButtonItem!
     
@@ -23,7 +23,7 @@ class NuovoUtenteController: UIViewController {
     @IBOutlet weak var avatarbutton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         // Do any additional setup after loading the view.
@@ -32,6 +32,19 @@ class NuovoUtenteController: UIViewController {
         //userProfile!.setValue("default", forKey: "avatar")
         //userProfile.avatar = "default"
         creaButton.isEnabled = false
+        //Looks for single or multiple taps.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Calls this function when the tap is recognized.
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     @IBAction func textChanged(_ sender: UITextField) {
@@ -54,7 +67,7 @@ class NuovoUtenteController: UIViewController {
         }
     }
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
@@ -70,10 +83,10 @@ class NuovoUtenteController: UIViewController {
         default: print(#function)
             
         }
-
-
+        
+        
     }
     
-
+    
 }
 

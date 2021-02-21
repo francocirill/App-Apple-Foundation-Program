@@ -17,11 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="imgpsh_fullsize (3)" translatesAutoresizingMaskIntoConstraints="NO" id="fIG-O7-i9o">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="145" width="414" height="751"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="700" id="ZgX-qW-Qvo"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdh-0L-NSO">
+                                <rect key="frame" x="146.5" y="96" width="121" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Color5"/>
@@ -29,6 +35,8 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fIG-O7-i9o" secondAttribute="trailing" id="HS1-Po-3ay"/>
                             <constraint firstItem="fIG-O7-i9o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oah-6h-Vaz"/>
+                            <constraint firstItem="Jdh-0L-NSO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="SyJ-IW-oAB"/>
+                            <constraint firstItem="Jdh-0L-NSO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="TuB-mb-Ldh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fIG-O7-i9o" secondAttribute="bottom" id="Zud-YH-TLu"/>
                             <constraint firstItem="fIG-O7-i9o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gc3-Ga-WkI"/>
                         </constraints>
