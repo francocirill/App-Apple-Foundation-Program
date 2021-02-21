@@ -24,11 +24,11 @@
 		DC2954F725DC213B0087907E /* LivelloSuperatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2954F625DC213B0087907E /* LivelloSuperatoViewController.swift */; };
 		DC66D96C25E2696D0028DC3E /* zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC66D96A25E2696D0028DC3E /* zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3 */; };
 		DC66D96D25E2696D0028DC3E /* mixkit-game-level-completed-2059.wav in Resources */ = {isa = PBXBuildFile; fileRef = DC66D96B25E2696D0028DC3E /* mixkit-game-level-completed-2059.wav */; };
+		DC66D97125E269C60028DC3E /* imgpsh_fullsize (1).jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DC66D97025E269C60028DC3E /* imgpsh_fullsize (1).jpeg */; };
 		DC92936D25DD3A4000311BA4 /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92936C25DD3A4000311BA4 /* Pulsing.swift */; };
 		DC92937225DD5F6700311BA4 /* SpeechDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92937125DD5F6700311BA4 /* SpeechDetectionViewController.swift */; };
 		DC92937525DD661300311BA4 /* ShakingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92937425DD661300311BA4 /* ShakingLabel.swift */; };
 		DC92937C25DD76CC00311BA4 /* MyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92937B25DD76CC00311BA4 /* MyString.swift */; };
-		DC92938325DD7B7500311BA4 /* imgpsh_fullsize (1).jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DC92938225DD7B7500311BA4 /* imgpsh_fullsize (1).jpeg */; };
 		DC92938B25E1641700311BA4 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92938A25E1641700311BA4 /* TutorialViewController.swift */; };
 		DC92938E25E1761B00311BA4 /* Tutorial1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92938D25E1761B00311BA4 /* Tutorial1ViewController.swift */; };
 		DC92939225E17A1500311BA4 /* UserProfile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92939125E17A1500311BA4 /* UserProfile+CoreDataProperties.swift */; };
@@ -55,11 +55,11 @@
 		DC2954F625DC213B0087907E /* LivelloSuperatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivelloSuperatoViewController.swift; sourceTree = "<group>"; };
 		DC66D96A25E2696D0028DC3E /* zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3; sourceTree = "<group>"; };
 		DC66D96B25E2696D0028DC3E /* mixkit-game-level-completed-2059.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "mixkit-game-level-completed-2059.wav"; sourceTree = "<group>"; };
+		DC66D97025E269C60028DC3E /* imgpsh_fullsize (1).jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "imgpsh_fullsize (1).jpeg"; sourceTree = "<group>"; };
 		DC92936C25DD3A4000311BA4 /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
 		DC92937125DD5F6700311BA4 /* SpeechDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechDetectionViewController.swift; sourceTree = "<group>"; };
 		DC92937425DD661300311BA4 /* ShakingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakingLabel.swift; sourceTree = "<group>"; };
 		DC92937B25DD76CC00311BA4 /* MyString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyString.swift; sourceTree = "<group>"; };
-		DC92938225DD7B7500311BA4 /* imgpsh_fullsize (1).jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "imgpsh_fullsize (1).jpeg"; path = "../../../../../Downloads/imgpsh_fullsize (1).jpeg"; sourceTree = "<group>"; };
 		DC92938A25E1641700311BA4 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		DC92938D25E1761B00311BA4 /* Tutorial1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial1ViewController.swift; sourceTree = "<group>"; };
 		DC92939125E17A1500311BA4 /* UserProfile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserProfile+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -100,6 +100,7 @@
 		0467032325D693A7001BE5C2 /* App2 */ = {
 			isa = PBXGroup;
 			children = (
+				DC66D97025E269C60028DC3E /* imgpsh_fullsize (1).jpeg */,
 				DC92937125DD5F6700311BA4 /* SpeechDetectionViewController.swift */,
 				DC2954EF25DAD0380087907E /* NuovoUtenteController.swift */,
 				0467032425D693A7001BE5C2 /* AppDelegate.swift */,
@@ -114,7 +115,6 @@
 				DC29548B25DA854B0087907E /* CollectionViewCell.swift */,
 				DC29549225DA8C7F0087907E /* CollectionViewController.swift */,
 				DC2954E925DAC8910087907E /* PreferenceManager.swift */,
-				DC92938225DD7B7500311BA4 /* imgpsh_fullsize (1).jpeg */,
 				DC2954F325DC0F210087907E /* Localizable.strings */,
 				DC2954F625DC213B0087907E /* LivelloSuperatoViewController.swift */,
 				DC92936C25DD3A4000311BA4 /* Pulsing.swift */,
@@ -187,11 +187,11 @@
 				DC2954F425DC0F210087907E /* Localizable.strings in Resources */,
 				DC66D96D25E2696D0028DC3E /* mixkit-game-level-completed-2059.wav in Resources */,
 				DC66D96C25E2696D0028DC3E /* zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3 in Resources */,
+				DC66D97125E269C60028DC3E /* imgpsh_fullsize (1).jpeg in Resources */,
 				DC2954E725DAC8410087907E /* App2.xcdatamodeld in Resources */,
 				0467033425D693A8001BE5C2 /* LaunchScreen.storyboard in Resources */,
 				0467033125D693A8001BE5C2 /* Assets.xcassets in Resources */,
 				0467032C25D693A7001BE5C2 /* Main.storyboard in Resources */,
-				DC92938325DD7B7500311BA4 /* imgpsh_fullsize (1).jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
