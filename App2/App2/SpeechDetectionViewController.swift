@@ -60,6 +60,15 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
 
             } else {
                 self.pronunciata.textColor = UIColor(named: "Color1")
+                var audioSession = AVAudioSession.sharedInstance();
+                do {
+                    try audioSession.setCategory (AVAudioSession.Category.playAndRecord, options: AVAudioSession.CategoryOptions.mixWithOthers);
+                    try  audioSession.setActive (true);
+                
+                }
+                catch let error as NSError {
+                    return print(error)
+                }
                 self.recordAndRecognizeSpeech()
                 isRecording = true
                 microphone.setImage(UIImage(named: "mic_acceso"), for: .normal)
@@ -80,20 +89,28 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         
         // Do any additional setup after loading the view.
         self.navigationItem.hidesBackButton = true
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
         
+        }
+        catch let error as NSError {
+            return print(error)
+        }
 //        microphone.isUserInteractionEnabled = true
 //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SpeechDetectionViewController.addPulse))
 //        tapGestureRecognizer.numberOfTouchesRequired = 1
 //        microphone.addGestureRecognizer(tapGestureRecognizer)
-        Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.pulseRipetiButton), userInfo: nil, repeats: true)
            
     }
     @objc func pulseRipetiButton() {
-        let pulse = Pulsing(numberOfPulses: 2, radius: 50, position: ripetiButton.center)
-        pulse.animationDuration = 0.8
-        pulse.backgroundColor = UIColor(named: "Color2")?.cgColor
-        
-        self.view.layer.insertSublayer(pulse, below: ripetiButton.layer)
+        if PersistenceManager.fetchData()[0].outLoud {
+            let pulse = Pulsing(numberOfPulses: 2, radius: 50, position: ripetiButton.center)
+            pulse.animationDuration = 0.8
+            pulse.backgroundColor = UIColor(named: "Color2")?.cgColor
+            
+            self.view.layer.insertSublayer(pulse, below: ripetiButton.layer)
+        }
     }
     
     @objc func addPulse(){
@@ -105,10 +122,19 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     }
     
     func speak(_ msg : String) {
+//        let audioSession = AVAudioSession.sharedInstance()
+//        do {
+//
+//                try audioSession.setCategory(.playAndRecord, options: .defaultToSpeaker)
+//                  try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+//        }catch let error as NSError{
+//            return print(error)
+//        }
         let utterance = AVSpeechUtterance(string: msg)
        
 
         utterance.voice = AVSpeechSynthesisVoice(language: "it-IT")
+        utterance.volume = 1.0
         //utterance.rate = 0.1 velocità di espressione
         
         let synthesizer = AVSpeechSynthesizer()
@@ -119,10 +145,12 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         livello = Int(PersistenceManager.fetchData()[0].lastLevel + 1)
         user = PersistenceManager.fetchData()[0]
         image.isHidden = !user.showPics
+        ripetiButton.isHidden = !user.outLoud
         self.navigation!.title = "Livello \(livello!)"
         self.image.image = UIImage(named: "level\(livello!)")
         frase.text = NSLocalizedString("level\(livello!)", comment: "")
     
+        Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.pulseRipetiButton), userInfo: nil, repeats: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -142,11 +170,14 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
 //            return
 //        }
         request = SFSpeechAudioBufferRecognitionRequest()
+        
         do{
-            try audioEngine.start()
-        }catch{
+                try audioEngine.start()
+        }catch {
             return print(error)
         }
+        
+        
         /*recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
                 var isFinal = false
 
@@ -191,6 +222,14 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
 //                    self.recognitionTask = nil
                 }
         })*/
+//        let audioSession = AVAudioSession.sharedInstance()
+//        do {
+//
+//                try audioSession.setCategory(.playAndRecord, options: .defaultToSpeaker)
+//                  try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+//        }catch let error as NSError{
+//            return print(error)
+//        }
         recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
                 if result != nil { // check to see if result is empty (i.e. no speech found)
                     if let result = result {
@@ -241,7 +280,14 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                                 animation.autoreverses = true
                                 animation.fromValue = NSValue(cgPoint: CGPoint(x: self.pronunciata.center.x-10, y: self.pronunciata.center.y))
                                 animation.toValue = NSValue(cgPoint: CGPoint(x: self.pronunciata.center.x+10, y: self.pronunciata.center.y))
-                                
+//                                let audioSession = AVAudioSession.sharedInstance()
+//                                do {
+//
+//                                        try audioSession.setCategory(.playAndRecord, options: .defaultToSpeaker)
+//                                          try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+//                                }catch let error as NSError{
+//                                    return print(error)
+//                                }
                                 self.pronunciata.layer.add(animation, forKey: "position")
                                 guard let url = Bundle.main.url(forResource: "zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381", withExtension: "mp3") else { return }
 

@@ -41,6 +41,15 @@ class LivelloSuperatoViewController: UIViewController {
         user = PersistenceManager.fetchData()[0]
         avatarImage.setImage(UIImage(named: user.avatar!), for: .normal)
         nameLabel.text = "\(user.name!)!"
+        var audioSession = AVAudioSession.sharedInstance();
+        do {
+            try audioSession.setCategory (AVAudioSession.Category.playAndRecord, options: AVAudioSession.CategoryOptions.mixWithOthers);
+            try  audioSession.setActive (true);
+        
+        }
+        catch let error as NSError {
+            return print(error)
+        }
     }
     
     @IBOutlet weak var starsStack: UIStackView!
