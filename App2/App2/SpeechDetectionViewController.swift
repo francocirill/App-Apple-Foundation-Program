@@ -60,7 +60,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
 
             } else {
                 self.pronunciata.textColor = UIColor(named: "Color1")
-                var audioSession = AVAudioSession.sharedInstance();
+                let audioSession = AVAudioSession.sharedInstance();
                 do {
                     try audioSession.setCategory (AVAudioSession.Category.playAndRecord, options: AVAudioSession.CategoryOptions.mixWithOthers);
                     try  audioSession.setActive (true);
