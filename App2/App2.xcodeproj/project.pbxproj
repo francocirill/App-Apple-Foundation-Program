@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0456C02025F900FA002527E3 /* CategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C01F25F900FA002527E3 /* CategorieViewController.swift */; };
+		0456C02325F9016B002527E3 /* CategoriaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C02225F9016B002527E3 /* CategoriaViewCell.swift */; };
 		0467032525D693A7001BE5C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467032425D693A7001BE5C2 /* AppDelegate.swift */; };
 		0467032725D693A7001BE5C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467032625D693A7001BE5C2 /* SceneDelegate.swift */; };
 		0467032925D693A7001BE5C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467032825D693A7001BE5C2 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0456C01F25F900FA002527E3 /* CategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieViewController.swift; sourceTree = "<group>"; };
+		0456C02225F9016B002527E3 /* CategoriaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaViewCell.swift; sourceTree = "<group>"; };
 		0467032125D693A7001BE5C2 /* App2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0467032425D693A7001BE5C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0467032625D693A7001BE5C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 				0467032625D693A7001BE5C2 /* SceneDelegate.swift */,
 				0467032825D693A7001BE5C2 /* ViewController.swift */,
 				0467032A25D693A7001BE5C2 /* Main.storyboard */,
+				0456C02225F9016B002527E3 /* CategoriaViewCell.swift */,
+				0456C01F25F900FA002527E3 /* CategorieViewController.swift */,
 				DC2954B125DABD2E0087907E /* PersistenceManager.swift */,
 				0467033025D693A8001BE5C2 /* Assets.xcassets */,
 				0467033225D693A8001BE5C2 /* LaunchScreen.storyboard */,
@@ -211,12 +217,14 @@
 				DC2954B225DABD2E0087907E /* PersistenceManager.swift in Sources */,
 				DC92939225E17A1500311BA4 /* UserProfile+CoreDataProperties.swift in Sources */,
 				DC29548C25DA854B0087907E /* CollectionViewCell.swift in Sources */,
+				0456C02025F900FA002527E3 /* CategorieViewController.swift in Sources */,
 				DC29549325DA8C7F0087907E /* CollectionViewController.swift in Sources */,
 				DC2954E025DAC5250087907E /* UserProfile+CoreDataClass.swift in Sources */,
 				DC92938B25E1641700311BA4 /* TutorialViewController.swift in Sources */,
 				DC2954F025DAD0380087907E /* NuovoUtenteController.swift in Sources */,
 				DC92939625E18E0200311BA4 /* Impostazioni.swift in Sources */,
 				DC92937C25DD76CC00311BA4 /* MyString.swift in Sources */,
+				0456C02325F9016B002527E3 /* CategoriaViewCell.swift in Sources */,
 				0467032725D693A7001BE5C2 /* SceneDelegate.swift in Sources */,
 				DC92937525DD661300311BA4 /* ShakingLabel.swift in Sources */,
 				DC2954F725DC213B0087907E /* LivelloSuperatoViewController.swift in Sources */,

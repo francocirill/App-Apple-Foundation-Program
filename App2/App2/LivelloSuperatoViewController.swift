@@ -9,6 +9,8 @@ import UIKit
 import AVFoundation
 
 class LivelloSuperatoViewController: UIViewController {
+    var categoria:String!
+    @IBOutlet weak var finito: UILabel!
     @IBOutlet weak var stella2: UIImageView!
     @IBOutlet weak var stella3: UIImageView!
     
@@ -22,9 +24,23 @@ class LivelloSuperatoViewController: UIViewController {
     @IBAction func avanti(_ sender: Any) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "SpeechDetectionViewController") as! SpeechDetectionViewController
-            //self.newViewController?.isModalInPresentation = true
-            self.navigationController?.pushViewController(newViewController, animated: true)
+            let newViewController:UIViewController
+            if PersistenceManager.fetchData()[0].lastLevel == 7 {
+                
+                PersistenceManager.fetchData()[0].lastLevel = 0
+                PersistenceManager.saveContext()
+                
+                 newViewController = storyBoard.instantiateViewController(withIdentifier: "CategorieViewController") as! CategorieViewController
+                //newViewController.isModalInPresentation = true
+                self.navigationController?.pushViewController(newViewController, animated: true)
+                
+            } else{
+                 newViewController = storyBoard.instantiateViewController(withIdentifier: "SpeechDetectionViewController") as! SpeechDetectionViewController
+                let c=newViewController as! SpeechDetectionViewController
+                c.categoria=self.categoria
+                //self.newViewController?.isModalInPresentation = true
+                self.navigationController?.pushViewController(newViewController, animated: true)
+            }
         })
     }
     @IBOutlet weak var starsConstraint: NSLayoutConstraint!
@@ -54,11 +70,14 @@ class LivelloSuperatoViewController: UIViewController {
     
     @IBOutlet weak var starsStack: UIStackView!
     override func viewWillAppear(_ animated: Bool) {
+        finito.isHidden=true
+        
         starsConstraint.constant += 100
         starsStack.alpha = 0.0
         tipLabel.alpha = 0.0
         if PersistenceManager.fetchData()[0].lastLevel == 7 {
-            avantiButton.isHidden = true
+            //avantiButton.isHidden = true
+            finito.isHidden=false
         }
 
         self.navigationController?.title = "Livello superato!"

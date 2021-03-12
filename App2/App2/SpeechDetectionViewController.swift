@@ -12,6 +12,8 @@ import AVFoundation
 class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegate{
     //Processa lo stream audio
   
+    var categoria:String!
+    @IBOutlet weak var rip: UILabel!
     
     var player: AVAudioPlayer?
     
@@ -142,6 +144,9 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        //mostra la categoria
+        rip.text="categoria "+categoria
+        
         livello = Int(PersistenceManager.fetchData()[0].lastLevel + 1)
         user = PersistenceManager.fetchData()[0]
         image.isHidden = !user.showPics
@@ -258,6 +263,8 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                                     //self.newViewController?.isModalInPresentation = true
                                     PersistenceManager.fetchData()[0].lastLevel += 1
                                     let cont = self.newViewController as! LivelloSuperatoViewController
+                                    //passa la categoria
+                                    cont.categoria=self.categoria
                                     switch self.tentativi {
                                     case 1:
                                         cont.numero = 3

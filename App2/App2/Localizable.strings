@@ -13,3 +13,9 @@
 "level5" = "criceto";
 "level6" = "scacchi";
 "level7" = "dromedario";
+
+"numeroCategorie" = "4";
+"categoria1" = "P posizione iniziale";
+"categoria2" = "P posizione mediana";
+"categoria3" = "B posizione iniziale";
+"categoria4" = "B posizione mediana";

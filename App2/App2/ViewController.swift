@@ -12,13 +12,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var stars: UILabel!
     @IBOutlet weak var level: UILabel!
-    @IBOutlet weak var finalText: UILabel!
     @IBOutlet weak var continuaButton: UIButton!
     @IBOutlet weak var avatar: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        finalText.isHidden = true
         self.navigationItem.leftBarButtonItem = nil;
         self.navigationItem.hidesBackButton = true;
         self.navigationController?.navigationItem.backBarButtonItem?.isEnabled = false;
@@ -38,8 +36,7 @@ class ViewController: UIViewController {
             level.text = String(user.lastLevel + 1)
             avatar.image = UIImage(named: user.avatar!)
             if user.lastLevel == 7 {
-                finalText.isHidden = false
-                continuaButton.isHidden = true
+                
             }
         }
     }
