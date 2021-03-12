@@ -10,6 +10,7 @@ import AVFoundation
 
 class LivelloSuperatoViewController: UIViewController {
     var categoria:String!
+    var livello:Int=1
     @IBOutlet weak var finito: UILabel!
     @IBOutlet weak var stella2: UIImageView!
     @IBOutlet weak var stella3: UIImageView!
@@ -25,8 +26,8 @@ class LivelloSuperatoViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController:UIViewController
-            if PersistenceManager.fetchData()[0].lastLevel == 0 {
-                
+            let nlivelli=Int(NSLocalizedString("\(self.categoria ?? "")-numero", comment: ""))
+            if self.livello==(nlivelli!+1) {
                 
                  newViewController = storyBoard.instantiateViewController(withIdentifier: "CategorieViewController") as! CategorieViewController
                 //newViewController.isModalInPresentation = true
@@ -36,6 +37,7 @@ class LivelloSuperatoViewController: UIViewController {
                  newViewController = storyBoard.instantiateViewController(withIdentifier: "SpeechDetectionViewController") as! SpeechDetectionViewController
                 let c=newViewController as! SpeechDetectionViewController
                 c.categoria=self.categoria
+                c.livello=self.livello
                 //self.newViewController?.isModalInPresentation = true
                 self.navigationController?.pushViewController(newViewController, animated: true)
             }
@@ -73,11 +75,16 @@ class LivelloSuperatoViewController: UIViewController {
         starsConstraint.constant += 100
         starsStack.alpha = 0.0
         tipLabel.alpha = 0.0
-        if PersistenceManager.fetchData()[0].lastLevel == 7 {
-            //avantiButton.isHidden = true
+//        if PersistenceManager.fetchData()[0].lastLevel == 7 {
+//            //avantiButton.isHidden = true
+//            finito.isHidden=false
+//            PersistenceManager.fetchData()[0].lastLevel = 0
+//            PersistenceManager.saveContext()
+//        }
+        let nlivelli=Int(NSLocalizedString("\(self.categoria ?? "")-numero", comment: ""))
+        if self.livello==(nlivelli!+1) {
             finito.isHidden=false
-            PersistenceManager.fetchData()[0].lastLevel = 0
-            PersistenceManager.saveContext()
+            
         }
 
         self.navigationController?.title = "Livello superato!"

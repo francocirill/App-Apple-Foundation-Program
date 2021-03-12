@@ -44,7 +44,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     var newViewController : UIViewController?
     
     var tentativi = 0
-    var livello : Int!
+    var livello : Int=1
     @IBAction func pronuncia(_ sender: Any) {
         if isRecording {
 
@@ -147,13 +147,13 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         //mostra la categoria
         rip.text="Categoria "+categoria
         //dovrei ricominciare da capo i livelli
-        livello = Int(PersistenceManager.fetchData()[0].lastLevel + 1)
+        //livello = Int(PersistenceManager.fetchData()[0].lastLevel + 1)
         user = PersistenceManager.fetchData()[0]
         image.isHidden = !user.showPics
         ripetiButton.isHidden = !user.outLoud
-        self.navigation!.title = "Livello \(livello!)"
+        self.navigation!.title = "Livello \(livello)"
         //Prendo il livello localizzato in base alla stringa
-        frase.text = NSLocalizedString("\(categoria ?? "")-level\(livello!)", comment: "")
+        frase.text = NSLocalizedString("\(categoria ?? "")-level\(livello)", comment: "")
         self.image.image = UIImage(named: frase.text ?? "")
         
         Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.pulseRipetiButton), userInfo: nil, repeats: true)
@@ -262,10 +262,12 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                     self.newViewController = storyBoard.instantiateViewController(withIdentifier: "LivelloSuperatoViewController") as! LivelloSuperatoViewController
                                     //self.newViewController?.isModalInPresentation = true
-                                    PersistenceManager.fetchData()[0].lastLevel += 1
+                                    //PersistenceManager.fetchData()[0].lastLevel += 1
+                                    self.livello+=1
                                     let cont = self.newViewController as! LivelloSuperatoViewController
                                     //passa la categoria
                                     cont.categoria=self.categoria
+                                    cont.livello=self.livello
                                     switch self.tentativi {
                                     case 1:
                                         cont.numero = 3
