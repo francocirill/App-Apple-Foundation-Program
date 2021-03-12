@@ -145,16 +145,17 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     
     override func viewWillAppear(_ animated: Bool) {
         //mostra la categoria
-        rip.text="categoria "+categoria
-        
+        rip.text="Categoria "+categoria
+        //dovrei ricominciare da capo i livelli
         livello = Int(PersistenceManager.fetchData()[0].lastLevel + 1)
         user = PersistenceManager.fetchData()[0]
         image.isHidden = !user.showPics
         ripetiButton.isHidden = !user.outLoud
         self.navigation!.title = "Livello \(livello!)"
-        self.image.image = UIImage(named: "level\(livello!)")
-        frase.text = NSLocalizedString("level\(livello!)", comment: "")
-    
+        //Prendo il livello localizzato in base alla stringa
+        frase.text = NSLocalizedString("\(categoria ?? "")-level\(livello!)", comment: "")
+        self.image.image = UIImage(named: frase.text ?? "")
+        
         Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.pulseRipetiButton), userInfo: nil, repeats: true)
     }
     

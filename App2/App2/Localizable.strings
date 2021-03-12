@@ -1,11 +1,7 @@
 /* 
   Localizable.strings
-  App2
-
-  Created by Marco Venere on 16/02/21.
-  
 */
-
+/*
 "level1" = "casa";
 "level2" = "cane";
 "level3" = "mela";
@@ -13,9 +9,20 @@
 "level5" = "criceto";
 "level6" = "scacchi";
 "level7" = "dromedario";
-
+*/
 "numeroCategorie" = "4";
 "categoria1" = "P posizione iniziale";
 "categoria2" = "P posizione mediana";
 "categoria3" = "B posizione iniziale";
 "categoria4" = "B posizione mediana";
+
+
+"P posizione iniziale-numero" = "7";
+"P posizione iniziale-level1" = "Papà";
+"P posizione iniziale-level2" = "Pipa";
+"P posizione iniziale-level3" = "Pepe";
+"P posizione iniziale-level4" = "Pupo";
+"P posizione iniziale-level5" = "Pollo";
+"P posizione iniziale-level6" = "Pila";
+"P posizione iniziale-level7" = "Pupa";
+

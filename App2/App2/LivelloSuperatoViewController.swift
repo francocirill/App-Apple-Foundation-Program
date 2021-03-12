@@ -25,10 +25,8 @@ class LivelloSuperatoViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController:UIViewController
-            if PersistenceManager.fetchData()[0].lastLevel == 7 {
+            if PersistenceManager.fetchData()[0].lastLevel == 0 {
                 
-                PersistenceManager.fetchData()[0].lastLevel = 0
-                PersistenceManager.saveContext()
                 
                  newViewController = storyBoard.instantiateViewController(withIdentifier: "CategorieViewController") as! CategorieViewController
                 //newViewController.isModalInPresentation = true
@@ -70,14 +68,16 @@ class LivelloSuperatoViewController: UIViewController {
     
     @IBOutlet weak var starsStack: UIStackView!
     override func viewWillAppear(_ animated: Bool) {
-        finito.isHidden=true
         
+        finito.isHidden=true
         starsConstraint.constant += 100
         starsStack.alpha = 0.0
         tipLabel.alpha = 0.0
         if PersistenceManager.fetchData()[0].lastLevel == 7 {
             //avantiButton.isHidden = true
             finito.isHidden=false
+            PersistenceManager.fetchData()[0].lastLevel = 0
+            PersistenceManager.saveContext()
         }
 
         self.navigationController?.title = "Livello superato!"
