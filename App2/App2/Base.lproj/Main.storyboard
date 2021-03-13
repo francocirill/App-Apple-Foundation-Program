@@ -679,10 +679,12 @@
                     <connections>
                         <outlet property="avantiButton" destination="THj-fB-3R4" id="BsO-GG-0tX"/>
                         <outlet property="avatarImage" destination="5y2-bl-8bq" id="Jla-FW-ake"/>
+                        <outlet property="congratulazioni" destination="Wee-2g-ZBr" id="yRJ-UD-B9Y"/>
                         <outlet property="finito" destination="lNX-Bg-1a8" id="Nmi-Z4-Iuq"/>
                         <outlet property="nameLabel" destination="TDf-NJ-sCs" id="bse-YP-FFH"/>
                         <outlet property="starsConstraint" destination="9gC-RR-hcC" id="qKk-PK-tcr"/>
                         <outlet property="starsStack" destination="2dF-hy-Ob7" id="qaS-EB-j1C"/>
+                        <outlet property="stella1" destination="wYF-Vi-d0c" id="TnC-nC-Cvm"/>
                         <outlet property="stella2" destination="LWq-WO-A2J" id="oTb-4e-urg"/>
                         <outlet property="stella3" destination="gs8-XE-9eh" id="zJH-8L-3iy"/>
                         <outlet property="tipLabel" destination="xbt-OJ-pBP" id="DaR-oH-hW4"/>
@@ -751,6 +753,16 @@
                                 </state>
                                 <connections>
                                     <action selector="ripetiTapped:" destination="EwY-to-DXc" eventType="touchUpInside" id="3Ct-g4-cGp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-xj-Xo4">
+                                <rect key="frame" x="337" y="728" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Salta">
+                                    <color key="titleColor" name="Color1"/>
+                                </state>
+                                <connections>
+                                    <action selector="salta:" destination="EwY-to-DXc" eventType="touchUpInside" id="NMc-Xz-aMl"/>
                                 </connections>
                             </button>
                         </subviews>

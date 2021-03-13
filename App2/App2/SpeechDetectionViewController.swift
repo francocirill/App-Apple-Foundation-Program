@@ -10,8 +10,23 @@ import Speech
 import AVFoundation
 
 class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegate{
-    //Processa lo stream audio
-  
+
+    @IBAction func salta(_ sender: UIButton) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            self.newViewController = storyBoard.instantiateViewController(withIdentifier: "LivelloSuperatoViewController") as! LivelloSuperatoViewController
+            //self.newViewController?.isModalInPresentation = true
+            //PersistenceManager.fetchData()[0].lastLevel += 1
+            self.livello+=1
+            let cont = self.newViewController as! LivelloSuperatoViewController
+            //passa la categoria
+            cont.categoria=self.categoria
+            cont.livello=self.livello
+            self.navigationController?.pushViewController(self.newViewController!, animated: true)
+            })
+    }
+    
+    
     var categoria:String!
     @IBOutlet weak var rip: UILabel!
     

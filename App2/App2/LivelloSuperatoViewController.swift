@@ -11,7 +11,9 @@ import AVFoundation
 class LivelloSuperatoViewController: UIViewController {
     var categoria:String!
     var livello:Int=1
+    @IBOutlet weak var congratulazioni: UILabel!
     @IBOutlet weak var finito: UILabel!
+    @IBOutlet weak var stella1: UIImageView!
     @IBOutlet weak var stella2: UIImageView!
     @IBOutlet weak var stella3: UIImageView!
     
@@ -87,39 +89,54 @@ class LivelloSuperatoViewController: UIViewController {
             
         }
 
-        self.navigationController?.title = "Livello superato!"
+        
         switch numero {
         case 3:
             stella3.image! = UIImage(named: "stella piena")!
             stella2.image! = UIImage(named: "stella piena")!
             tipLabel.text = "Ottimo lavoro!"
+            self.navigationController?.title = "Livello superato!"
         case 2:
             stella2.image! = UIImage(named: "stella piena")!
             tipLabel.text = "Ci sei quasi!"
+            self.navigationController?.title = "Livello superato!"
+            
+        case 0:
+            stella1.image! = UIImage(named: "stella_vuota")!
+            stella2.image! = UIImage(named: "stella_vuota")!
+            stella3.image! = UIImage(named: "stella_vuota")!
+            tipLabel.text = "Riprovalo piu tardi"
+            nameLabel.isHidden=true
+            congratulazioni.isHidden=true
         default:
             stella2.image! = UIImage(named: "stella_vuota")!
             stella3.image! = UIImage(named: "stella_vuota")!
             tipLabel.text = "Metticela tutta!"
+            self.navigationController?.title = "Livello superato!"
         }
-        guard let url = Bundle.main.url(forResource: "mixkit-game-level-completed-2059", withExtension: "wav") else { return }
+        
+        if numero != 0{
+            guard let url = Bundle.main.url(forResource: "mixkit-game-level-completed-2059", withExtension: "wav") else { return }
 
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-            try AVAudioSession.sharedInstance().setActive(true)
+            do {
+                try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+                try AVAudioSession.sharedInstance().setActive(true)
 
-            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
-            self.player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
+                /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+                self.player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
 
-            /* iOS 10 and earlier require the following line:
-            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+                /* iOS 10 and earlier require the following line:
+                player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
 
-            guard let player = self.player else { return }
+                guard let player = self.player else { return }
 
-            player.play()
+                player.play()
 
-        } catch let error {
-            print(error.localizedDescription)
+            } catch let error {
+                print(error.localizedDescription)
+            }
         }
+        
 
     }
     
