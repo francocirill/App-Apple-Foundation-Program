@@ -11,6 +11,8 @@ import AVFoundation
 class LivelloSuperatoViewController: UIViewController {
     var categoria:String!
     var livello:Int=1
+    let defaults = UserDefaults.standard
+    var stelleTotali=0
     @IBOutlet weak var congratulazioni: UILabel!
     @IBOutlet weak var finito: UILabel!
     @IBOutlet weak var stella1: UIImageView!
@@ -40,6 +42,7 @@ class LivelloSuperatoViewController: UIViewController {
                 let c=newViewController as! SpeechDetectionViewController
                 c.categoria=self.categoria
                 c.livello=self.livello
+                c.stelleTotali=self.stelleTotali
                 //self.newViewController?.isModalInPresentation = true
                 self.navigationController?.pushViewController(newViewController, animated: true)
             }
@@ -86,8 +89,15 @@ class LivelloSuperatoViewController: UIViewController {
         let nlivelli=Int(NSLocalizedString("\(self.categoria ?? "")-numero", comment: ""))
         if self.livello==(nlivelli!+1) {
             finito.isHidden=false
+            let cc = defaults.integer(forKey: "CategorieCompletate")
+            defaults.set(cc+1, forKey: "CategorieCompletate")
+            
+            defaults.set(Double(stelleTotali)/Double(nlivelli ?? 0 + 1), forKey: "\(categoria ?? "")-percentuale")
+
+            
             
         }
+
 
         
         switch numero {

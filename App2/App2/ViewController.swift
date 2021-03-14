@@ -9,9 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let defaults = UserDefaults.standard
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var stars: UILabel!
-    @IBOutlet weak var level: UILabel!
+    @IBOutlet weak var categorieCompletate: UILabel!
     @IBOutlet weak var continuaButton: UIButton!
     @IBOutlet weak var avatar: UIImageView!
     override func viewDidLoad() {
@@ -30,14 +31,13 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         if PersistenceManager.fetchData().count != 0 {
-            var user = PersistenceManager.fetchData()[0]
+            let user = PersistenceManager.fetchData()[0]
             userName.text = user.name!
             stars.text = String(user.points)
-            level.text = String(user.lastLevel + 1)
+            //level.text = String(user.lastLevel + 1)
+            let cc = defaults.integer(forKey: "CategorieCompletate")
+            categorieCompletate.text=cc.description
             avatar.image = UIImage(named: user.avatar!)
-            if user.lastLevel == 7 {
-                
-            }
         }
     }
     

@@ -22,12 +22,14 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
             //passa la categoria
             cont.categoria=self.categoria
             cont.livello=self.livello
+            cont.stelleTotali=self.stelleTotali
             self.navigationController?.pushViewController(self.newViewController!, animated: true)
             })
     }
     
     
     var categoria:String!
+    var stelleTotali=0
     @IBOutlet weak var rip: UILabel!
     
     var player: AVAudioPlayer?
@@ -219,15 +221,19 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                                     //passa la categoria
                                     cont.categoria=self.categoria
                                     cont.livello=self.livello
+                                    
                                     switch self.tentativi {
                                     case 1:
                                         cont.numero = 3
+                                        cont.stelleTotali=self.stelleTotali+3
                                         PersistenceManager.fetchData()[0].points +=  3
                                     case 2, 3:
                                         cont.numero = 2
+                                        cont.stelleTotali=self.stelleTotali+2
                                         PersistenceManager.fetchData()[0].points +=  2
                                     default:
                                         cont.numero = 1
+                                        cont.stelleTotali=self.stelleTotali+1
                                         PersistenceManager.fetchData()[0].points +=  1
                                     }
                                     PersistenceManager.saveContext()

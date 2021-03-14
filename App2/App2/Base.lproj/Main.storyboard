@@ -42,14 +42,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI5-yw-kom">
-                                <rect key="frame" x="291" y="403.5" width="33" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI5-yw-kom">
+                                <rect key="frame" x="305" y="403.5" width="19" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prossimo livello:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUb-x6-sRy">
-                                <rect key="frame" x="30" y="411" width="152" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Categorie completate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUb-x6-sRy">
+                                <rect key="frame" x="30" y="411" width="211" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -71,6 +71,18 @@
                                 <state key="normal" title="Button" image="continua"/>
                                 <connections>
                                     <segue destination="aQf-W0-0cx" kind="show" id="EBS-1c-3x3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1R-2x-oar">
+                                <rect key="frame" x="151" y="572" width="121" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="Color3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title=" Statistiche ">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2LV-vV-tFb" kind="show" id="dfN-2L-h6j"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,8 +115,8 @@
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="avatar" destination="rty-z7-36Q" id="fJV-dr-9d8"/>
+                        <outlet property="categorieCompletate" destination="aI5-yw-kom" id="dwC-v4-3kZ"/>
                         <outlet property="continuaButton" destination="jMa-nY-Le7" id="c50-Mq-P6z"/>
-                        <outlet property="level" destination="aI5-yw-kom" id="OG5-nx-xy1"/>
                         <outlet property="stars" destination="1Ug-2R-XrS" id="vud-Bm-coB"/>
                         <outlet property="userName" destination="9a9-8W-TlE" id="CQh-7A-s0M"/>
                     </connections>
@@ -826,18 +838,71 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wD6-e7-3sM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2051" y="-141"/>
+            <point key="canvasLocation" x="-2801" y="-141"/>
+        </scene>
+        <!--Statistiche View Controller-->
+        <scene sceneID="97B-hI-IL8">
+            <objects>
+                <tableViewController id="2LV-vV-tFb" customClass="StatisticheViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="O94-CO-KAj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="statisticheCell" id="ZNd-2E-YT8" customClass="StatisticheViewCell" customModule="App2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZNd-2E-YT8" id="W8l-Me-VbL">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxj-1w-hNL">
+                                            <rect key="frame" x="20" y="11" width="252" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stella piena" translatesAutoresizingMaskIntoConstraints="NO" id="m1N-NT-AZs">
+                                            <rect key="frame" x="357" y="2" width="37" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUg-ub-ZYC">
+                                            <rect key="frame" x="309" y="11" width="40" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoria" destination="yxj-1w-hNL" id="5mi-zw-7QX"/>
+                                    <outlet property="percentuale" destination="HUg-ub-ZYC" id="ipf-u1-DcI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2LV-vV-tFb" id="EeD-xU-MFl"/>
+                            <outlet property="delegate" destination="2LV-vV-tFb" id="Bci-P9-nwZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="9Sb-i4-wAB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AlQ-kI-UsH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2023.1884057971015" y="460.71428571428567"/>
         </scene>
         <!--Modifica profilo-->
         <scene sceneID="Auz-Zp-SXD">
             <objects>
                 <viewController id="nlw-Ad-gAW" customClass="Impostazioni" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gv9-1W-ciu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="x1k-24-g6k">
-                                <rect key="frame" x="32.5" y="215.5" width="349" height="411"/>
+                                <rect key="frame" x="32.5" y="242.5" width="349" height="411"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="phy-gB-2wW">
                                         <rect key="frame" x="0.0" y="0.0" width="349" height="34"/>
@@ -956,7 +1021,7 @@
             <objects>
                 <collectionViewController id="YTX-Ss-XNd" customClass="CollectionViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="pDN-Yt-oD3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wlR-lB-OuZ">
@@ -1059,8 +1124,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vLo-g3-8Ew"/>
-        <segue reference="dHF-HI-aYf"/>
+        <segue reference="EBS-1c-3x3"/>
+        <segue reference="0ts-CP-gN1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1f5e3" width="512" height="512"/>
@@ -1081,9 +1146,15 @@
         <namedColor name="Color1">
             <color red="0.15686274509803921" green="0.41960784313725491" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Color3">
+            <color red="0.33725490196078434" green="0.90980392156862744" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Color5">
             <color red="0.2627450980392157" green="0.70980392156862748" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
