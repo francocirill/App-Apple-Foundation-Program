@@ -9,7 +9,7 @@ import UIKit
 
 class CategorieViewController: UITableViewController {
 
-    //let listaCategoria : [String] = ["b","c","ci","d","f","g","gi","gli","gn"]
+    //Array di tutte le categorie di fonemi
     var listaCategoria = [String]()
     var n:Int=0
     override func viewDidLoad() {
@@ -21,13 +21,12 @@ class CategorieViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-//        self.navigationItem.leftBarButtonItem = nil;
-//        self.navigationItem.hidesBackButton = true;
-//        self.navigationController?.navigationItem.backBarButtonItem?.isEnabled = false;
-//        self.navigationController!.interactivePopGestureRecognizer!.isEnabled = false;
         caricamento()
         
     }
+    /*
+     Carica il contenuto della lista delle categorie da Localizable.strings
+     */
     func caricamento()
     {
         //carica tutte le categorie in un array

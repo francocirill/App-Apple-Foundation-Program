@@ -833,11 +833,11 @@
             <objects>
                 <viewController id="nlw-Ad-gAW" customClass="Impostazioni" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gv9-1W-ciu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="x1k-24-g6k">
-                                <rect key="frame" x="32.5" y="242.5" width="349" height="411"/>
+                                <rect key="frame" x="32.5" y="215.5" width="349" height="411"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="phy-gB-2wW">
                                         <rect key="frame" x="0.0" y="0.0" width="349" height="34"/>
@@ -956,7 +956,7 @@
             <objects>
                 <collectionViewController id="YTX-Ss-XNd" customClass="CollectionViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="pDN-Yt-oD3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wlR-lB-OuZ">
@@ -1060,7 +1060,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="vLo-g3-8Ew"/>
-        <segue reference="0ts-CP-gN1"/>
+        <segue reference="dHF-HI-aYf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1f5e3" width="512" height="512"/>

@@ -1,5 +1,7 @@
 import UIKit
-
+/*
+ Animazione per scuotere i label
+ */
 @IBDesignable
 class ShakingLabel: UILabel {
     

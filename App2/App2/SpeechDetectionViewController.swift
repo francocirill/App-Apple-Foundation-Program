@@ -37,12 +37,9 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     }
     @IBOutlet weak var navigation: UINavigationItem!
     let audioEngine = AVAudioEngine()
-    //Riconosce le parole
-    //let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
-    //Utile per cambiare lingua
     @IBOutlet weak var microphone: UIButton!
+    //Riconoscimento vocale
     let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "it-IT"))
-    //Riconoscimento in tempo reale
     var user : UserProfile! = nil
     var request = SFSpeechAudioBufferRecognitionRequest()
     var isRecording = false
@@ -114,12 +111,11 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         catch let error as NSError {
             return print(error)
         }
-//        microphone.isUserInteractionEnabled = true
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SpeechDetectionViewController.addPulse))
-//        tapGestureRecognizer.numberOfTouchesRequired = 1
-//        microphone.addGestureRecognizer(tapGestureRecognizer)
            
     }
+    /*
+     Imposta la pulsazione per la voce chr ripete la parola
+     */
     @objc func pulseRipetiButton() {
         if PersistenceManager.fetchData()[0].outLoud {
             let pulse = Pulsing(numberOfPulses: 2, radius: 50, position: ripetiButton.center)
@@ -129,7 +125,9 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
             self.view.layer.insertSublayer(pulse, below: ripetiButton.layer)
         }
     }
-    
+    /*
+     Imposta la pulsazione per il microfono
+     */
     @objc func addPulse(){
         let pulse = Pulsing(numberOfPulses: 1, radius: 110, position: microphone.center)
         pulse.animationDuration = 0.8
@@ -137,16 +135,10 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         
         self.view.layer.insertSublayer(pulse, below: microphone.layer)
     }
-    
+    /*
+     Riproduce la parola da pronunciare
+     */
     func speak(_ msg : String) {
-//        let audioSession = AVAudioSession.sharedInstance()
-//        do {
-//
-//                try audioSession.setCategory(.playAndRecord, options: .defaultToSpeaker)
-//                  try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-//        }catch let error as NSError{
-//            return print(error)
-//        }
         let utterance = AVSpeechUtterance(string: msg)
        
 
@@ -177,7 +169,9 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     override func viewDidAppear(_ animated: Bool) {
         speak(frase.text!)
     }
-    
+    /*
+     Riconosce le parole pronunciate e le confronta con quelle da pronunciare
+     */
     func recordAndRecognizeSpeech(){
         
         let node = audioEngine.inputNode //else { return }
@@ -187,9 +181,6 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         }
         audioEngine.prepare()
 
-//        guard let myRecognizer = SFSpeechRecognizer() else {
-//            return
-//        }
         request = SFSpeechAudioBufferRecognitionRequest()
         
         do{
@@ -198,65 +189,11 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
             return print(error)
         }
         
-        
-        /*recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
-                var isFinal = false
-
-            
-            self.pronunciata.text = (result?.transcriptions[0].segments[0].substring)!.lowercased()
-            print(self.num)
-            if (result?.transcriptions[0].segments.count)! == 1 {
-                
-                audioEngine.stop()
-                DispatchQueue.main.async { [unowned self] in
-                        guard let task = recognitionTask else {
-                            fatalError("Error")
-                        }
-                        task.cancel()
-                        task.finish()
-                    }
-                self.num = 0
-                
-                if self.frase.text?.lowercased() == self.pronunciata.text {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
-                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                           let newViewController = storyBoard.instantiateViewController(withIdentifier: "LivelloSuperatoViewController") as! LivelloSuperatoViewController
-                           self.present(newViewController, animated: true, completion: nil)
-                        })
-                    }
-                    
-//                if let result = result, result.isFinal {
-//                    print("Result: \(result.bestTranscription.formattedString)")
-//                    isFinal = result.isFinal
-//                    //per passare a schermata risultato
-//                    if self.frase.text == self.pronunciata.text {
-//                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-//                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                            let newViewController = storyBoard.instantiateViewController(withIdentifier: "LivelloSuperatoViewController") as! LivelloSuperatoViewController
-//                            self.present(newViewController, animated: true, completion: nil)
-//                        })
-//                    }
-//                }
-//
-//                if error != nil || isFinal {
-                   // self.recognitionRequest = nil
-//                    self.recognitionTask = nil
-                }
-        })*/
-//        let audioSession = AVAudioSession.sharedInstance()
-//        do {
-//
-//                try audioSession.setCategory(.playAndRecord, options: .defaultToSpeaker)
-//                  try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-//        }catch let error as NSError{
-//            return print(error)
-//        }
         recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
                 if result != nil { // check to see if result is empty (i.e. no speech found)
                     if let result = result {
                         self.addPulse()
                         self.pronunciata.text = (result.transcriptions[0].segments[0].substring).lowercased()
-                        //print(self.num)
                         
                         if (result.transcriptions[0].segments.count) == 1 {
                             self.tentativi += 1
@@ -270,7 +207,6 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                                     task.cancel()
                                     task.finish()
                                 }
-                            //self.num = 0
                             
                             if self.frase.text?.lowercased() == self.pronunciata.text {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
@@ -305,14 +241,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                                 animation.autoreverses = true
                                 animation.fromValue = NSValue(cgPoint: CGPoint(x: self.pronunciata.center.x-10, y: self.pronunciata.center.y))
                                 animation.toValue = NSValue(cgPoint: CGPoint(x: self.pronunciata.center.x+10, y: self.pronunciata.center.y))
-//                                let audioSession = AVAudioSession.sharedInstance()
-//                                do {
-//
-//                                        try audioSession.setCategory(.playAndRecord, options: .defaultToSpeaker)
-//                                          try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-//                                }catch let error as NSError{
-//                                    return print(error)
-//                                }
+
                                 self.pronunciata.layer.add(animation, forKey: "position")
                                 guard let url = Bundle.main.url(forResource: "zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381", withExtension: "mp3") else { return }
 
@@ -335,19 +264,6 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                                 }
                             }
                                 
-            //                if let result = result, result.isFinal {
-            //                    print("Result: \(result.bestTranscription.formattedString)")
-            //                    isFinal = result.isFinal
-            //                    //per passare a schermata risultato
-            //                    if self.frase.text == self.pronunciata.text {
-            //                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-            //                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            //                            let newViewController = storyBoard.instantiateViewController(withIdentifier: "LivelloSuperatoViewController") as! LivelloSuperatoViewController
-            //                            self.present(newViewController, animated: true, completion: nil)
-            //                        })
-            //                    }
-            //                }
-            //
                     } else if let error = error {
                         print(error)
                     }
@@ -357,14 +273,6 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        switch segue.identifier {
-//        case "backHomeFromLevel" :
-//            
-//        default: print(#function)
-//            
-//        }
-//    }
 
 }
     /*

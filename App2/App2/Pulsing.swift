@@ -8,7 +8,9 @@
 
 import UIKit
 
-
+/*
+ Animazione per la pulsazione delle icone
+ */
 
 class Pulsing: CALayer {
     
