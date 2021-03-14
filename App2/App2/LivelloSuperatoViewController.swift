@@ -27,7 +27,7 @@ class LivelloSuperatoViewController: UIViewController {
     var user : UserProfile!
     @IBOutlet weak var avantiButton: UIButton!
     @IBAction func avanti(_ sender: Any) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController:UIViewController
             let nlivelli=Int(NSLocalizedString("\(self.categoria ?? "")-numero", comment: ""))
@@ -46,7 +46,7 @@ class LivelloSuperatoViewController: UIViewController {
                 //self.newViewController?.isModalInPresentation = true
                 self.navigationController?.pushViewController(newViewController, animated: true)
             }
-        })
+//        })
     }
     @IBOutlet weak var starsConstraint: NSLayoutConstraint!
     @IBAction func backHome(_ sender: Any) {
@@ -148,6 +148,9 @@ class LivelloSuperatoViewController: UIViewController {
         }
         
 
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        player?.stop()
     }
     
      override func viewDidAppear(_ animated: Bool) {

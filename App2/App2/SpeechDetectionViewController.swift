@@ -12,7 +12,7 @@ import AVFoundation
 class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegate{
 
     @IBAction func salta(_ sender: UIButton) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             self.newViewController = storyBoard.instantiateViewController(withIdentifier: "LivelloSuperatoViewController") as! LivelloSuperatoViewController
             //self.newViewController?.isModalInPresentation = true
@@ -24,7 +24,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
             cont.livello=self.livello
             cont.stelleTotali=self.stelleTotali
             self.navigationController?.pushViewController(self.newViewController!, animated: true)
-            })
+//            })
     }
     
     
@@ -67,7 +67,6 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
 
               let node = audioEngine.inputNode
               node.removeTap(onBus: 0)
-              //  }
                 recognitionTask?.cancel()
             
             microphone.setImage(UIImage(named: "mic_spento"), for: .normal)

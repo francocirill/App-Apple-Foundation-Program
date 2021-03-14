@@ -840,7 +840,7 @@
             </objects>
             <point key="canvasLocation" x="-2801" y="-141"/>
         </scene>
-        <!--Statistiche View Controller-->
+        <!--Statistiche-->
         <scene sceneID="97B-hI-IL8">
             <objects>
                 <tableViewController id="2LV-vV-tFb" customClass="StatisticheViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
@@ -867,8 +867,8 @@
                                             <rect key="frame" x="357" y="2" width="37" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUg-ub-ZYC">
-                                            <rect key="frame" x="309" y="11" width="40" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUg-ub-ZYC">
+                                            <rect key="frame" x="298" y="11" width="51" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -879,6 +879,7 @@
                                 <connections>
                                     <outlet property="categoria" destination="yxj-1w-hNL" id="5mi-zw-7QX"/>
                                     <outlet property="percentuale" destination="HUg-ub-ZYC" id="ipf-u1-DcI"/>
+                                    <outlet property="stella" destination="m1N-NT-AZs" id="hec-R6-pME"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -887,7 +888,7 @@
                             <outlet property="delegate" destination="2LV-vV-tFb" id="Bci-P9-nwZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="9Sb-i4-wAB"/>
+                    <navigationItem key="navigationItem" title="Statistiche" id="9Sb-i4-wAB"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AlQ-kI-UsH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1073,7 +1074,7 @@
             </objects>
             <point key="canvasLocation" x="771" y="-1136"/>
         </scene>
-        <!--Categorie View Controller-->
+        <!--Categorie-->
         <scene sceneID="bTu-YY-aTd">
             <objects>
                 <tableViewController storyboardIdentifier="CategorieViewController" id="aQf-W0-0cx" customClass="CategorieViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
@@ -1109,7 +1110,7 @@
                             <outlet property="delegate" destination="aQf-W0-0cx" id="DFX-pM-ebu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="R3E-Wm-BTi">
+                    <navigationItem key="navigationItem" title="Categorie" id="R3E-Wm-BTi">
                         <barButtonItem key="leftBarButtonItem" title="Home" id="WaV-dI-2hx">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="dHF-HI-aYf"/>

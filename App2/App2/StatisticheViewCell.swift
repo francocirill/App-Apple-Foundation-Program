@@ -11,6 +11,7 @@ class StatisticheViewCell: UITableViewCell {
 
     @IBOutlet weak var categoria: UILabel!
     @IBOutlet weak var percentuale: UILabel!
+    @IBOutlet weak var stella: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -55,7 +55,15 @@ class StatisticheViewController: UITableViewController {
         let categoria=listaCategoria[indexPath.row]
         cell.categoria.text=categoria
         let perc = (defaults.double(forKey: "\(categoria)-percentuale")*100).rounded()/100
-        cell.percentuale.text=perc.description
+        cell.percentuale.text=perc.description+"/3"
+        
+        if perc>=2 {
+            cell.stella.image=UIImage(named: "stella verde")
+        } else if perc>=1 {
+            cell.stella.image=UIImage(named: "stella piena")
+        } else {
+            cell.stella.image=UIImage(named: "stella rossa")
+        }
         
 
         return cell
