@@ -11,6 +11,7 @@ import AVFoundation
 
 class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegate{
 
+    @IBOutlet weak var saltaButton: UIButton!
     @IBAction func salta(_ sender: UIButton) {
 //        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -61,19 +62,24 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     var livello : Int=1
     @IBAction func pronuncia(_ sender: Any) {
         if isRecording {
+            //mostra salta
+            saltaButton.isHidden=false
+            
+            request.endAudio() // Added line to mark end of recording
+            audioEngine.stop()
 
-                request.endAudio() // Added line to mark end of recording
-                audioEngine.stop()
-
-              let node = audioEngine.inputNode
-              node.removeTap(onBus: 0)
-                recognitionTask?.cancel()
+            let node = audioEngine.inputNode
+            node.removeTap(onBus: 0)
+            recognitionTask?.cancel()
             
             microphone.setImage(UIImage(named: "mic_spento"), for: .normal)
-                isRecording = false
-                //startButton.backgroundColor = UIColor.gray
+            isRecording = false
+            //startButton.backgroundColor = UIColor.gray
 
             } else {
+                //nascondi salta
+                saltaButton.isHidden=true
+                
                 self.pronunciata.textColor = UIColor(named: "Color1")
                 let audioSession = AVAudioSession.sharedInstance();
                 do {
@@ -174,7 +180,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
      Riconosce le parole pronunciate e le confronta con quelle da pronunciare
      */
     func recordAndRecognizeSpeech(){
-        
+        print("Sono entrato nella funzione")
         let node = audioEngine.inputNode //else { return }
         let recordingFormat = node.outputFormat(forBus: 0)
         node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
@@ -189,28 +195,39 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         }catch {
             return print(error)
         }
-        
+        var trovata=0
         recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
-                if result != nil { // check to see if result is empty (i.e. no speech found)
+            print("Sono entrato in recognizer")
+                if result != nil && trovata==0{ // check to see if result is empty (i.e. no speech found)
+                    print("Sono entrato in res!=nil")
                     if let result = result {
+                        print("Sono entrato in res=res")
                         self.addPulse()
-                        self.pronunciata.text = (result.transcriptions[0].segments[0].substring).lowercased()
+//                        self.pronunciata.text = (result.transcriptions[0].segments[0].substring).lowercased()
+                        self.pronunciata.text = (result.bestTranscription.segments[0].substring).lowercased()
                         
-                        if (result.transcriptions[0].segments.count) == 1 {
+//                        if (result.transcriptions[0].segments.count) == 1 {
+                        if (result.bestTranscription.segments.count) == 1 {
+                            print("Sono entrato in trascrizione=1")
                             self.tentativi += 1
                            // print(String(result.transcriptions[0].segments[0].confidence * 100) + "%" )
                             
                             self.audioEngine.stop()
                             DispatchQueue.main.async { [unowned self] in
-                                    guard let task = recognitionTask else {
+                            guard let task = self.recognitionTask else {
                                         fatalError("Error")
                                     }
                                     task.cancel()
                                     task.finish()
+                                print("Sono entrato in task cancellato")
                                 }
                             
                             if self.frase.text?.lowercased() == self.pronunciata.text {
+                                trovata=1
+                                print("Sono entrato in parole uguali")
+                                
                                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                                    print("Sono entrato in async per il segue")
                                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                     self.newViewController = storyBoard.instantiateViewController(withIdentifier: "LivelloSuperatoViewController") as! LivelloSuperatoViewController
                                     //self.newViewController?.isModalInPresentation = true

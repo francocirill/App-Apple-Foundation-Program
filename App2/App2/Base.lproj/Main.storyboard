@@ -814,6 +814,7 @@
                         <outlet property="rip" destination="HuS-XF-Ck9" id="Cyx-4a-AqE"/>
                         <outlet property="ripeti" destination="it0-cM-Rf5" id="joF-Pq-y4M"/>
                         <outlet property="ripetiButton" destination="it0-cM-Rf5" id="LQW-YW-DqI"/>
+                        <outlet property="saltaButton" destination="EJz-xj-Xo4" id="kwS-9j-A1d"/>
                         <segue destination="apV-uo-cPm" kind="unwind" identifier="backHomeFromLevel" unwindAction="unwind:" id="YMp-Rg-qjq"/>
                     </connections>
                 </viewController>
