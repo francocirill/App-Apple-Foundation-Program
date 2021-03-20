@@ -16,6 +16,24 @@
     -categoria-numero = numero di livelli per ogni fonema
     -categoria-levelN = parola di quel livello per quel fonema
  */
+"numeroEsercizi" = "8";
+"esercizio1" = "Scimmia";
+"esercizio2" = "Bolle";
+"esercizio3" = "Cucchiaino";
+"esercizio4" = "Tira bottone";
+"esercizio5" = "Passeggiata della lingua";
+"esercizio6" = "Lingua a posto";
+"esercizio7" = "Lingua contro una resistenza";
+"esercizio8" = "Tocca il naso con la lingua";
+
+"Scimmia" = "Spingi la lingua dietro il labbro inferiore, da destra verso sinistra e viceversa, a bocca chiusa";
+"Bolle" = "Soffia a bocca chiusa e spingi l’aria giù";
+"Cucchiaino" = "Mantieni un cucchiaino in orizzontale con le labbra";
+"Tira bottone" = "Prendi un bottone legato ad un filo, posizionalo tra i denti e le labbra e, con la bocca chiusa, cerca di tirare fuori il bottone tirando il filo";
+"Passeggiata della lingua" = "Cerca di toccare con la lingua tutti i denti sulla parte esterna";
+"Lingua a posto" = "La lingua deve premere contro lo spot (collinetta dietro i denti superiori) con la bocca aperta, aspira e ingoia se hai della saliva";
+"Lingua contro una resistenza" = "La punta della lingua va spinta con decisione contro un cucchiaio o un abbassalingua tenuto davanti alle labbra. È importante che la lingua rimanga dritta e non si pieghi verso il basso";
+"Tocca il naso con la lingua" = "L’esercizio prevede di toccare il naso con la punta della lingua. È una cosa che non tutti riescono a fare, ma l’importante è che la lingua sia tesa il più possibile verso il naso";
 
  "numeroCategorie" = "38";
  "categoria1" = "P posizione iniziale";

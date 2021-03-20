@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Logos-->
+        <!--Profilo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,7 +70,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="continua"/>
                                 <connections>
-                                    <segue destination="aQf-W0-0cx" kind="show" id="EBS-1c-3x3"/>
+                                    <segue destination="I3S-eo-DRa" kind="show" id="o8k-6x-1fH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1R-2x-oar">
@@ -105,14 +105,13 @@
                             <constraint firstItem="KKP-K1-jUz" firstAttribute="top" secondItem="rty-z7-36Q" secondAttribute="bottom" constant="41" id="j7H-hq-4L0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Logos" id="YZn-Jg-3w5">
+                    <navigationItem key="navigationItem" title="Profilo" id="YZn-Jg-3w5">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape" catalog="system" id="E0D-o0-Pdi">
                             <connections>
                                 <segue destination="nlw-Ad-gAW" kind="show" id="TK0-ix-awE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="avatar" destination="rty-z7-36Q" id="fJV-dr-9d8"/>
                         <outlet property="categorieCompletate" destination="aI5-yw-kom" id="dwC-v4-3kZ"/>
@@ -123,7 +122,165 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1223" y="-141"/>
+            <point key="canvasLocation" x="-1877" y="-141"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="TcE-CK-icE">
+            <objects>
+                <viewController id="I3S-eo-DRa" customClass="MenuViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="STP-Rb-dMr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4k6-fV-0qO">
+                                <rect key="frame" x="129" y="263" width="158" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Ripeti le parole">
+                                    <color key="titleColor" name="Color1"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aQf-W0-0cx" kind="show" id="scv-Im-Kl6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7d-7Z-Mdx">
+                                <rect key="frame" x="98" y="341" width="222" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Esercizi con la lingua">
+                                    <color key="titleColor" name="Color1"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6vH-34-q2m" kind="show" id="fQL-JI-hlH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nma-03-k7L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menu" id="FYY-OW-HOD">
+                        <barButtonItem key="leftBarButtonItem" title="Profilo" id="M4f-gz-KfS">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="QQZ-S0-mab"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OqB-AT-gQY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-886" y="179"/>
+        </scene>
+        <!--Esercizi Lingua View Controller-->
+        <scene sceneID="bra-sW-itt">
+            <objects>
+                <tableViewController id="6vH-34-q2m" customClass="EserciziLinguaViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qtH-4r-xh2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eserciziLinguaCell" id="0ZD-zx-qfK" customClass="EserciziViewCell" customModule="App2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0ZD-zx-qfK" id="ohY-1m-CxX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Esercizio Lingua" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHO-dr-3hR">
+                                            <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="esercizio" destination="rHO-dr-3hR" id="Zp9-yM-tKn"/>
+                                    <segue destination="wtm-K8-a70" kind="show" identifier="esercizio" id="acX-ea-BII"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6vH-34-q2m" id="lRh-7D-1Tf"/>
+                            <outlet property="delegate" destination="6vH-34-q2m" id="bqv-K3-152"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="RgT-ky-A0a"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6oi-Ps-p4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.855072463768124" y="205.58035714285714"/>
+        </scene>
+        <!--Esercizio Controller-->
+        <scene sceneID="Si4-FO-Pft">
+            <objects>
+                <viewController id="wtm-K8-a70" customClass="EsercizioController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tbb-ZG-DTm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome esercizio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMu-Nr-mPo">
+                                <rect key="frame" x="32" y="104" width="340" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" name="Color1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cmb-RI-JuT">
+                                <rect key="frame" x="20" y="362" width="374" height="329"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Descrizione" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqJ-V6-9mk">
+                                <rect key="frame" x="32" y="139" width="340" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="340" id="U0c-lP-eFy"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="257" id="X83-va-NiJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BE-yX-uTb">
+                                <rect key="frame" x="20" y="710" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzH-3n-Oee">
+                                <rect key="frame" x="150" y="720" width="105" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Avvia timer">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="avviaTimer:" destination="wtm-K8-a70" eventType="touchUpInside" id="pWE-kh-z0v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9i2-Ul-z7c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YqJ-V6-9mk" firstAttribute="leading" secondItem="9i2-Ul-z7c" secondAttribute="leading" constant="32" id="0zU-Bg-5Go"/>
+                            <constraint firstItem="YqJ-V6-9mk" firstAttribute="top" secondItem="Tbb-ZG-DTm" secondAttribute="top" constant="139" id="3TV-Sm-0Jm"/>
+                            <constraint firstItem="YqJ-V6-9mk" firstAttribute="leading" secondItem="qMu-Nr-mPo" secondAttribute="leading" id="aVU-Me-SAv"/>
+                            <constraint firstItem="YqJ-V6-9mk" firstAttribute="top" secondItem="qMu-Nr-mPo" secondAttribute="bottom" constant="8" symbolic="YES" id="b0Z-vy-VHG"/>
+                            <constraint firstItem="YqJ-V6-9mk" firstAttribute="trailing" secondItem="qMu-Nr-mPo" secondAttribute="trailing" id="sL4-SV-xcm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DxV-gD-xhC"/>
+                    <connections>
+                        <outlet property="descrizione" destination="YqJ-V6-9mk" id="CAJ-Ui-NgD"/>
+                        <outlet property="immagine" destination="cmb-RI-JuT" id="biv-tp-aty"/>
+                        <outlet property="nomeEsercizio" destination="qMu-Nr-mPo" id="gV7-z9-uzW"/>
+                        <outlet property="tempo" destination="0BE-yX-uTb" id="hxh-6c-s25"/>
+                        <outlet property="timer" destination="EzH-3n-Oee" id="imb-HT-zZF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="und-Zj-Z3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.7101449275362" y="228.34821428571428"/>
         </scene>
         <!--Crea profilo-->
         <scene sceneID="8tk-rL-2O3">
@@ -230,7 +387,7 @@
                         <barButtonItem key="backBarButtonItem" title="Indietro" id="bHP-Jz-e5p"/>
                         <barButtonItem key="rightBarButtonItem" title="Gioca" style="plain" id="5CM-E7-7TD">
                             <connections>
-                                <segue destination="aQf-W0-0cx" kind="show" identifier="create" id="vLo-g3-8Ew"/>
+                                <segue destination="I3S-eo-DRa" kind="show" identifier="create" id="hQX-U5-fDV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -706,7 +863,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wqa-SS-1u4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="D2h-vP-FZa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1586" y="-141"/>
+            <point key="canvasLocation" x="1701" y="-439"/>
         </scene>
         <!--Speech Detection View Controller-->
         <scene sceneID="2aS-RB-pYs">
@@ -821,7 +978,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gJ-6H-16J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="apV-uo-cPm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="729" y="-141"/>
+            <point key="canvasLocation" x="874" y="-439"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rtt-h7-TPh">
@@ -893,7 +1050,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AlQ-kI-UsH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2023.1884057971015" y="460.71428571428567"/>
+            <point key="canvasLocation" x="-2416" y="-952"/>
         </scene>
         <!--Modifica profilo-->
         <scene sceneID="Auz-Zp-SXD">
@@ -1016,7 +1173,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KxL-oF-wJK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="SqK-0o-nFO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-107" y="-851"/>
+            <point key="canvasLocation" x="-1113" y="-952"/>
         </scene>
         <!--Seleziona un avatar-->
         <scene sceneID="IP7-An-Oeo">
@@ -1073,7 +1230,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PND-y7-EUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771" y="-1136"/>
+            <point key="canvasLocation" x="-314" y="-1477"/>
         </scene>
         <!--Categorie-->
         <scene sceneID="bTu-YY-aTd">
@@ -1112,9 +1269,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Categorie" id="R3E-Wm-BTi">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="WaV-dI-2hx">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="WaV-dI-2hx">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="dHF-HI-aYf"/>
+                                <segue destination="I3S-eo-DRa" kind="show" id="jKk-m2-TAc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1122,11 +1279,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXT-vO-T5J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236.23188405797103" y="-141.29464285714286"/>
+            <point key="canvasLocation" x="-46" y="-438"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EBS-1c-3x3"/>
+        <segue reference="o8k-6x-1fH"/>
         <segue reference="0ts-CP-gN1"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -1159,6 +1316,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
