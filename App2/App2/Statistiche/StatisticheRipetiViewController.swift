@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StatisticheViewController: UITableViewController {
+class StatisticheRipetiViewController: UITableViewController {
 
     //Array di tutte le categorie di fonemi
     var listaCategoria = [String]()
@@ -50,7 +50,7 @@ class StatisticheViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "statisticheCell", for: indexPath) as! StatisticheViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "statisticheRipetiCell", for: indexPath) as! StatisticheRipetiViewCell
 
         let categoria=listaCategoria[indexPath.row]
         cell.categoria.text=categoria

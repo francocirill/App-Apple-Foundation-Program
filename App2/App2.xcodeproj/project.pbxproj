@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		0456C02025F900FA002527E3 /* CategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C01F25F900FA002527E3 /* CategorieViewController.swift */; };
 		0456C02325F9016B002527E3 /* CategoriaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456C02225F9016B002527E3 /* CategoriaViewCell.swift */; };
-		0458234025FE2DE000338AAA /* StatisticheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458233F25FE2DE000338AAA /* StatisticheViewController.swift */; };
-		0458234325FE2FC400338AAA /* StatisticheViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458234225FE2FC400338AAA /* StatisticheViewCell.swift */; };
+		0458234025FE2DE000338AAA /* StatisticheRipetiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458233F25FE2DE000338AAA /* StatisticheRipetiViewController.swift */; };
+		0458234325FE2FC400338AAA /* StatisticheRipetiViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458234225FE2FC400338AAA /* StatisticheRipetiViewCell.swift */; };
 		0467032525D693A7001BE5C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467032425D693A7001BE5C2 /* AppDelegate.swift */; };
 		0467032725D693A7001BE5C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467032625D693A7001BE5C2 /* SceneDelegate.swift */; };
 		0467032925D693A7001BE5C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467032825D693A7001BE5C2 /* ViewController.swift */; };
@@ -21,6 +21,9 @@
 		04DB09B726060D410026C668 /* EserciziLinguaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB09B626060D410026C668 /* EserciziLinguaViewController.swift */; };
 		04DB09BA26060DC80026C668 /* EserciziViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB09B926060DC80026C668 /* EserciziViewCell.swift */; };
 		04DB09BF26062C4A0026C668 /* EsercizioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB09BE26062C4A0026C668 /* EsercizioController.swift */; };
+		04DB09C526065FD60026C668 /* StatisticheMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB09C426065FD60026C668 /* StatisticheMenuViewController.swift */; };
+		04DB09C9260663110026C668 /* StatisticheEserciziViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB09C8260663110026C668 /* StatisticheEserciziViewController.swift */; };
+		04DB09CC260663360026C668 /* StatisticheEserciziViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB09CB260663360026C668 /* StatisticheEserciziViewCell.swift */; };
 		DC29548C25DA854B0087907E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC29548B25DA854B0087907E /* CollectionViewCell.swift */; };
 		DC29549325DA8C7F0087907E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC29549225DA8C7F0087907E /* CollectionViewController.swift */; };
 		DC2954B225DABD2E0087907E /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2954B125DABD2E0087907E /* PersistenceManager.swift */; };
@@ -46,8 +49,8 @@
 /* Begin PBXFileReference section */
 		0456C01F25F900FA002527E3 /* CategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieViewController.swift; sourceTree = "<group>"; };
 		0456C02225F9016B002527E3 /* CategoriaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaViewCell.swift; sourceTree = "<group>"; };
-		0458233F25FE2DE000338AAA /* StatisticheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticheViewController.swift; sourceTree = "<group>"; };
-		0458234225FE2FC400338AAA /* StatisticheViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticheViewCell.swift; sourceTree = "<group>"; };
+		0458233F25FE2DE000338AAA /* StatisticheRipetiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticheRipetiViewController.swift; sourceTree = "<group>"; };
+		0458234225FE2FC400338AAA /* StatisticheRipetiViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticheRipetiViewCell.swift; sourceTree = "<group>"; };
 		0467032125D693A7001BE5C2 /* App2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0467032425D693A7001BE5C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0467032625D693A7001BE5C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +63,9 @@
 		04DB09B626060D410026C668 /* EserciziLinguaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EserciziLinguaViewController.swift; sourceTree = "<group>"; };
 		04DB09B926060DC80026C668 /* EserciziViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EserciziViewCell.swift; sourceTree = "<group>"; };
 		04DB09BE26062C4A0026C668 /* EsercizioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsercizioController.swift; sourceTree = "<group>"; };
+		04DB09C426065FD60026C668 /* StatisticheMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticheMenuViewController.swift; sourceTree = "<group>"; };
+		04DB09C8260663110026C668 /* StatisticheEserciziViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticheEserciziViewController.swift; sourceTree = "<group>"; };
+		04DB09CB260663360026C668 /* StatisticheEserciziViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticheEserciziViewCell.swift; sourceTree = "<group>"; };
 		DC29548B25DA854B0087907E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		DC29549225DA8C7F0087907E /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		DC2954B125DABD2E0087907E /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
@@ -159,8 +165,11 @@
 		04DB09AE26060AC80026C668 /* Statistiche */ = {
 			isa = PBXGroup;
 			children = (
-				0458234225FE2FC400338AAA /* StatisticheViewCell.swift */,
-				0458233F25FE2DE000338AAA /* StatisticheViewController.swift */,
+				04DB09C426065FD60026C668 /* StatisticheMenuViewController.swift */,
+				0458234225FE2FC400338AAA /* StatisticheRipetiViewCell.swift */,
+				0458233F25FE2DE000338AAA /* StatisticheRipetiViewController.swift */,
+				04DB09C8260663110026C668 /* StatisticheEserciziViewController.swift */,
+				04DB09CB260663360026C668 /* StatisticheEserciziViewCell.swift */,
 			);
 			path = Statistiche;
 			sourceTree = "<group>";
@@ -253,18 +262,21 @@
 				DC92936D25DD3A4000311BA4 /* Pulsing.swift in Sources */,
 				DC92938E25E1761B00311BA4 /* Tutorial1ViewController.swift in Sources */,
 				DC2954EA25DAC8910087907E /* PreferenceManager.swift in Sources */,
-				0458234025FE2DE000338AAA /* StatisticheViewController.swift in Sources */,
+				0458234025FE2DE000338AAA /* StatisticheRipetiViewController.swift in Sources */,
 				0467032925D693A7001BE5C2 /* ViewController.swift in Sources */,
 				DC92937225DD5F6700311BA4 /* SpeechDetectionViewController.swift in Sources */,
 				0467032525D693A7001BE5C2 /* AppDelegate.swift in Sources */,
 				DC2954B225DABD2E0087907E /* PersistenceManager.swift in Sources */,
+				04DB09C9260663110026C668 /* StatisticheEserciziViewController.swift in Sources */,
+				04DB09C526065FD60026C668 /* StatisticheMenuViewController.swift in Sources */,
 				DC92939225E17A1500311BA4 /* UserProfile+CoreDataProperties.swift in Sources */,
 				DC29548C25DA854B0087907E /* CollectionViewCell.swift in Sources */,
-				0458234325FE2FC400338AAA /* StatisticheViewCell.swift in Sources */,
+				0458234325FE2FC400338AAA /* StatisticheRipetiViewCell.swift in Sources */,
 				0456C02025F900FA002527E3 /* CategorieViewController.swift in Sources */,
 				DC29549325DA8C7F0087907E /* CollectionViewController.swift in Sources */,
 				DC2954E025DAC5250087907E /* UserProfile+CoreDataClass.swift in Sources */,
 				DC92938B25E1641700311BA4 /* TutorialViewController.swift in Sources */,
+				04DB09CC260663360026C668 /* StatisticheEserciziViewCell.swift in Sources */,
 				DC2954F025DAD0380087907E /* NuovoUtenteController.swift in Sources */,
 				DC92939625E18E0200311BA4 /* Impostazioni.swift in Sources */,
 				DC92937C25DD76CC00311BA4 /* MyString.swift in Sources */,

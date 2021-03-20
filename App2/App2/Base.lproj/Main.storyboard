@@ -82,7 +82,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2LV-vV-tFb" kind="show" id="dfN-2L-h6j"/>
+                                    <segue destination="Yqn-Zt-Rmg" kind="show" id="tH9-gX-8Ww"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -998,16 +998,16 @@
             </objects>
             <point key="canvasLocation" x="-2801" y="-141"/>
         </scene>
-        <!--Statistiche-->
+        <!--Ripeti le parole-->
         <scene sceneID="97B-hI-IL8">
             <objects>
-                <tableViewController id="2LV-vV-tFb" customClass="StatisticheViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="2LV-vV-tFb" customClass="StatisticheRipetiViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="O94-CO-KAj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="statisticheCell" id="ZNd-2E-YT8" customClass="StatisticheViewCell" customModule="App2" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="statisticheRipetiCell" id="ZNd-2E-YT8" customClass="StatisticheRipetiViewCell" customModule="App2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZNd-2E-YT8" id="W8l-Me-VbL">
@@ -1046,11 +1046,51 @@
                             <outlet property="delegate" destination="2LV-vV-tFb" id="Bci-P9-nwZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Statistiche" id="9Sb-i4-wAB"/>
+                    <navigationItem key="navigationItem" title="Ripeti le parole" id="9Sb-i4-wAB"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AlQ-kI-UsH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2416" y="-952"/>
+            <point key="canvasLocation" x="-3935" y="-910"/>
+        </scene>
+        <!--Statistiche-->
+        <scene sceneID="eoU-da-wvR">
+            <objects>
+                <viewController id="Yqn-Zt-Rmg" customClass="StatisticheMenuViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vWA-He-jhi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XS-xy-Aey">
+                                <rect key="frame" x="128" y="149" width="158" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Ripeti le parole">
+                                    <color key="titleColor" name="Color1"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2LV-vV-tFb" kind="show" id="BIs-1n-o5l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cG-KW-mP4">
+                                <rect key="frame" x="96" y="233" width="222" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Esercizi con la lingua">
+                                    <color key="titleColor" name="Color1"/>
+                                </state>
+                                <connections>
+                                    <segue destination="91T-ns-Lgo" kind="show" id="dj7-zt-jXi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A7s-bG-VTB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Statistiche" id="rAP-DB-IkJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X23-WL-hg9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2877" y="-1290"/>
         </scene>
         <!--Modifica profilo-->
         <scene sceneID="Auz-Zp-SXD">
@@ -1280,6 +1320,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXT-vO-T5J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-46" y="-438"/>
+        </scene>
+        <!--Esercizi con la lingua-->
+        <scene sceneID="XjU-6j-99h">
+            <objects>
+                <tableViewController id="91T-ns-Lgo" customClass="StatisticheEserciziViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aZ3-3h-SfJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="statisticheEserciziCell" id="vrR-op-7Kg" customClass="StatisticheEserciziViewCell" customModule="App2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vrR-op-7Kg" id="LdX-GS-Rw2">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Esercizio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4h2-DH-Vxk">
+                                            <rect key="frame" x="20" y="11" width="252" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJ0-Pf-IFi">
+                                            <rect key="frame" x="298" y="11" width="96" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="esercizio" destination="4h2-DH-Vxk" id="iOe-cM-I6i"/>
+                                    <outlet property="volte" destination="CJ0-Pf-IFi" id="BSW-Fd-aco"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="91T-ns-Lgo" id="UP6-bh-emz"/>
+                            <outlet property="delegate" destination="91T-ns-Lgo" id="yCa-Nt-iez"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Esercizi con la lingua" id="LDC-Gx-cPm"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CUS-Ru-OrD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3936.2318840579715" y="-1721.6517857142856"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

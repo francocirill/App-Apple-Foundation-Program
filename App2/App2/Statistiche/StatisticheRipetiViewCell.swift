@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StatisticheViewCell: UITableViewCell {
+class StatisticheRipetiViewCell: UITableViewCell {
 
     @IBOutlet weak var categoria: UILabel!
     @IBOutlet weak var percentuale: UILabel!

@@ -11,6 +11,8 @@ class EsercizioController: UIViewController {
     
     var esercizio:String=""
     var secondsRemaining:Int=6
+    let defaults = UserDefaults.standard
+    var tim:Timer?=nil
 
     @IBOutlet var nomeEsercizio: UILabel!
     @IBOutlet weak var descrizione: UILabel!
@@ -21,7 +23,7 @@ class EsercizioController: UIViewController {
         timer.isHidden=true
         self.tempo.text=("\(self.secondsRemaining) secondi")
         secondsRemaining-=1
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
+        tim=Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
                 if self.secondsRemaining > 0 {
                     self.tempo.text=("\(self.secondsRemaining) secondi")
                     self.secondsRemaining -= 1
@@ -29,6 +31,10 @@ class EsercizioController: UIViewController {
                     Timer.invalidate()
                     self.tempo.text=("Hai terminato")
                     //aggiorna statistiche
+                    print("aggiorna volte")
+                    let volte = self.defaults.integer(forKey: "\(self.esercizio)-volte")
+                    self.defaults.set(volte+1, forKey: "\(self.esercizio)-volte")
+                    
                 }
             }
     }
@@ -49,6 +55,9 @@ class EsercizioController: UIViewController {
         
         
         
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        tim?.invalidate()
     }
     
 
