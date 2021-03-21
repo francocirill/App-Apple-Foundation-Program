@@ -60,6 +60,8 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     
     var tentativi = 0
     var livello : Int=1
+    //Indica se la funzione puo verificare che la parola pronunciata è giusta, si puo verifivare una volta per volta che si preme il pulsante
+    var puoVerificare:Int=0
     @IBAction func pronuncia(_ sender: Any) {
         if isRecording {
             //mostra salta
@@ -80,12 +82,13 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                 //nascondi salta
                 saltaButton.isHidden=true
                 
+                puoVerificare=0
+                
                 self.pronunciata.textColor = UIColor(named: "Color1")
                 let audioSession = AVAudioSession.sharedInstance();
                 do {
                     try audioSession.setCategory (AVAudioSession.Category.playAndRecord, options: AVAudioSession.CategoryOptions.mixWithOthers);
                     try  audioSession.setActive (true);
-                
                 }
                 catch let error as NSError {
                     return print(error)
@@ -121,7 +124,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
            
     }
     /*
-     Imposta la pulsazione per la voce chr ripete la parola
+     Imposta la pulsazione per la voce che ripete la parola
      */
     @objc func pulseRipetiButton() {
         if PersistenceManager.fetchData()[0].outLoud {
@@ -189,16 +192,16 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         audioEngine.prepare()
 
         request = SFSpeechAudioBufferRecognitionRequest()
-        
         do{
-                try audioEngine.start()
+            try audioEngine.start()
         }catch {
             return print(error)
         }
+        print("prima di recognition task ")
         var trovata=0
         recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
             print("Sono entrato in recognizer")
-                if result != nil && trovata==0{ // check to see if result is empty (i.e. no speech found)
+            if result != nil && trovata==0 && self.puoVerificare==0 { // check to see if result is empty (i.e. no speech found)
                     print("Sono entrato in res!=nil")
                     if let result = result {
                         print("Sono entrato in res=res")
@@ -213,16 +216,25 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                            // print(String(result.transcriptions[0].segments[0].confidence * 100) + "%" )
                             
                             self.audioEngine.stop()
-                            DispatchQueue.main.async { [unowned self] in
-                            guard let task = self.recognitionTask else {
-                                        fatalError("Error")
-                                    }
-                                    task.cancel()
-                                    task.finish()
+//                            DispatchQueue.main.async { [unowned self] in
+//                            guard let task = self.recognitionTask else {
+//                                        fatalError("Error")
+//                                    }
+//                                    task.cancel()
+//                                    task.finish()
+//                                }
+                            //Non puo piu verificare finché non riavvia il microfono
+                            self.puoVerificare=1
+                            //Se chiami cancel troppe volte da problemi
+                            if ((self.recognitionTask) != nil) {
+                                    //[self.recognitionTask cancel];
+                                self.recognitionTask?.finish()
                                 print("Sono entrato in task cancellato")
                                 }
+                                self.recognitionTask = nil;
                             
                             if self.frase.text?.lowercased() == self.pronunciata.text {
+                                
                                 trovata=1
                                 print("Sono entrato in parole uguali")
                                 
@@ -256,6 +268,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                                     self.navigationController?.pushViewController(self.newViewController!, animated: true)
                                     })
                             } else {
+                                
                                 self.pronunciata.textColor = UIColor.red
                                 let animation = CABasicAnimation(keyPath: "position")
                                 animation.duration = 0.1
