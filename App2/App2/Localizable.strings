@@ -129,14 +129,14 @@
  "T posizione mediana-level6" = "Pattini";
  "T posizione mediana-level7" = "Patatine";
  "categoria9" = "D posizione iniziale";
- "D posizione iniziale-numero" = "6";
+ "D posizione iniziale-numero" = "5";
  "D posizione iniziale-level1" = "Dado";
  "D posizione iniziale-level2" = "Dito";
  "D posizione iniziale-level3" = "Due";
  //"D posizione iniziale-level4" = "Dama";
  "D posizione iniziale-level4" = "Divano";
- "D posizione iniziale-level5" = "Diavolo";
- "D posizione iniziale-level6" = "Dinosauro";
+ //"D posizione iniziale-level5" = "Diavolo";
+ "D posizione iniziale-level5" = "Dinosauro";
  "categoria10" = "D posizione mediana";
  "D posizione mediana-numero" = "6";
  "D posizione mediana-level1" = "Sedia";

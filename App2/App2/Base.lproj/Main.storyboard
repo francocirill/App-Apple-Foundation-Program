@@ -880,11 +880,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OYe-8g-hQU">
-                                <rect key="frame" x="107" y="306.5" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="5uS-Yw-hMv"/>
-                                    <constraint firstAttribute="width" constant="200" id="PNx-GJ-0ql"/>
-                                </constraints>
+                                <rect key="frame" x="30" y="306.5" width="354" height="200"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN5-BC-eku">
                                 <rect key="frame" x="132" y="668" width="150" height="150"/>
@@ -905,7 +901,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premi il microfono e ripeti la parola" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmP-4N-He8">
-                                <rect key="frame" x="45.5" y="566.5" width="323.5" height="26.5"/>
+                                <rect key="frame" x="45.5" y="566.5" width="323" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" name="Color1"/>
                                 <nil key="highlightedColor"/>
@@ -924,9 +920,8 @@
                                     <action selector="ripetiTapped:" destination="EwY-to-DXc" eventType="touchUpInside" id="3Ct-g4-cGp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-xj-Xo4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-xj-Xo4">
                                 <rect key="frame" x="337" y="728" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Salta">
                                     <color key="titleColor" name="Color1"/>
                                 </state>
@@ -941,7 +936,10 @@
                             <constraint firstItem="Bf8-5F-3j6" firstAttribute="top" secondItem="it0-cM-Rf5" secondAttribute="top" id="4oa-LF-dZo"/>
                             <constraint firstItem="yN5-BC-eku" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="A6e-ry-BFu"/>
                             <constraint firstItem="yN5-BC-eku" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="CiX-BA-aPr"/>
+                            <constraint firstItem="yN5-BC-eku" firstAttribute="centerY" secondItem="EJz-xj-Xo4" secondAttribute="centerY" id="DY8-mI-rr2"/>
+                            <constraint firstItem="kkC-jg-1BR" firstAttribute="bottom" secondItem="yN5-BC-eku" secondAttribute="bottom" constant="44" id="DzE-a0-tN2"/>
                             <constraint firstItem="Bf8-5F-3j6" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="F9l-n5-dl4"/>
+                            <constraint firstItem="EJz-xj-Xo4" firstAttribute="leading" secondItem="yN5-BC-eku" secondAttribute="trailing" constant="55" id="G2p-zM-WDM"/>
                             <constraint firstItem="OYe-8g-hQU" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="LcD-G5-zwA"/>
                             <constraint firstItem="yN5-BC-eku" firstAttribute="top" secondItem="dmP-4N-He8" secondAttribute="bottom" constant="75" id="bbn-2P-BF7"/>
                             <constraint firstItem="dmP-4N-He8" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="dSb-ow-EDC"/>
@@ -950,7 +948,9 @@
                             <constraint firstItem="yN5-BC-eku" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="iUU-PZ-CtK"/>
                             <constraint firstItem="HuS-XF-Ck9" firstAttribute="top" secondItem="kkC-jg-1BR" secondAttribute="top" constant="30" id="mfL-Nk-CbP"/>
                             <constraint firstItem="HuS-XF-Ck9" firstAttribute="centerX" secondItem="cmL-BY-y5U" secondAttribute="centerX" id="qMC-yF-Q7V"/>
+                            <constraint firstItem="OYe-8g-hQU" firstAttribute="trailing" secondItem="it0-cM-Rf5" secondAttribute="trailing" id="uF1-Co-vNM"/>
                             <constraint firstItem="it0-cM-Rf5" firstAttribute="top" secondItem="kkC-jg-1BR" secondAttribute="top" constant="70" id="uGE-5Z-hbG"/>
+                            <constraint firstItem="dmP-4N-He8" firstAttribute="leading" secondItem="kkC-jg-1BR" secondAttribute="leading" constant="45.5" id="vYN-Mb-1EC"/>
                             <constraint firstItem="dmP-4N-He8" firstAttribute="top" secondItem="OYe-8g-hQU" secondAttribute="bottom" constant="60" id="wDm-w9-KdH"/>
                         </constraints>
                     </view>
@@ -978,7 +978,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gJ-6H-16J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="apV-uo-cPm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="874" y="-439"/>
+            <point key="canvasLocation" x="873.91304347826099" y="-439.28571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rtt-h7-TPh">
