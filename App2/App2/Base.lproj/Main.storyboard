@@ -14,36 +14,36 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome utente" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a9-8W-TlE">
-                                <rect key="frame" x="129.5" y="50" width="155.5" height="33.5"/>
+                                <rect key="frame" x="129.5" y="138" width="155.5" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captain America" translatesAutoresizingMaskIntoConstraints="NO" id="rty-z7-36Q">
-                                <rect key="frame" x="138" y="103.5" width="138" height="117"/>
+                                <rect key="frame" x="138" y="191.5" width="138" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="8IP-16-Kq0"/>
                                     <constraint firstAttribute="width" constant="138" id="Cxd-eC-aKT"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ug-2R-XrS">
-                                <rect key="frame" x="299" y="261.5" width="25" height="36"/>
+                                <rect key="frame" x="299" y="349.5" width="25" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stelle guadagnate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVh-ch-ILa">
-                                <rect key="frame" x="30" y="265.5" width="177" height="27"/>
+                                <rect key="frame" x="30" y="353.5" width="177" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI5-yw-kom">
-                                <rect key="frame" x="305" y="315.5" width="19" height="36"/>
+                                <rect key="frame" x="305" y="403.5" width="19" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,14 +56,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stella piena" translatesAutoresizingMaskIntoConstraints="NO" id="KKP-K1-jUz">
-                                <rect key="frame" x="329" y="261.5" width="35" height="35"/>
+                                <rect key="frame" x="329" y="349.5" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="Lmd-NG-aX8"/>
                                     <constraint firstAttribute="height" constant="35" id="psN-LT-4Vs"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMa-nY-Le7">
-                                <rect key="frame" x="82" y="668" width="250" height="100"/>
+                                <rect key="frame" x="82" y="722" width="250" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="ZFq-Ze-P67"/>
                                     <constraint firstAttribute="width" constant="250" id="jF9-Ga-7wv"/>
@@ -134,7 +134,7 @@
             <objects>
                 <viewController id="I3S-eo-DRa" customClass="MenuViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="STP-Rb-dMr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMw-ZI-gf2">
@@ -215,7 +215,7 @@
             <objects>
                 <tableViewController id="6vH-34-q2m" customClass="EserciziLinguaViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qtH-4r-xh2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -269,11 +269,11 @@
             <objects>
                 <viewController id="wtm-K8-a70" customClass="EsercizioController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tbb-ZG-DTm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cth-fE-Xme">
-                                <rect key="frame" x="10" y="166" width="390" height="492"/>
+                                <rect key="frame" x="10" y="166" width="390" height="546"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrizione" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqJ-V6-9mk">
                                         <rect key="frame" x="25" y="21" width="340" height="20.5"/>
@@ -314,7 +314,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzH-3n-Oee">
-                                <rect key="frame" x="149.5" y="666" width="105" height="39"/>
+                                <rect key="frame" x="149.5" y="720" width="105" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Avvia timer">
                                     <color key="titleColor" systemColor="systemRedColor"/>
@@ -1173,7 +1173,7 @@
             <objects>
                 <tableViewController id="2LV-vV-tFb" customClass="StatisticheRipetiViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="O94-CO-KAj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -1227,7 +1227,7 @@
             <objects>
                 <viewController id="Yqn-Zt-Rmg" customClass="StatisticheMenuViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vWA-He-jhi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XS-xy-Aey">
@@ -1505,12 +1505,12 @@
             </objects>
             <point key="canvasLocation" x="-46.376811594202906" y="-438.61607142857139"/>
         </scene>
-        <!--Esercizi con la lingua-->
+        <!--Esercizi con la bocca-->
         <scene sceneID="XjU-6j-99h">
             <objects>
                 <tableViewController id="91T-ns-Lgo" customClass="StatisticheEserciziViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aZ3-3h-SfJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -1548,7 +1548,7 @@
                             <outlet property="delegate" destination="91T-ns-Lgo" id="yCa-Nt-iez"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Esercizi con la lingua" id="LDC-Gx-cPm"/>
+                    <navigationItem key="navigationItem" title="Esercizi con la bocca" id="LDC-Gx-cPm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CUS-Ru-OrD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1559,7 +1559,7 @@
             <objects>
                 <viewController id="L7C-dq-0WT" customClass="Impostazioni" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gDN-WK-7B6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FyI-BF-nDG">
@@ -1721,7 +1721,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="PSj-wa-11Y"/>
         <segue reference="o8k-6x-1fH"/>
-        <segue reference="1JP-i7-rDj"/>
+        <segue reference="0ts-CP-gN1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1f5e3" width="512" height="512"/>
