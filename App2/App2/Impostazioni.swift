@@ -21,7 +21,7 @@ class Impostazioni: UIViewController {
     @IBOutlet weak var avatar: UIButton!
     @IBOutlet weak var showPics: UISwitch!
     @IBOutlet weak var outLoud: UISwitch!
-    @IBOutlet weak var salvabutton: UIBarButtonItem!
+    @IBOutlet weak var salvabutton: UIButton!
     var avatarString : MyString?
     override func viewDidLoad() {
         
@@ -33,6 +33,7 @@ class Impostazioni: UIViewController {
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
         
+        
         view.addGestureRecognizer(tap)
     }
     
@@ -43,6 +44,8 @@ class Impostazioni: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
         var user = PersistenceManager.fetchData()[0]
         nome.text = user.name
         showPics.isOn = user.showPics
@@ -60,7 +63,11 @@ class Impostazioni: UIViewController {
         user.showPics = showPics.isOn
         user.outLoud = outLoud.isOn
         PersistenceManager.saveContext()
-        performSegue(withIdentifier: "backHomeFromLevel", sender: self)
+        //performSegue(withIdentifier: "backHomeFromLevel", sender: self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

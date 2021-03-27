@@ -75,6 +75,7 @@ class LivelloSuperatoViewController: UIViewController {
     
     @IBOutlet weak var starsStack: UIStackView!
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         finito.isHidden=true
         starsConstraint.constant += 100
@@ -151,6 +152,7 @@ class LivelloSuperatoViewController: UIViewController {
     }
     override func viewWillDisappear(_ animated: Bool) {
         player?.stop()
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
      override func viewDidAppear(_ animated: Bool) {

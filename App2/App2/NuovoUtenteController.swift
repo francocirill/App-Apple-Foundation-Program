@@ -15,7 +15,7 @@ class NuovoUtenteController: UIViewController {
     
     
     
-    @IBOutlet weak var creaButton: UIBarButtonItem!
+    @IBOutlet weak var creaButton: UIButton!
     
     var avatar: MyString?
     var textChanged = false
@@ -37,6 +37,8 @@ class NuovoUtenteController: UIViewController {
         
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         //tap.cancelsTouchesInView = false
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         view.addGestureRecognizer(tap)
     }
@@ -65,6 +67,10 @@ class NuovoUtenteController: UIViewController {
             avatarChanged = false
             creaButton.isEnabled = false
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     // MARK: - Navigation
     
