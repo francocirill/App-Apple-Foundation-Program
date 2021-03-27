@@ -11,6 +11,8 @@ class EserciziViewCell: UITableViewCell {
     
     
     @IBOutlet weak var esercizio: UILabel!
+    @IBOutlet weak var numero: UILabel!
+    @IBOutlet weak var sfondo: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

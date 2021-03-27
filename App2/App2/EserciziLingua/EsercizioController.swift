@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class EsercizioController: UIViewController {
     
@@ -13,6 +14,7 @@ class EsercizioController: UIViewController {
     var secondsRemaining:Int=6
     let defaults = UserDefaults.standard
     var tim:Timer?=nil
+    let synthesizer = AVSpeechSynthesizer()
 
     @IBOutlet var nomeEsercizio: UILabel!
     @IBOutlet weak var descrizione: UILabel!
@@ -52,12 +54,28 @@ class EsercizioController: UIViewController {
         descrizione.sizeToFit()
         immagine.image=UIImage(named: esercizio)
         
+        speak(NSLocalizedString("\(esercizio)", comment: ""))
         
         
+    }
+    /*
+     Riproduce la parola da pronunciare
+     */
+    func speak(_ msg : String) {
+        let utterance = AVSpeechUtterance(string: msg)
+       
+
+        utterance.voice = AVSpeechSynthesisVoice(language: "it-IT")
+        utterance.volume = 1.0
+        utterance.rate = 0.4
+        
+        
+        synthesizer.speak(utterance)
         
     }
     override func viewWillDisappear(_ animated: Bool) {
         tim?.invalidate()
+        synthesizer.stopSpeaking(at: .immediate)
     }
     
 

@@ -49,7 +49,12 @@ class EserciziLinguaViewController: UITableViewController {
 
         let esercizio=listaEsercizi[indexPath.row]
         cell.esercizio.text=esercizio
+        cell.numero.text=String(indexPath.row+1)
 
+        cell.sfondo.layer.shadowColor = UIColor.black.cgColor
+        cell.sfondo.layer.shadowOpacity = 1
+        cell.sfondo.layer.shadowOffset = .zero
+        cell.sfondo.layer.shadowRadius = 20
         return cell
     }
     

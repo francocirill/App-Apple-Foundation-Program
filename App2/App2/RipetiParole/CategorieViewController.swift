@@ -54,11 +54,32 @@ class CategorieViewController: UITableViewController {
 
         let categoria=listaCategoria[indexPath.row]
         cell.categoria.text=categoria
+        //cell.numero.text=String(indexPath.row+1)
+        cell.numero.text=listaCategoria[indexPath.row].prefix(1).description
+        
+        cell.sfondo.layer.shadowColor = UIColor.black.cgColor
+        cell.sfondo.layer.shadowOpacity = 1
+        cell.sfondo.layer.shadowOffset = .zero
+        cell.sfondo.layer.shadowRadius = 20
         //cell.categoria.setTitle("Categoria "+categoria, for: .normal)
+        //cell.sfondo.backgroundColor = cellColorForIndex(indexPath: indexPath)
+        //cell.backgroundColor=UIColor(named: "black")
         
         return cell
     }
-
+    /*
+    //MARK: Instance Methods
+    func cellColorForIndex(indexPath:IndexPath) -> UIColor{
+        //cast row and section to CGFloat
+        let row = CGFloat(indexPath.row)
+        //let section = CGFloat(indexPath.section)
+        //compute row as hue and section as saturation
+        let alpha  = 1.0 - row / CGFloat(listaCategoria.count)
+        var hue=UIColor(named: "Color5")
+        //UIColor(named: "Color5")?.getHue(&hue, saturation: nil, brightness: nil, alpha: nil)
+        return UIColor(hue: hue!.cgColor as! CGFloat, saturation: 1.0, brightness: 1.0, alpha: alpha)
+    }
+*/
 
     /*
     // Override to support conditional editing of the table view.
