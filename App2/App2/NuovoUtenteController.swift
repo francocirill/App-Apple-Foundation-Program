@@ -2,7 +2,7 @@
 //  NuovoUtenteController.swift
 //  App2
 //
-//  Created by Marco Venere on 12/02/21.
+//  Created by Franco Cirillo on 12/02/21.
 //
 
 import UIKit
@@ -12,11 +12,13 @@ class NuovoUtenteController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var pictureSwitch: UISwitch!
     @IBOutlet weak var speechSwitch: UISwitch!
+    @IBOutlet weak var tutorial: UISwitch!
     
     
     
     @IBOutlet weak var creaButton: UIButton!
     
+    let defaults = UserDefaults.standard
     var avatar: MyString?
     var textChanged = false
     var avatarChanged = false
@@ -86,6 +88,7 @@ class NuovoUtenteController: UIViewController {
         case "create":
             PersistenceManager.newProfile(name: userNameTextField.text!, outLoud: speechSwitch.isOn, showPics: pictureSwitch.isOn, avatar: (avatar!.str))
             PersistenceManager.saveContext()
+            defaults.set(tutorial.isOn, forKey: "Tutorial")
         default: print(#function)
             
         }

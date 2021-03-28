@@ -28,7 +28,8 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
 //            })
     }
     
-    
+    let defaults = UserDefaults.standard
+    let synthesizer = AVSpeechSynthesizer()
     var categoria:String!
     var stelleTotali=0
     @IBOutlet weak var rip: UILabel!
@@ -84,7 +85,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                 
                 puoVerificare=0
                 
-                self.pronunciata.textColor = UIColor(named: "Color1")
+                self.pronunciata.textColor = UIColor.white
                 let audioSession = AVAudioSession.sharedInstance();
                 do {
                     try audioSession.setCategory (AVAudioSession.Category.playAndRecord, options: AVAudioSession.CategoryOptions.mixWithOthers);
@@ -156,7 +157,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         utterance.volume = 1.0
         //utterance.rate = 0.1 velocità di espressione
         
-        let synthesizer = AVSpeechSynthesizer()
+        
         synthesizer.speak(utterance)
     }
     
@@ -177,7 +178,17 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        speak(frase.text!)
+        //Se è il primo livello spiega come funziona il gioco
+        if livello==1 && defaults.bool(forKey: "Tutorial"){
+            speak("Premi il microfono e ripeti la parola, se sbagli premi due volte il microfono e ripeti. "+frase.text!)
+        } else {
+            speak(frase.text!)
+        }
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        synthesizer.stopSpeaking(at: .immediate)
     }
     /*
      Riconosce le parole pronunciate e le confronta con quelle da pronunciare

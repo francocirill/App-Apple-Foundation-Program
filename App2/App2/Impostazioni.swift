@@ -16,11 +16,13 @@ class Impostazioni: UIViewController {
      // Drawing code
      }
      */
+    let defaults = UserDefaults.standard
     
     @IBOutlet weak var nome: UITextField!
     @IBOutlet weak var avatar: UIButton!
     @IBOutlet weak var showPics: UISwitch!
     @IBOutlet weak var outLoud: UISwitch!
+    @IBOutlet weak var tutorial: UISwitch!
     @IBOutlet weak var salvabutton: UIButton!
     var avatarString : MyString?
     override func viewDidLoad() {
@@ -46,10 +48,11 @@ class Impostazioni: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
-        var user = PersistenceManager.fetchData()[0]
+        let user = PersistenceManager.fetchData()[0]
         nome.text = user.name
         showPics.isOn = user.showPics
         outLoud.isOn = user.outLoud
+        tutorial.isOn = defaults.bool(forKey: "Tutorial")
         avatar.setImage(UIImage(named: avatarString!.str) , for: .normal)
     }
     @IBAction func textchanged(_ sender: Any) {
@@ -57,12 +60,14 @@ class Impostazioni: UIViewController {
     }
     
     @IBAction func salvaButton(_ sender: Any) {
-        var user = PersistenceManager.fetchData()[0]
+        let user = PersistenceManager.fetchData()[0]
         user.name = nome.text
         user.avatar = avatarString?.str
         user.showPics = showPics.isOn
         user.outLoud = outLoud.isOn
         PersistenceManager.saveContext()
+        
+        defaults.set(tutorial.isOn, forKey: "Tutorial")
         //performSegue(withIdentifier: "backHomeFromLevel", sender: self)
     }
     
