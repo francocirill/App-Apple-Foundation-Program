@@ -34,16 +34,25 @@ class MondoViewController: UIViewController {
         if PersistenceManager.fetchData().count != 0 {
             var user = PersistenceManager.fetchData()[0]
             switch user.lastLevel+1 {
-            case 1:
+            case  1 :
                 mondo.text="Mondo 1"
-            case 2:
+                background.image = UIImage(named: "mondo1.jpeg")!
+            case 2 :
                 mondo.text="Mondo 2"
-            case 3:
+                background.image = UIImage(named: "mondo2.jpeg")!
+            case 3 :
                 mondo.text="Mondo 3"
+                background.image = UIImage(named: "mondo3.png")!
+            case 4 :
+                mondo.text="Mondo 4"
+                background.image = UIImage(named: "mondo4.jpeg")!
+            case 5 | 21 | 22 | 23 | 24 | 25:
+                mondo.text="Mondo 5"
+                background.image = UIImage(named: "mondo5.jpeg")!
             default:
                 mondo.text="Other"
             }
-            background.image = UIImage(named: "mondo1.jpeg")!
+            
         }
     }
     /*
