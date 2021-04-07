@@ -13,6 +13,7 @@
 		0467032C25D693A7001BE5C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467032A25D693A7001BE5C2 /* Main.storyboard */; };
 		0467033125D693A8001BE5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0467033025D693A8001BE5C2 /* Assets.xcassets */; };
 		0467033425D693A8001BE5C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467033225D693A8001BE5C2 /* LaunchScreen.storyboard */; };
+		8B24ABF6261E134900D4320C /* MondoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24ABF5261E134900D4320C /* MondoViewController.swift */; };
 		DC29548C25DA854B0087907E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC29548B25DA854B0087907E /* CollectionViewCell.swift */; };
 		DC29549325DA8C7F0087907E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC29549225DA8C7F0087907E /* CollectionViewController.swift */; };
 		DC2954B225DABD2E0087907E /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2954B125DABD2E0087907E /* PersistenceManager.swift */; };
@@ -44,6 +45,7 @@
 		0467033025D693A8001BE5C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0467033325D693A8001BE5C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0467033525D693A8001BE5C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B24ABF5261E134900D4320C /* MondoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondoViewController.swift; sourceTree = "<group>"; };
 		DC29548B25DA854B0087907E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		DC29549225DA8C7F0087907E /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		DC2954B125DABD2E0087907E /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				DC92938A25E1641700311BA4 /* TutorialViewController.swift */,
 				DC92938D25E1761B00311BA4 /* Tutorial1ViewController.swift */,
 				DC92939525E18E0200311BA4 /* Impostazioni.swift */,
+				8B24ABF5261E134900D4320C /* MondoViewController.swift */,
 			);
 			path = App2;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				DC92937225DD5F6700311BA4 /* SpeechDetectionViewController.swift in Sources */,
 				0467032525D693A7001BE5C2 /* AppDelegate.swift in Sources */,
 				DC2954B225DABD2E0087907E /* PersistenceManager.swift in Sources */,
+				8B24ABF6261E134900D4320C /* MondoViewController.swift in Sources */,
 				DC92939225E17A1500311BA4 /* UserProfile+CoreDataProperties.swift in Sources */,
 				DC29548C25DA854B0087907E /* CollectionViewCell.swift in Sources */,
 				DC29549325DA8C7F0087907E /* CollectionViewController.swift in Sources */,
