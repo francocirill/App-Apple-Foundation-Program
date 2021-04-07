@@ -43,7 +43,7 @@ class MondoViewController: UIViewController {
             default:
                 mondo.text="Other"
             }
-            background.image = UIImage(named: "Mondo1.jpeg")!
+            background.image = UIImage(named: "mondo1.jpeg")!
         }
     }
     /*
