@@ -22,11 +22,12 @@ class LivelloSuperatoViewController: UIViewController {
     @IBAction func avanti(_ sender: Any) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "SpeechDetectionViewController") as! SpeechDetectionViewController
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
             //self.newViewController?.isModalInPresentation = true
             self.navigationController?.pushViewController(newViewController, animated: true)
         })
     }
+    
     @IBOutlet weak var starsConstraint: NSLayoutConstraint!
     @IBAction func backHome(_ sender: Any) {
             performSegue(withIdentifier: "backHomeFromLevel", sender: self)
