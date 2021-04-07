@@ -9,10 +9,17 @@ import UIKit
 
 class MondoViewController: UIViewController {
 
+    @IBOutlet weak var mondo: UILabel!
+    
+    @IBOutlet weak var background: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.navigationItem.leftBarButtonItem = nil;
+        self.navigationItem.hidesBackButton = true;
+        self.navigationController?.navigationItem.backBarButtonItem?.isEnabled = false;
+        self.navigationController!.interactivePopGestureRecognizer!.isEnabled = false;
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -22,7 +29,23 @@ class MondoViewController: UIViewController {
                 }
         
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if PersistenceManager.fetchData().count != 0 {
+            var user = PersistenceManager.fetchData()[0]
+            switch user.lastLevel+1 {
+            case 1:
+                mondo.text="Mondo 1"
+            case 2:
+                mondo.text="Mondo 2"
+            case 3:
+                mondo.text="Mondo 3"
+            default:
+                mondo.text="Other"
+            }
+            background.image = UIImage(named: "Mondo1.jpeg")!
+        }
+    }
     /*
     // MARK: - Navigation
 
