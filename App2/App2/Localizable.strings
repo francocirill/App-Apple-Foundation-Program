@@ -6,10 +6,24 @@
   
 */
 
-"level1" = "casa";
-"level2" = "cane";
-"level3" = "mela";
-"level4" = "fragola";
-"level5" = "criceto";
-"level6" = "scacchi";
-"level7" = "dromedario";
+"level1" = "topo";
+"level2" = "gatto";
+"level3" = "notte";
+"level4" = "tavolo";
+"level5" = "dottore";
+"level6" = "telefono";
+"level7" = "tesoro";
+"level8" = "torta";
+"level9" = "temporale";
+"level10" = "trattore";
+
+"level11" = "cuore";
+"level12" = "scarpe";
+"level13" = "regina";
+"level14" = "ruota";
+"level15" = "sorriso";
+"level16" = "torre";
+"level17" = "pirata";
+"level18" = "arcobaleno";
+"level19" = "berretto";
+"level20" = "carrozza";
