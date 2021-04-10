@@ -12,6 +12,8 @@ class LivelloSuperatoViewController: UIViewController {
     @IBOutlet weak var stella2: UIImageView!
     @IBOutlet weak var stella3: UIImageView!
     
+    @IBOutlet weak var complimenti: UILabel!
+    @IBOutlet weak var nextmondo: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var avatarImage: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
@@ -20,11 +22,30 @@ class LivelloSuperatoViewController: UIViewController {
     var user : UserProfile!
     @IBOutlet weak var avantiButton: UIButton!
     @IBAction func avanti(_ sender: Any) {
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
+            let lastlevel = PersistenceManager.fetchData()[0].lastLevel
+            switch lastlevel {
+            case 10:
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
+                self.navigationController?.pushViewController(newViewController, animated: true)
+            case 20:
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
+                self.navigationController?.pushViewController(newViewController, animated: true)
+            case 30:
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
+                self.navigationController?.pushViewController(newViewController, animated: true)
+            case 40:
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
+                self.navigationController?.pushViewController(newViewController, animated: true)
+            default:
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "SpeechDetectionViewController") as! SpeechDetectionViewController
+                self.navigationController?.pushViewController(newViewController, animated: true)
+            }
+            
             //self.newViewController?.isModalInPresentation = true
-            self.navigationController?.pushViewController(newViewController, animated: true)
+            
         })
     }
     
@@ -58,9 +79,38 @@ class LivelloSuperatoViewController: UIViewController {
         starsConstraint.constant += 100
         starsStack.alpha = 0.0
         tipLabel.alpha = 0.0
-        if PersistenceManager.fetchData()[0].lastLevel == 50 {
+        complimenti.alpha = 0.0
+        nextmondo.alpha = 0.0
+        let lastlevel = PersistenceManager.fetchData()[0].lastLevel
+        if lastlevel == 50 {
             avantiButton.isHidden = true
         }
+        
+        switch lastlevel {
+        case 10:
+            nextmondo.text = "Isola delle R"
+            tipLabel.isHidden = true
+        case 20:
+            nextmondo.text = "Precipizio delle S"
+            tipLabel.isHidden = true
+        case 30:
+            nextmondo.text = "Abisso delle GN"
+            tipLabel.isHidden = true
+        case 40:
+            nextmondo.text = "Foresta delle SC"
+            tipLabel.isHidden = true
+        default:
+            complimenti.isHidden = true
+            nextmondo.isHidden = true
+        }
+        
+//        if lastlevel == 10 || lastlevel == 20 || lastlevel == 30 || lastlevel == 40 {
+//            nextmondo.text =
+//        }
+//        else{
+//            complimenti.isHidden = true
+//            nextmondo.isHidden = true
+//        }
 
         self.navigationController?.title = "Livello superato!"
         switch numero {
@@ -100,15 +150,24 @@ class LivelloSuperatoViewController: UIViewController {
     
      override func viewDidAppear(_ animated: Bool) {
        starsConstraint.constant = 0
-        UIView.animate(withDuration: 2, animations: {
-            [weak self] in self?.view.layoutIfNeeded()
-        }, completion: {_ in
-            UIView.animate(withDuration: 2, animations: {
-                self.tipLabel.alpha = 1.0
-            })
-        })
+//        UIView.animate(withDuration: 2, animations: {
+//            [weak self] in self?.view.layoutIfNeeded()
+//        }, completion: {_ in
+//            UIView.animate(withDuration: 2, animations: {
+//                self.tipLabel.alpha = 1.0
+//            })
+//        })
         UIView.animate(withDuration: 2, animations: {
             self.starsStack.alpha = 1.0
+        })
+        UIView.animate(withDuration: 2, animations: {
+            self.tipLabel.alpha = 1.0
+        })
+        UIView.animate(withDuration: 4, animations: {
+            self.complimenti.alpha = 1.0
+        })
+        UIView.animate(withDuration: 4, animations: {
+            self.nextmondo.alpha = 1.0
         })
     }
     /*

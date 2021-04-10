@@ -638,6 +638,13 @@
                                 <color key="textColor" name="Color1"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Complimenti! Hai sbloccato" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Po-uz-NG3">
+                                <rect key="frame" x="95" y="548" width="225" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" name="Color1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDf-NJ-sCs">
                                 <rect key="frame" x="165" y="141" width="84" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
@@ -655,6 +662,15 @@
                                     <action selector="backHome:" destination="YGh-B3-jfI" eventType="touchUpInside" id="Imw-Va-fo8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="IxV-x0-oP3">
+                                <rect key="frame" x="66" y="608" width="282" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="67"/>
+                                <color key="textColor" name="Color1"/>
+                                <color key="highlightedColor" name="Color1"/>
+                                <color key="shadowColor" name="Color1"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bjC-B6-Ctq"/>
                         <color key="backgroundColor" name="Color2"/>
@@ -679,7 +695,9 @@
                     <connections>
                         <outlet property="avantiButton" destination="THj-fB-3R4" id="BsO-GG-0tX"/>
                         <outlet property="avatarImage" destination="5y2-bl-8bq" id="Jla-FW-ake"/>
+                        <outlet property="complimenti" destination="2Po-uz-NG3" id="XZv-4Y-vlc"/>
                         <outlet property="nameLabel" destination="TDf-NJ-sCs" id="bse-YP-FFH"/>
+                        <outlet property="nextmondo" destination="IxV-x0-oP3" id="D6b-Mo-POv"/>
                         <outlet property="starsConstraint" destination="9gC-RR-hcC" id="qKk-PK-tcr"/>
                         <outlet property="starsStack" destination="2dF-hy-Ob7" id="qaS-EB-j1C"/>
                         <outlet property="stella2" destination="LWq-WO-A2J" id="oTb-4e-urg"/>
@@ -691,7 +709,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wqa-SS-1u4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="D2h-vP-FZa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3262" y="-140"/>
+            <point key="canvasLocation" x="3260.8695652173915" y="-140.625"/>
         </scene>
         <!--Mondo View Controller-->
         <scene sceneID="V01-h3-HN9">
