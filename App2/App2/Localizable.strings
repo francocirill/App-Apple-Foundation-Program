@@ -27,3 +27,36 @@
 "level18" = "arcobaleno";
 "level19" = "berretto";
 "level20" = "carrozza";
+
+"level21" = "osso";
+"level22" = "sirena";
+"level23" = "soffiare";
+"level24" = "semaforo";
+"level25" = "suora";
+"level26" = "tosse";
+"level27" = "girasole";
+"level28" = "bussola";
+"level29" = "messaggio";
+"level30" = "sasso";
+
+"level31" = "gnomo";
+"level32" = "legna";
+"level33" = "sogno";
+"level34" = "spugna";
+"level35" = "ragno";
+"level36" = "agnello";
+"level37" = "lavagna";
+"level38" = "cagnolino";
+"level39" = "pagnotta";
+"level40" = "bagnina";
+
+"level41" = "pesce";
+"level42" = "scimmia";
+"level43" = "cuscino";
+"level44" = "scivolo";
+"level45" = "piscina";
+"level46" = "sciarpa";
+"level47" = "sceriffo";
+"level48" = "sciare";
+"level49" = "asciugacapelli";
+"level50" = "scienziato";
