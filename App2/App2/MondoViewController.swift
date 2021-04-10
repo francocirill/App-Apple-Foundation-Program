@@ -10,9 +10,7 @@ import UIKit
 class MondoViewController: UIViewController {
 
     @IBOutlet weak var mondo: UILabel!
-    
-    @IBOutlet weak var background: UIImageView!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,19 +34,19 @@ class MondoViewController: UIViewController {
             switch user.lastLevel+1 {
             case  1..<11:
                 mondo.text="Bosco delle T"
-                background.image = UIImage(named: "mondo1.jpg")!
+                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo1.jpg")!)
             case  11..<21:
                 mondo.text="Isola delle R"
-                background.image = UIImage(named: "mondo2.png")!
+                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo2.jpg")!)
             case  21..<31:
                 mondo.text="Precipizio delle S"
-                background.image = UIImage(named: "mondo3.jpg")!
+                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo3.jpg")!)
             case  31..<41:
                 mondo.text="Abisso delle GN"
-                background.image = UIImage(named: "mondo4.png")!
+                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo4.jpg")!)
             case  41..<51:
                 mondo.text="Foresta delle SC"
-                background.image = UIImage(named: "mondo5.jpg")!
+                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo5.jpg")!)
             default:
                 mondo.text="Other"
             }

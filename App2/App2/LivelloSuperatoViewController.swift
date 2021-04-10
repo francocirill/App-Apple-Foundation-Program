@@ -58,7 +58,7 @@ class LivelloSuperatoViewController: UIViewController {
         starsConstraint.constant += 100
         starsStack.alpha = 0.0
         tipLabel.alpha = 0.0
-        if PersistenceManager.fetchData()[0].lastLevel == 7 {
+        if PersistenceManager.fetchData()[0].lastLevel == 50 {
             avantiButton.isHidden = true
         }
 

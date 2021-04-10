@@ -107,7 +107,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         if PersistenceManager.fetchData()[0].outLoud {
             let pulse = Pulsing(numberOfPulses: 2, radius: 50, position: ripetiButton.center)
             pulse.animationDuration = 0.8
-            pulse.backgroundColor = UIColor(named: "Color2")?.cgColor
+            pulse.backgroundColor = UIColor(named: "Color5")?.cgColor
             
             self.view.layer.insertSublayer(pulse, below: ripetiButton.layer)
         }

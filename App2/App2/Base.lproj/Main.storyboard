@@ -701,9 +701,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mky-dK-hoc">
-                                <rect key="frame" x="0.0" y="88" width="414" height="862"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="RxH-vW-VGm">
                                 <rect key="frame" x="66" y="220" width="282" height="161"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="65"/>
@@ -717,18 +714,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RxH-vW-VGm" firstAttribute="top" secondItem="Buv-Hd-C0O" secondAttribute="top" constant="132" id="8EI-Dj-bIu"/>
-                            <constraint firstItem="RxH-vW-VGm" firstAttribute="centerX" secondItem="Mky-dK-hoc" secondAttribute="centerX" id="8fc-2g-DpI"/>
                             <constraint firstItem="RxH-vW-VGm" firstAttribute="leading" secondItem="Buv-Hd-C0O" secondAttribute="leading" constant="66" id="M9Y-4a-v4f"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Mky-dK-hoc" secondAttribute="bottom" constant="-88" id="TAt-tr-IzA" userLabel="bottomMargin = Background.bottom"/>
-                            <constraint firstItem="Mky-dK-hoc" firstAttribute="leading" secondItem="Buv-Hd-C0O" secondAttribute="leading" id="f4J-LX-l50"/>
                             <constraint firstItem="RxH-vW-VGm" firstAttribute="centerX" secondItem="RcU-gy-yN0" secondAttribute="centerX" id="gRf-Tm-PwD"/>
                             <constraint firstItem="Buv-Hd-C0O" firstAttribute="bottom" secondItem="RxH-vW-VGm" secondAttribute="bottom" constant="481" id="mS1-AG-34b"/>
-                            <constraint firstItem="Mky-dK-hoc" firstAttribute="top" secondItem="Buv-Hd-C0O" secondAttribute="top" id="yka-Gh-mnf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oUu-2p-TAV"/>
                     <connections>
-                        <outlet property="background" destination="Mky-dK-hoc" id="o8x-q9-pzi"/>
                         <outlet property="mondo" destination="RxH-vW-VGm" id="BZJ-Po-txM"/>
                         <segue destination="EwY-to-DXc" kind="show" identifier="start" id="Hh0-l8-BtX"/>
                     </connections>

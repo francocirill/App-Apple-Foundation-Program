@@ -38,7 +38,7 @@ class ViewController: UIViewController {
             stars.text = String(user.points)
             level.text = String(user.lastLevel + 1)
             avatar.image = UIImage(named: user.avatar!)
-            if user.lastLevel == 7 {
+            if user.lastLevel == 50 {
                 finalText.isHidden = false
                 continuaButton.isHidden = true
             }
