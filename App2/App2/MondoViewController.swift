@@ -10,7 +10,7 @@ import UIKit
 class MondoViewController: UIViewController {
 
     @IBOutlet weak var mondo: UILabel!
-        
+            
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,6 +29,7 @@ class MondoViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
         if PersistenceManager.fetchData().count != 0 {
             var user = PersistenceManager.fetchData()[0]
             switch user.lastLevel+1 {
