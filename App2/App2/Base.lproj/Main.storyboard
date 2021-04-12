@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bQV-87-oiB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p2w-3Y-Rol">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -18,32 +18,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome utente" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a9-8W-TlE">
-                                <rect key="frame" x="129.5" y="138" width="155.5" height="33.5"/>
+                                <rect key="frame" x="129.5" y="94" width="155.5" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captain America" translatesAutoresizingMaskIntoConstraints="NO" id="rty-z7-36Q">
-                                <rect key="frame" x="138" y="191.5" width="138" height="117"/>
+                                <rect key="frame" x="138" y="147.5" width="138" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="8IP-16-Kq0"/>
                                     <constraint firstAttribute="width" constant="138" id="Cxd-eC-aKT"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ug-2R-XrS">
-                                <rect key="frame" x="299" y="349.5" width="25" height="36"/>
+                                <rect key="frame" x="299" y="305.5" width="25" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stelle guadagnate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVh-ch-ILa">
-                                <rect key="frame" x="30" y="353.5" width="177" height="27"/>
+                                <rect key="frame" x="30" y="309.5" width="177" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI5-yw-kom">
-                                <rect key="frame" x="291" y="403.5" width="33" height="36"/>
+                                <rect key="frame" x="291" y="359.5" width="33" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stella piena" translatesAutoresizingMaskIntoConstraints="NO" id="KKP-K1-jUz">
-                                <rect key="frame" x="329" y="349.5" width="35" height="35"/>
+                                <rect key="frame" x="329" y="305.5" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="Lmd-NG-aX8"/>
                                     <constraint firstAttribute="height" constant="35" id="psN-LT-4Vs"/>
@@ -69,9 +69,6 @@
                                     <constraint firstAttribute="width" constant="250" id="jF9-Ga-7wv"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="continua"/>
-                                <connections>
-                                    <segue destination="Hzt-IN-R1K" kind="show" id="vYH-Ha-riP"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complimenti!Gioco terminato!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dn6-ga-cxL">
                                 <rect key="frame" x="127" y="639" width="160" height="53"/>
@@ -799,6 +796,7 @@
                         <viewLayoutGuide key="safeArea" id="Vsl-x5-skf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6QW-LF-VBx"/>
                     <connections>
                         <outlet property="avatar1" destination="FjU-X2-qIq" id="iZk-Fy-MNN"/>
                         <outlet property="avatar2" destination="Psh-sr-7Qt" id="WMo-nk-ag5"/>
@@ -815,14 +813,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hZ-66-pqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-528" y="-140"/>
+            <point key="canvasLocation" x="-751" y="-141"/>
         </scene>
         <!--Select Level View Controller-->
         <scene sceneID="j6N-rh-FQ3">
             <objects>
                 <viewController id="VpF-lG-hjj" customClass="SelectLevelViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CfP-S7-tf1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVj-Ny-hue">
@@ -831,6 +829,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="wolrd1:" destination="bQV-87-oiB" eventType="touchUpInside" id="N1w-0U-wde"/>
+                                    <segue destination="Hzt-IN-R1K" kind="show" identifier="level1" id="WjK-DX-Qld"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgh-oa-95y">
@@ -839,6 +838,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="world4:" destination="bQV-87-oiB" eventType="touchUpInside" id="Q3p-vP-ll7"/>
+                                    <segue destination="Hzt-IN-R1K" kind="show" identifier="level4" id="fIe-sm-A42"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oag-jC-j7B">
@@ -847,6 +847,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="wolrd2:" destination="bQV-87-oiB" eventType="touchUpInside" id="wQj-At-TQx"/>
+                                    <segue destination="Hzt-IN-R1K" kind="show" identifier="level2" id="dra-nk-Lsv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBb-SC-6Dg">
@@ -855,6 +856,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="world3:" destination="bQV-87-oiB" eventType="touchUpInside" id="9Jg-xo-off"/>
+                                    <segue destination="Hzt-IN-R1K" kind="show" identifier="level3" id="eM8-T6-eNz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzX-PA-BmL">
@@ -863,6 +865,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="world5:" destination="bQV-87-oiB" eventType="touchUpInside" id="stf-eE-763"/>
+                                    <segue destination="Hzt-IN-R1K" kind="show" identifier="level5" id="fce-EH-5p6"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5hd-Qg-CQn">
@@ -905,7 +908,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4mn-A1-pWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="451" y="-140"/>
+            <point key="canvasLocation" x="162" y="-141"/>
         </scene>
         <!--Mondo View Controller-->
         <scene sceneID="V01-h3-HN9">
@@ -1056,7 +1059,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0ts-CP-gN1"/>
+                        <segue destination="bQV-87-oiB" kind="relationship" relationship="rootViewController" id="jUN-iR-UXc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wD6-e7-3sM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1068,11 +1071,11 @@
             <objects>
                 <viewController id="nlw-Ad-gAW" customClass="Impostazioni" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gv9-1W-ciu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="x1k-24-g6k">
-                                <rect key="frame" x="32.5" y="242.5" width="349" height="411"/>
+                                <rect key="frame" x="32.5" y="215.5" width="349" height="411"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="phy-gB-2wW">
                                         <rect key="frame" x="0.0" y="0.0" width="349" height="34"/>
@@ -1191,7 +1194,7 @@
             <objects>
                 <collectionViewController id="YTX-Ss-XNd" customClass="CollectionViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="pDN-Yt-oD3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="Color2"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wlR-lB-OuZ">
@@ -1245,7 +1248,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vYH-Ha-riP"/>
+        <segue reference="fIe-sm-A42"/>
         <segue reference="aUN-aA-Zzs"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -134,11 +134,36 @@ class SelectLevelViewController: UIViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation*/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "level1":
+            let dstView = segue.destination as! MondoViewController
+            dstView.worldNumber = worldNumber
+            dstView.levelNumber = 1 + (worldNumber-1)*5
+        case "level2":
+            let dstView = segue.destination as! MondoViewController
+            dstView.worldNumber = worldNumber
+            dstView.levelNumber = 2 + (worldNumber-1)*5
+        case "level3":
+            let dstView = segue.destination as! MondoViewController
+            dstView.worldNumber = worldNumber
+            dstView.levelNumber = 3 + (worldNumber-1)*5
+        case "level4":
+            let dstView = segue.destination as! MondoViewController
+            dstView.worldNumber = worldNumber
+            dstView.levelNumber = 4 + (worldNumber-1)*5
+        case "level5":
+            let dstView = segue.destination as! MondoViewController
+            dstView.worldNumber = worldNumber
+            dstView.levelNumber = 5 + (worldNumber-1)*5
+        default:
+            print(#function)
+        }
     }
-    */
+
+    
 
 }

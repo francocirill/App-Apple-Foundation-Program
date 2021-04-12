@@ -21,6 +21,7 @@ class SelectWorldViewController: UIViewController {
     @IBOutlet weak var world2Image: UIButton!
     @IBOutlet weak var world1Image: UIButton!
     
+    
     @IBAction func wolrd1(_ sender: Any) {
     }
     
@@ -37,6 +38,11 @@ class SelectWorldViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if PersistenceManager.fetchData().count == 0 {let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "TutorialViewController")
+            //self.newViewController?.isModalInPresentation = true
+            self.navigationController?.pushViewController(newViewController, animated: true)
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -119,5 +125,6 @@ class SelectWorldViewController: UIViewController {
         }
     }
     
-
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+    }
 }

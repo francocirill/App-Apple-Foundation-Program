@@ -10,6 +10,8 @@ import UIKit
 class MondoViewController: UIViewController {
 
     @IBOutlet weak var mondo: UILabel!
+    var worldNumber : Int = 1
+    var levelNumber : Int = 1
             
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,26 +33,45 @@ class MondoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: false)
         if PersistenceManager.fetchData().count != 0 {
-            var user = PersistenceManager.fetchData()[0]
-            switch user.lastLevel+1 {
-            case  1..<11:
+            switch worldNumber {
+            case 1:
                 mondo.text="Bosco delle T"
                 self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo1.jpg")!)
-            case  11..<21:
+            case 2:
                 mondo.text="Isola delle R"
                 self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo2.jpg")!)
-            case  21..<31:
+            case 3:
                 mondo.text="Precipizio delle S"
                 self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo3.jpg")!)
-            case  31..<41:
+            case 4:
                 mondo.text="Abisso delle GN"
                 self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo4.jpg")!)
-            case  41..<51:
+            case 5:
                 mondo.text="Foresta delle SC"
                 self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo5.jpg")!)
             default:
                 mondo.text="Other"
             }
+//            var user = PersistenceManager.fetchData()[0]
+//            switch user.lastLevel+1 {
+//            case  1..<11:
+//                mondo.text="Bosco delle T"
+//                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo1.jpg")!)
+//            case  11..<21:
+//                mondo.text="Isola delle R"
+//                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo2.jpg")!)
+//            case  21..<31:
+//                mondo.text="Precipizio delle S"
+//                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo3.jpg")!)
+//            case  31..<41:
+//                mondo.text="Abisso delle GN"
+//                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo4.jpg")!)
+//            case  41..<51:
+//                mondo.text="Foresta delle SC"
+//                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo5.jpg")!)
+//            default:
+//                mondo.text="Other"
+//            }
             
         }
         mondo.backgroundColor = UIColor(white: 1, alpha: 0.7)

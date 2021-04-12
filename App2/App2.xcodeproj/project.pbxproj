@@ -129,9 +129,9 @@
 				DC92938A25E1641700311BA4 /* TutorialViewController.swift */,
 				DC92938D25E1761B00311BA4 /* Tutorial1ViewController.swift */,
 				DC92939525E18E0200311BA4 /* Impostazioni.swift */,
-				8B24ABF5261E134900D4320C /* MondoViewController.swift */,
 				8B05DF312624B7B300214B4C /* SelectWorldViewController.swift */,
 				8B05DF342624D4C200214B4C /* SelectLevelViewController.swift */,
+				8B24ABF5261E134900D4320C /* MondoViewController.swift */,
 			);
 			path = App2;
 			sourceTree = "<group>";
