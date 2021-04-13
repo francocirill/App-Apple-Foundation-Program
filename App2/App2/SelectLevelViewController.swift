@@ -150,7 +150,7 @@ class SelectLevelViewController: UIViewController {
             dstView.worldNumber = worldNumber
             dstView.levelNumber = 5 + (worldNumber-1)*5
         default:
-            print(#function)
+            print("error")
         }
     }
 
