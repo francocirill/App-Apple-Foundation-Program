@@ -796,7 +796,13 @@
                         <viewLayoutGuide key="safeArea" id="Vsl-x5-skf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6QW-LF-VBx"/>
+                    <navigationItem key="navigationItem" id="6QW-LF-VBx">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape" catalog="system" id="DoY-t9-EFO">
+                            <connections>
+                                <segue destination="nlw-Ad-gAW" kind="show" id="09V-Ls-C7L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="avatar1" destination="FjU-X2-qIq" id="iZk-Fy-MNN"/>
                         <outlet property="avatar2" destination="Psh-sr-7Qt" id="WMo-nk-ag5"/>
@@ -813,7 +819,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hZ-66-pqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-751" y="-141"/>
+            <point key="canvasLocation" x="-900" y="-141"/>
         </scene>
         <!--Select Level View Controller-->
         <scene sceneID="j6N-rh-FQ3">
@@ -1248,6 +1254,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="TK0-ix-awE"/>
         <segue reference="fIe-sm-A42"/>
         <segue reference="aUN-aA-Zzs"/>
     </inferredMetricsTieBreakers>
