@@ -102,11 +102,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Logos" id="YZn-Jg-3w5">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape" catalog="system" id="E0D-o0-Pdi">
-                            <connections>
-                                <segue destination="nlw-Ad-gAW" kind="show" id="TK0-ix-awE"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape" catalog="system" id="E0D-o0-Pdi"/>
                     </navigationItem>
                     <connections>
                         <outlet property="avatar" destination="rty-z7-36Q" id="fJV-dr-9d8"/>
@@ -1077,11 +1073,11 @@
             <objects>
                 <viewController id="nlw-Ad-gAW" customClass="Impostazioni" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gv9-1W-ciu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="x1k-24-g6k">
-                                <rect key="frame" x="32.5" y="215.5" width="349" height="411"/>
+                                <rect key="frame" x="32.5" y="242.5" width="349" height="411"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="phy-gB-2wW">
                                         <rect key="frame" x="0.0" y="0.0" width="349" height="34"/>
@@ -1200,7 +1196,7 @@
             <objects>
                 <collectionViewController id="YTX-Ss-XNd" customClass="CollectionViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="pDN-Yt-oD3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="Color2"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wlR-lB-OuZ">
@@ -1254,7 +1250,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TK0-ix-awE"/>
         <segue reference="fIe-sm-A42"/>
         <segue reference="aUN-aA-Zzs"/>
     </inferredMetricsTieBreakers>

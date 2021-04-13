@@ -66,66 +66,56 @@ class SelectLevelViewController: UIViewController {
         
         if PersistenceManager.fetchData().count != 0 {
             var user = PersistenceManager.fetchData()[0]
+            print("select level last level: \(user.lastLevel)")
+            print("select level world choosed: \(worldNumber)")
             avatar1.image = UIImage(named: user.avatar!)
             avatar2.image = UIImage(named: user.avatar!)
             avatar3.image = UIImage(named: user.avatar!)
             avatar4.image = UIImage(named: user.avatar!)
             avatar5.image = UIImage(named: user.avatar!)
-            print((user.lastLevel+1)%5)
-            print(worldNumber*5)
             switch (user.lastLevel+1)%5 {
             case  1:
                 if(user.lastLevel+1 > worldNumber*5){
                     avatar1.isHidden = true
                 }
-                else{
-                    avatar5.isHidden = true
-                }
                 avatar2.isHidden = true
                 avatar3.isHidden = true
                 avatar4.isHidden = true
-                
+                avatar5.isHidden = true
             case  2:
                 if(user.lastLevel+1 > worldNumber*5){
                     avatar2.isHidden = true
                 }
-                else{
-                    avatar5.isHidden = true
-                }
                 avatar1.isHidden = true
                 avatar3.isHidden = true
                 avatar4.isHidden = true
+                avatar5.isHidden = true
             case  3:
                 if(user.lastLevel+1 > worldNumber*5){
                     avatar3.isHidden = true
                 }
-                else{
-                    avatar5.isHidden = true
-                }
                 avatar1.isHidden = true
                 avatar2.isHidden = true
                 avatar4.isHidden = true
+                avatar5.isHidden = true
             case  4:
                 if(user.lastLevel+1 > worldNumber*10){
                     avatar4.isHidden = true
                 }
-                else{
-                    avatar5.isHidden = true
-                }
                 avatar1.isHidden = true
                 avatar2.isHidden = true
                 avatar3.isHidden = true
+                avatar5.isHidden = true
             case  0:
+                if(user.lastLevel+1 > worldNumber*10){
+                    avatar5.isHidden = true
+                }
                 avatar1.isHidden = true
                 avatar2.isHidden = true
                 avatar3.isHidden = true
                 avatar4.isHidden = true
             default:
-                avatar1.isHidden = true
-                avatar2.isHidden = true
-                avatar3.isHidden = true
-                avatar4.isHidden = true
-                avatar5.isHidden = true
+                print(#function)
             }
             
         }

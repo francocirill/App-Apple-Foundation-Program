@@ -12,6 +12,8 @@ import AVFoundation
 class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegate{
     //Processa lo stream audio
   
+    var worldNumber : Int = 1
+    var levelNumber : Int = 1
     
     var player: AVAudioPlayer?
     
@@ -143,7 +145,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: false)
-        livello = Int(PersistenceManager.fetchData()[0].lastLevel + 1)
+        livello = levelNumber + (worldNumber-1)*5
         user = PersistenceManager.fetchData()[0]
         image.isHidden = !user.showPics
         ripetiButton.isHidden = !user.outLoud

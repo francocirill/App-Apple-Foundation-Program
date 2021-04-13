@@ -33,6 +33,8 @@ class MondoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: false)
         if PersistenceManager.fetchData().count != 0 {
+            print("mondo view world choosen: \(worldNumber)")
+            print("mondo view level choosen: \(levelNumber)")
             switch worldNumber {
             case 1:
                 mondo.text="Bosco delle T"
@@ -81,11 +83,14 @@ class MondoViewController: UIViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation*/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let dstView = segue.destination as! SpeechDetectionViewController
+        dstView.worldNumber = worldNumber
+        dstView.levelNumber = levelNumber
     }
-    */
+    
 
 }

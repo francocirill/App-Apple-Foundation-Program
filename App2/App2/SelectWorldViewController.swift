@@ -51,7 +51,7 @@ class SelectWorldViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "space.jpeg")!)
         if PersistenceManager.fetchData().count != 0 {
             var user = PersistenceManager.fetchData()[0]
-            print(user.lastLevel)
+            print("select world last level: \(user.lastLevel)")
             startsNumber.text = String(user.points)
             avatar1.image = UIImage(named: user.avatar!)
             avatar2.image = UIImage(named: user.avatar!)
