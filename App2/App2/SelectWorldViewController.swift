@@ -38,17 +38,58 @@ class SelectWorldViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         if PersistenceManager.fetchData().count == 0 {let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "TutorialViewController")
             //self.newViewController?.isModalInPresentation = true
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
+        
+        world1Image.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        world1Image.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
+        world1Image.layer.shadowOpacity = 1.0
+        world1Image.layer.shadowRadius = 2.0
+        world1Image.layer.cornerRadius = 4.0
+        world1Image.layer.masksToBounds = false
+        
+        world2Image.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        world2Image.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
+        world2Image.layer.shadowOpacity = 1.0
+        world2Image.layer.shadowRadius = 2.0
+        world2Image.layer.cornerRadius = 4.0
+        world2Image.layer.masksToBounds = false
+        
+        world3Image.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        world3Image.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
+        world3Image.layer.shadowOpacity = 1.0
+        world3Image.layer.shadowRadius = 2.0
+        world3Image.layer.cornerRadius = 4.0
+        world3Image.layer.masksToBounds = false
+        
+        world4Image.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        world4Image.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
+        world4Image.layer.shadowOpacity = 1.0
+        world4Image.layer.shadowRadius = 2.0
+        world4Image.layer.cornerRadius = 4.0
+        world4Image.layer.masksToBounds = false
+        
+        world5Image.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        world5Image.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
+        world5Image.layer.shadowOpacity = 1.0
+        world5Image.layer.shadowRadius = 2.0
+        world5Image.layer.cornerRadius = 4.0
+        world5Image.layer.masksToBounds = false
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "space.jpeg")!)
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "green3.jpg")?.draw(in: self.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "green3.jpg")!)
         if PersistenceManager.fetchData().count != 0 {
             var user = PersistenceManager.fetchData()[0]
             print("select world last level: \(user.lastLevel)")

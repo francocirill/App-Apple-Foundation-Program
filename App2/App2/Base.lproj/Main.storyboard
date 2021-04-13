@@ -713,79 +713,118 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjM-Qj-e2b">
-                                <rect key="frame" x="247" y="694" width="116" height="92"/>
+                                <rect key="frame" x="247" y="719" width="116" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="bosco"/>
+                                <state key="normal" backgroundImage="mondo1"/>
                                 <connections>
                                     <action selector="wolrd1:" destination="bQV-87-oiB" eventType="touchUpInside" id="IAg-ah-w5g"/>
                                     <segue destination="VpF-lG-hjj" kind="show" identifier="world1" id="aUN-aA-Zzs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJK-rX-dqQ">
-                                <rect key="frame" x="34" y="320" width="116" height="92"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJK-rX-dqQ">
+                                <rect key="frame" x="52" y="288" width="116" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="mondo4"/>
                                 <connections>
                                     <action selector="world4:" destination="bQV-87-oiB" eventType="touchUpInside" id="tnd-hQ-r4l"/>
                                     <segue destination="VpF-lG-hjj" kind="show" identifier="world4" id="eaG-ho-ufW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhB-IU-L1o">
-                                <rect key="frame" x="34" y="569" width="116" height="92"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhB-IU-L1o">
+                                <rect key="frame" x="52" y="576" width="116" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="mondo2"/>
                                 <connections>
                                     <action selector="wolrd2:" destination="bQV-87-oiB" eventType="touchUpInside" id="0PW-hM-UME"/>
                                     <segue destination="VpF-lG-hjj" kind="show" identifier="world2" id="Si0-4h-DYf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5En-Au-RBY">
-                                <rect key="frame" x="247" y="431" width="116" height="92"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5En-Au-RBY">
+                                <rect key="frame" x="247" y="431" width="116" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="mondo3"/>
                                 <connections>
                                     <action selector="world3:" destination="bQV-87-oiB" eventType="touchUpInside" id="bld-Mb-5pg"/>
                                     <segue destination="VpF-lG-hjj" kind="show" identifier="world3" id="7sw-Si-7ks"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz7-6k-49h">
-                                <rect key="frame" x="247" y="180" width="116" height="92"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz7-6k-49h">
+                                <rect key="frame" x="247" y="147" width="116" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="mondo5"/>
                                 <connections>
                                     <action selector="world5:" destination="bQV-87-oiB" eventType="touchUpInside" id="m2H-Sz-Whn"/>
                                     <segue destination="VpF-lG-hjj" kind="show" identifier="world5" id="pYx-Jd-EHg"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FjU-X2-qIq">
-                                <rect key="frame" x="177" y="704" width="85" height="73"/>
+                                <rect key="frame" x="206" y="777" width="85" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Psh-sr-7Qt">
-                                <rect key="frame" x="126" y="579" width="85" height="73"/>
+                                <rect key="frame" x="125" y="634" width="85" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RpZ-Gj-0p3">
-                                <rect key="frame" x="177" y="450" width="85" height="73"/>
+                                <rect key="frame" x="206" y="490" width="85" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Bg-dA-1Rf">
-                                <rect key="frame" x="126" y="330" width="85" height="73"/>
+                                <rect key="frame" x="125" y="346" width="85" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YE0-6S-H68">
-                                <rect key="frame" x="177" y="190" width="85" height="73"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaF-Td-Tg9">
+                                <rect key="frame" x="20" y="122" width="53" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaF-Td-Tg9">
-                                <rect key="frame" x="20" y="131" width="53" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stella piena" translatesAutoresizingMaskIntoConstraints="NO" id="TVK-Sb-hUR">
-                                <rect key="frame" x="74" y="135" width="37" height="37"/>
+                                <rect key="frame" x="75" y="122" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bosco delle T" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="NJ3-n5-7wq" userLabel="LabelW1">
+                                <rect key="frame" x="247" y="694" width="116" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="23"/>
+                                <color key="highlightedColor" name="Color1"/>
+                                <color key="shadowColor" name="Color1"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Isola delle R" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="otz-lg-dtd" userLabel="LabelW2">
+                                <rect key="frame" x="52" y="552" width="116" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="23"/>
+                                <color key="highlightedColor" name="Color1"/>
+                                <color key="shadowColor" name="Color1"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precipizio delle S" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="oso-XK-KBR" userLabel="LabelW3">
+                                <rect key="frame" x="247" y="406" width="116" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="23"/>
+                                <color key="highlightedColor" name="Color1"/>
+                                <color key="shadowColor" name="Color1"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Abisso delle GN" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="IOq-ZH-Pn6" userLabel="LabelW4">
+                                <rect key="frame" x="52" y="262" width="116" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="23"/>
+                                <color key="highlightedColor" name="Color1"/>
+                                <color key="shadowColor" name="Color1"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Foresta delle SC" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="BrC-Vv-RKt" userLabel="LabelW5">
+                                <rect key="frame" x="247" y="122" width="116" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="23"/>
+                                <color key="highlightedColor" name="Color1"/>
+                                <color key="shadowColor" name="Color1"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YE0-6S-H68">
+                                <rect key="frame" x="206" y="203" width="85" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -815,7 +854,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hZ-66-pqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-900" y="-141"/>
+            <point key="canvasLocation" x="-900.00000000000011" y="-141.29464285714286"/>
         </scene>
         <!--Select Level View Controller-->
         <scene sceneID="j6N-rh-FQ3">
@@ -921,7 +960,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="RxH-vW-VGm">
-                                <rect key="frame" x="66" y="220" width="282" height="161"/>
+                                <rect key="frame" x="66" y="158" width="282" height="76"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="65"/>
                                 <color key="textColor" name="Color1"/>
                                 <color key="highlightedColor" name="Color1"/>
@@ -932,10 +971,9 @@
                         <viewLayoutGuide key="safeArea" id="Buv-Hd-C0O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RxH-vW-VGm" firstAttribute="top" secondItem="Buv-Hd-C0O" secondAttribute="top" constant="132" id="8EI-Dj-bIu"/>
                             <constraint firstItem="RxH-vW-VGm" firstAttribute="leading" secondItem="Buv-Hd-C0O" secondAttribute="leading" constant="66" id="M9Y-4a-v4f"/>
                             <constraint firstItem="RxH-vW-VGm" firstAttribute="centerX" secondItem="RcU-gy-yN0" secondAttribute="centerX" id="gRf-Tm-PwD"/>
-                            <constraint firstItem="Buv-Hd-C0O" firstAttribute="bottom" secondItem="RxH-vW-VGm" secondAttribute="bottom" constant="481" id="mS1-AG-34b"/>
+                            <constraint firstItem="RxH-vW-VGm" firstAttribute="top" secondItem="Buv-Hd-C0O" secondAttribute="top" constant="70" id="yID-3w-ZYs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oUu-2p-TAV"/>
@@ -1251,14 +1289,13 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="fIe-sm-A42"/>
-        <segue reference="aUN-aA-Zzs"/>
+        <segue reference="7sw-Si-7ks"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1f5e3" width="512" height="512"/>
         <image name="Captain America" width="100" height="100"/>
         <image name="avanti" width="1240" height="698"/>
         <image name="avatar-default" width="150" height="150"/>
-        <image name="bosco" width="735" height="490"/>
         <image name="continua" width="1190" height="604"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="imgpsh_fullsize (4)" width="789" height="1732"/>
@@ -1268,6 +1305,11 @@
         <image name="imgpsh_fullsize (8)" width="809" height="1763"/>
         <image name="indietroHome" width="1205" height="628"/>
         <image name="mic_spento" width="1482" height="1490"/>
+        <image name="mondo1" width="558" height="997"/>
+        <image name="mondo2" width="558" height="995"/>
+        <image name="mondo3" width="982" height="1598"/>
+        <image name="mondo4" width="1285" height="2152"/>
+        <image name="mondo5" width="943" height="1595"/>
         <image name="stella piena" width="330.33334350585938" height="310"/>
         <image name="stella_vuota" width="372.66665649414062" height="342.66665649414062"/>
         <namedColor name="Color1">

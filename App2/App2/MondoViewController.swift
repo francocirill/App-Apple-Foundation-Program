@@ -38,19 +38,44 @@ class MondoViewController: UIViewController {
             switch worldNumber {
             case 1:
                 mondo.text="Bosco delle T"
-                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo1.jpg")!)
+                UIGraphicsBeginImageContext(self.view.frame.size)
+                UIImage(named: "mondo1.jpg")?.draw(in: self.view.bounds)
+                let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                self.view.backgroundColor = UIColor(patternImage: image)
+                mondo.textColor = UIColor.white
             case 2:
                 mondo.text="Isola delle R"
-                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo2.jpg")!)
+                UIGraphicsBeginImageContext(self.view.frame.size)
+                UIImage(named: "mondo2.jpg")?.draw(in: self.view.bounds)
+                let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                self.view.backgroundColor = UIColor(patternImage: image)
+                mondo.textColor = UIColor.white
             case 3:
                 mondo.text="Precipizio delle S"
-                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo3.jpg")!)
+                UIGraphicsBeginImageContext(self.view.frame.size)
+                UIImage(named: "mondo3.jpg")?.draw(in: self.view.bounds)
+                let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                self.view.backgroundColor = UIColor(patternImage: image)
+                mondo.textColor = UIColor.red
             case 4:
                 mondo.text="Abisso delle GN"
-                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo4.jpg")!)
+                UIGraphicsBeginImageContext(self.view.frame.size)
+                UIImage(named: "mondo4.jpg")?.draw(in: self.view.bounds)
+                let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                self.view.backgroundColor = UIColor(patternImage: image)
+                mondo.textColor = UIColor.white
             case 5:
                 mondo.text="Foresta delle SC"
-                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mondo5.jpg")!)
+                UIGraphicsBeginImageContext(self.view.frame.size)
+                UIImage(named: "mondo5.jpg")?.draw(in: self.view.bounds)
+                let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                self.view.backgroundColor = UIColor(patternImage: image)
+                mondo.textColor = UIColor.purple
             default:
                 mondo.text="Other"
             }
@@ -76,9 +101,10 @@ class MondoViewController: UIViewController {
 //            }
             
         }
-        mondo.backgroundColor = UIColor(white: 1, alpha: 0.7)
-        mondo.layer.masksToBounds = true
-        mondo.layer.cornerRadius = 10
+//        mondo.backgroundColor = UIColor(white: 1, alpha: 0.7)
+//        mondo.layer.masksToBounds = true
+//        mondo.layer.cornerRadius = 10
+        
     }
     /*
     // MARK: - Navigation

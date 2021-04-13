@@ -29,6 +29,11 @@ class SelectLevelViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "green3.jpg")?.draw(in: self.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
         switch worldNumber {
         case 1:
             level1Image.setTitle("Livello 1", for: .normal)
