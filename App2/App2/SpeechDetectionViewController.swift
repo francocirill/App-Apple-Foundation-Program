@@ -34,6 +34,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     //Gestire il riconoscimento
     var recognitionTask: SFSpeechRecognitionTask?
     @IBOutlet weak var frase: UILabel!
+    @IBOutlet weak var ripetiLabel: UILabel!
     @IBOutlet weak var ripeti: UIButton!
     @IBOutlet weak var image: UIImageView!
     @IBAction func ripetiTapped(_ sender: UIButton) {
@@ -99,6 +100,23 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         catch let error as NSError {
             return print(error)
         }
+        
+        pronunciata.layer.cornerRadius = 18
+        pronunciata.layer.borderWidth = 2
+        pronunciata.layer.masksToBounds = true
+        pronunciata.layer.borderColor = UIColor.white.cgColor
+        
+        image.layer.shadowColor = UIColor.black.cgColor
+        image.layer.shadowOpacity = 0.8
+        image.layer.shadowRadius = 13.0
+        image.clipsToBounds = false
+        image.layer.masksToBounds = false
+        
+        microphone.layer.shadowColor = UIColor.black.cgColor
+        microphone.layer.shadowOpacity = 0.8
+        microphone.layer.shadowRadius = 13.0
+        microphone.clipsToBounds = false
+        microphone.layer.masksToBounds = false
 //        microphone.isUserInteractionEnabled = true
 //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SpeechDetectionViewController.addPulse))
 //        tapGestureRecognizer.numberOfTouchesRequired = 1
@@ -154,6 +172,54 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         frase.text = NSLocalizedString("level\(livello!)", comment: "")
     
         Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.pulseRipetiButton), userInfo: nil, repeats: true)
+        
+        switch worldNumber {
+        case 1:
+            UIGraphicsBeginImageContext(self.view.frame.size)
+            UIImage(named: "mondo1.jpg")?.draw(in: self.view.bounds)
+            let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                UIGraphicsEndImageContext()
+            self.view.backgroundColor = UIColor(patternImage: image).withAlphaComponent(0.85)
+            frase.textColor = UIColor.white
+            ripetiLabel.textColor = UIColor.white
+        case 2:
+            UIGraphicsBeginImageContext(self.view.frame.size)
+            UIImage(named: "mondo2.jpg")?.draw(in: self.view.bounds)
+            let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                UIGraphicsEndImageContext()
+            self.view.backgroundColor = UIColor(patternImage: image).withAlphaComponent(0.85)
+            frase.textColor = UIColor.white
+            ripetiLabel.textColor = UIColor.white
+        case 3:
+            UIGraphicsBeginImageContext(self.view.frame.size)
+            UIImage(named: "mondo3.jpg")?.draw(in: self.view.bounds)
+            let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                UIGraphicsEndImageContext()
+            self.view.backgroundColor = UIColor(patternImage: image).withAlphaComponent(0.85)
+            frase.textColor = UIColor.red
+            ripetiLabel.textColor = UIColor.red
+        case 4:
+            UIGraphicsBeginImageContext(self.view.frame.size)
+            UIImage(named: "mondo4.jpg")?.draw(in: self.view.bounds)
+            let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                UIGraphicsEndImageContext()
+            self.view.backgroundColor = UIColor(patternImage: image).withAlphaComponent(0.85)
+            frase.textColor = UIColor.white
+            ripetiLabel.textColor = UIColor.white
+        case 5:
+            UIGraphicsBeginImageContext(self.view.frame.size)
+            UIImage(named: "mondo5.jpg")?.draw(in: self.view.bounds)
+            let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                UIGraphicsEndImageContext()
+            self.view.backgroundColor = UIColor(patternImage: image).withAlphaComponent(0.85)
+            frase.textColor = UIColor.red
+            ripetiLabel.textColor = UIColor.red
+        default:
+            self.view.backgroundColor = UIColor.white
+        }
+
+        
+
     }
     
     override func viewDidAppear(_ animated: Bool) {

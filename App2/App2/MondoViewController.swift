@@ -75,7 +75,7 @@ class MondoViewController: UIViewController {
                 let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
                     UIGraphicsEndImageContext()
                 self.view.backgroundColor = UIColor(patternImage: image)
-                mondo.textColor = UIColor.purple
+                mondo.textColor = UIColor.red
             default:
                 mondo.text="Other"
             }

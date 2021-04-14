@@ -10,6 +10,7 @@ import UIKit
 class SelectWorldViewController: UIViewController {
 
     @IBOutlet weak var startsNumber: UILabel!
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var avatar5: UIImageView!
     @IBOutlet weak var avatar4: UIImageView!
     @IBOutlet weak var avatar3: UIImageView!
@@ -20,6 +21,7 @@ class SelectWorldViewController: UIViewController {
     @IBOutlet weak var world3Image: UIButton!
     @IBOutlet weak var world2Image: UIButton!
     @IBOutlet weak var world1Image: UIButton!
+    var user : UserProfile!
     
     
     @IBAction func wolrd1(_ sender: Any) {
@@ -44,6 +46,7 @@ class SelectWorldViewController: UIViewController {
             //self.newViewController?.isModalInPresentation = true
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
+        
         
         world1Image.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
         world1Image.layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
@@ -135,6 +138,8 @@ class SelectWorldViewController: UIViewController {
             }
             
         }
+        user = PersistenceManager.fetchData()[0]
+        name.text = "\(user.name!)"
     }
 
     /*
