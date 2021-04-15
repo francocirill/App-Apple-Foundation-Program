@@ -34,7 +34,7 @@ class LevelCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
     
-    /* ??? */
+    /* ???*/
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -52,7 +52,7 @@ class LevelCollectionViewController: UICollectionViewController {
             
             levelCell.configure(levelNumber: levelSource[indexPath.row], levelImage: imageSource[indexPath.row]!)
             
-            //levelCell.configure(with: dataSource[indexPath.row])
+            
             
             cell = levelCell
             
@@ -105,7 +105,7 @@ class LevelCollectionViewController: UICollectionViewController {
     }
     */
 
-    /* ??? */
+    /* ???*/
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
