@@ -36,6 +36,7 @@
 		DC92938E25E1761B00311BA4 /* Tutorial1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92938D25E1761B00311BA4 /* Tutorial1ViewController.swift */; };
 		DC92939225E17A1500311BA4 /* UserProfile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92939125E17A1500311BA4 /* UserProfile+CoreDataProperties.swift */; };
 		DC92939625E18E0200311BA4 /* Impostazioni.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92939525E18E0200311BA4 /* Impostazioni.swift */; };
+		EF2E3B5B262836E200C72655 /* LevelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E3B5A262836E200C72655 /* LevelCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		DC92938D25E1761B00311BA4 /* Tutorial1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial1ViewController.swift; sourceTree = "<group>"; };
 		DC92939125E17A1500311BA4 /* UserProfile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserProfile+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DC92939525E18E0200311BA4 /* Impostazioni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Impostazioni.swift; sourceTree = "<group>"; };
+		EF2E3B5A262836E200C72655 /* LevelCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				8B05DF312624B7B300214B4C /* SelectWorldViewController.swift */,
 				8B05DF342624D4C200214B4C /* SelectLevelViewController.swift */,
 				8B24ABF5261E134900D4320C /* MondoViewController.swift */,
+				EF2E3B5A262836E200C72655 /* LevelCollectionViewController.swift */,
 			);
 			path = App2;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				DC92939225E17A1500311BA4 /* UserProfile+CoreDataProperties.swift in Sources */,
 				DC29548C25DA854B0087907E /* CollectionViewCell.swift in Sources */,
 				DC29549325DA8C7F0087907E /* CollectionViewController.swift in Sources */,
+				EF2E3B5B262836E200C72655 /* LevelCollectionViewController.swift in Sources */,
 				DC2954E025DAC5250087907E /* UserProfile+CoreDataClass.swift in Sources */,
 				DC92938B25E1641700311BA4 /* TutorialViewController.swift in Sources */,
 				DC2954F025DAD0380087907E /* NuovoUtenteController.swift in Sources */,

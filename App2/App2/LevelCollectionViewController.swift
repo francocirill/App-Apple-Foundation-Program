@@ -1,33 +1,15 @@
 //
-//  CollectionViewController.swift
+//  LevelCollectionViewController.swift
 //  App2
 //
-//  Created by Marco Venere on 15/02/21.
+//  Created by Giuseppe Pio D'Ambrosio on 15/04/21.
 //
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+class LevelCollectionViewController: UICollectionViewController {
 
-class CollectionViewController: UICollectionViewController{
-
-    var avatars = [UIImage(named: "Captain America"),
-                   UIImage(named: "Hulk"),
-                   UIImage(named: "Batman"),
-                   UIImage(named: "Catwoman"),
-                   UIImage(named: "Groot"),
-                   UIImage(named: "Harley Quinn"),
-                   UIImage(named: "Iron Man"),
-                   UIImage(named: "Joker"),
-                   UIImage(named: "Magneto"),
-                   UIImage(named: "Professor X"),
-                   UIImage(named: "Thor"),
-                   UIImage(named: "Spiderman"),
-                   UIImage(named: "Thanos"),
-                   UIImage(named: "Wolverine")]
-    var avatarsNames = ["Captain America", "Hulk", "Batman", "Catwoman", "Groot", "Harley Quinn", "Iron Man", "Joker", "Magneto", "Professor X", "Thor", "Spiderman", "Thanos", "Wolverine"]
-    
-    var  avatar:  MyString?
+    let dataSource: [String] = ["Livello 1", "Livello 2", "Livello 3", "Livello 4", "Livello 5", "Livello 6", "Livello 7", "Livello 8", "Livello 9", "Livello 10"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,18 +18,18 @@ class CollectionViewController: UICollectionViewController{
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "green3.jpg")?.draw(in: self.view.bounds)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-            UIGraphicsEndImageContext()
-        self.view.backgroundColor = UIColor(patternImage: image)
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
     
-   
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataSource.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
 
     /*
     // MARK: - Navigation
@@ -59,28 +41,31 @@ class CollectionViewController: UICollectionViewController{
     }
     */
 
+    
+    
     // MARK: UICollectionViewDataSource
-
+/*
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return avatarsNames.count
+        return 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "avatarCell", for: indexPath) as! CollectionViewCell
-        
-        //impostiamo l'immagine e il testo della label con quelli precedentemente dichiarati nelle due variabili
-        cell.avatar?.image = self.avatars[indexPath.row]
-        cell.avatarName?.text = self.avatarsNames[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+    
+        // Configure the cell
+    
         return cell
     }
-
+*/
+    
+    
     // MARK: UICollectionViewDelegate
 
     /*
@@ -90,20 +75,12 @@ class CollectionViewController: UICollectionViewController{
     }
     */
 
-    
+    /*
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
     }
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell {
-            //salvare in memoria
-            avatar!.str = cell.avatarName.text!
-            _ = navigationController?.popViewController(animated: true)
-        }
-    }
-    
+    */
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
@@ -121,5 +98,3 @@ class CollectionViewController: UICollectionViewController{
     */
 
 }
-
-
