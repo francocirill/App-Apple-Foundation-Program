@@ -63,6 +63,11 @@ class LivelloSuperatoViewController: UIViewController {
         user = PersistenceManager.fetchData()[0]
         avatarImage.setImage(UIImage(named: user.avatar!), for: .normal)
         nameLabel.text = "\(user.name!)!"
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "green3.jpg")?.draw(in: self.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
         var audioSession = AVAudioSession.sharedInstance();
         do {
             try audioSession.setCategory (AVAudioSession.Category.playAndRecord, options: AVAudioSession.CategoryOptions.mixWithOthers);
