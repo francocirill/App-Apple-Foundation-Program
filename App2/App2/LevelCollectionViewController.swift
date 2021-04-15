@@ -7,13 +7,24 @@
 
 import UIKit
 
-class LevelCollectionViewController: UICollectionViewController {
+/* ??? */private let reuseIdentifier = "Cell"
 
-    let dataSource: [String] = ["Livello 1", "Livello 2", "Livello 3", "Livello 4", "Livello 5", "Livello 6", "Livello 7", "Livello 8", "Livello 9", "Livello 10"]
+class LevelCollectionViewController: UICollectionViewController {
+    
+    let imageSource = [UIImage(named: "level1"), UIImage(named: "level2"),UIImage(named: "level3"),UIImage(named: "level4"),UIImage(named: "level5"),UIImage(named: "level6"),UIImage(named: "level7"),UIImage(named: "level8"),UIImage(named: "level9"),UIImage(named: "level10"),]
+
+    let levelSource: [String] = ["Livello 1", "Livello 2", "Livello 3", "Livello 4", "Livello 5", "Livello 6", "Livello 7", "Livello 8", "Livello 9", "Livello 10"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /* ??? */
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
+        let bgImage = UIImageView()
+        bgImage.image = UIImage(named: "green3.jpg")
+        bgImage.contentMode = .scaleToFill
+        self.collectionView?.backgroundView = bgImage
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -23,12 +34,31 @@ class LevelCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
     
+    /* ??? */
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource.count
+        return levelSource.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        
+        var cell = UICollectionViewCell()
+        
+        if let levelCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? LevelCollectionViewCell{
+            
+            levelCell.configure(levelNumber: levelSource[indexPath.row], levelImage: imageSource[indexPath.row]!)
+            
+            //levelCell.configure(with: dataSource[indexPath.row])
+            
+            cell = levelCell
+            
+        }
+        
+        return cell
     }
 
     /*
@@ -75,12 +105,12 @@ class LevelCollectionViewController: UICollectionViewController {
     }
     */
 
-    /*
+    /* ??? */
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
     }
-    */
+    
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item

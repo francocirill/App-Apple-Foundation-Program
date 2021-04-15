@@ -38,11 +38,10 @@ class CollectionViewController: UICollectionViewController{
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "green3.jpg")?.draw(in: self.view.bounds)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-            UIGraphicsEndImageContext()
-        self.view.backgroundColor = UIColor(patternImage: image)
+        let bgImage = UIImageView()
+        bgImage.image = UIImage(named: "green3.jpg")
+        bgImage.contentMode = .scaleToFill
+        self.collectionView?.backgroundView = bgImage
 
         // Do any additional setup after loading the view.
     }
