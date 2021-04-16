@@ -18,8 +18,6 @@ class LevelCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /* ??? */
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         let bgImage = UIImageView()
         bgImage.image = UIImage(named: "green3.jpg")
@@ -29,7 +27,7 @@ class LevelCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -48,11 +46,9 @@ class LevelCollectionViewController: UICollectionViewController {
         
         var cell = UICollectionViewCell()
         
-        if let levelCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? LevelCollectionViewCell{
+        if let levelCell = collectionView.dequeueReusableCell(withReuseIdentifier: "levelCell", for: indexPath) as? LevelCollectionViewCell{
             
             levelCell.configure(levelNumber: levelSource[indexPath.row], levelImage: imageSource[indexPath.row]!)
-            
-            
             
             cell = levelCell
             

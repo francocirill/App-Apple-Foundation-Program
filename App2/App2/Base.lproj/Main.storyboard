@@ -1132,7 +1132,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MqD-Wl-cJ8" customClass="LevelCollectionViewCell" customModule="App2" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="levelCell" id="MqD-Wl-cJ8" customClass="LevelCollectionViewCell" customModule="App2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gHF-IK-34l">
@@ -1171,7 +1171,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gqw-lx-G8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4763.768115942029" y="-665.625"/>
+            <point key="canvasLocation" x="-3642" y="-615"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rtt-h7-TPh">
