@@ -152,19 +152,19 @@ class SelectWorldViewController: UIViewController {
         // Pass the selected object to the new view controller.
         switch segue.identifier {
         case "world1":
-            let dstView = segue.destination as! SelectLevelViewController
+            let dstView = segue.destination as! LevelsTableViewController
             dstView.worldNumber = 1
         case "world2":
-            let dstView = segue.destination as! SelectLevelViewController
+            let dstView = segue.destination as! LevelsTableViewController
             dstView.worldNumber = 2
         case "world3":
-            let dstView = segue.destination as! SelectLevelViewController
+            let dstView = segue.destination as! LevelsTableViewController
             dstView.worldNumber = 3
         case "world4":
-            let dstView = segue.destination as! SelectLevelViewController
+            let dstView = segue.destination as! LevelsTableViewController
             dstView.worldNumber = 4
         case "world5":
-            let dstView = segue.destination as! SelectLevelViewController
+            let dstView = segue.destination as! LevelsTableViewController
             dstView.worldNumber = 5
         default:
             print(#function)

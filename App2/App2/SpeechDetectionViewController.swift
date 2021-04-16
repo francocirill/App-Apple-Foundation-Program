@@ -163,7 +163,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: false)
-        livello = levelNumber + (worldNumber-1)*5
+        livello = levelNumber + (worldNumber-1)*10
         user = PersistenceManager.fetchData()[0]
         image.isHidden = !user.showPics
         ripetiButton.isHidden = !user.outLoud
