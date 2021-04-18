@@ -136,10 +136,10 @@ class SelectWorldViewController: UIViewController {
                 avatar4.isHidden = true
                 avatar5.isHidden = true
             }
-            
+            user = PersistenceManager.fetchData()[0]
+            name.text = "\(user.name!)"
         }
-        user = PersistenceManager.fetchData()[0]
-        name.text = "\(user.name!)"
+        
     }
 
     /*

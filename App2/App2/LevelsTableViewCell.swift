@@ -11,6 +11,7 @@ class LevelsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var levelImage: UIImageView!
     @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var avatarImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

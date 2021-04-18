@@ -1044,7 +1044,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avantiLevel" translatesAutoresizingMaskIntoConstraints="NO" id="EL7-fh-UdY">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EL7-fh-UdY">
                                             <rect key="frame" x="334" y="30" width="60" height="60"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -1052,6 +1052,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
+                                    <outlet property="avatarImage" destination="EL7-fh-UdY" id="IqY-FJ-VqA"/>
                                     <outlet property="levelImage" destination="9cx-E2-zk5" id="B3e-Xm-yyU"/>
                                     <outlet property="levelLabel" destination="82z-gI-PwL" id="fKm-du-AjP"/>
                                     <segue destination="Hzt-IN-R1K" kind="show" identifier="selectedLevel" id="5BW-Vx-www"/>
@@ -1271,7 +1272,6 @@
         <image name="1f5e3" width="512" height="512"/>
         <image name="Captain America" width="100" height="100"/>
         <image name="avanti" width="1240" height="698"/>
-        <image name="avantiLevel" width="512" height="512"/>
         <image name="avatar-default" width="150" height="150"/>
         <image name="continua" width="1190" height="604"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>

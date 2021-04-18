@@ -44,10 +44,18 @@ class LevelsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! LevelsTableViewCell
 
         // Configure the cell...
-        
+        if PersistenceManager.fetchData().count != 0 {
+            var user = PersistenceManager.fetchData()[0]
+                        
+            if(user.lastLevel+1 <= worldNumber*10){
+                if(indexPath.row == user.lastLevel%10+1){
+                    cell.avatarImage.image = UIImage(named: user.avatar!)
+                }
+            }
+        }
         cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*10)+indexPath.row+1)")
         cell.levelLabel.text = "Livello \(((worldNumber-1)*10)+indexPath.row+1)"
-        
+    
         return cell
     }
     
