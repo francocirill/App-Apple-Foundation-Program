@@ -14,7 +14,7 @@ class LevelsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.tableView.separatorStyle = .none
         
         let bgImage = UIImageView()
         bgImage.image = UIImage(named: "green3.jpg")
