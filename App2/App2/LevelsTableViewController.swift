@@ -41,7 +41,7 @@ class LevelsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         if(indexPath.row % 2 == 0){
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellOdd", for: indexPath) as! LevelsTableViewCell
 
@@ -57,6 +57,10 @@ class LevelsTableViewController: UITableViewController {
             }
             cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*10)+indexPath.row+1)")
             cell.levelLabel.text = "Livello \(((worldNumber-1)*10)+indexPath.row+1)"
+            
+            tableView.transform = CGAffineTransform(scaleX: 1, y: -1)
+            cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
+            
         
             return cell
         }
@@ -75,7 +79,11 @@ class LevelsTableViewController: UITableViewController {
             }
             cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*10)+indexPath.row+1)")
             cell.levelLabel.text = "Livello \(((worldNumber-1)*10)+indexPath.row+1)"
-        
+            
+            tableView.transform = CGAffineTransform(scaleX: 1, y: -1)
+            cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
+            
+            
             return cell
         }
     }
