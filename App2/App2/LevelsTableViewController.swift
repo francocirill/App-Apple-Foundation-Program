@@ -14,7 +14,12 @@ class LevelsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.navigationBar.isTranslucent = false
+
         self.tableView.separatorStyle = .none
+        
+        self.tableView.transform = CGAffineTransform(rotationAngle: -(CGFloat)(Double.pi))
+        
         
         let bgImage = UIImageView()
         bgImage.image = UIImage(named: "green3.jpg")
@@ -42,6 +47,7 @@ class LevelsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        
         if(indexPath.row % 2 == 0){
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellOdd", for: indexPath) as! LevelsTableViewCell
 
@@ -57,6 +63,8 @@ class LevelsTableViewController: UITableViewController {
             }
             cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*10)+indexPath.row+1)")
             cell.levelLabel.text = "Livello \(((worldNumber-1)*10)+indexPath.row+1)"
+            
+            cell.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         
             return cell
         }
@@ -76,6 +84,8 @@ class LevelsTableViewController: UITableViewController {
             cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*10)+indexPath.row+1)")
             cell.levelLabel.text = "Livello \(((worldNumber-1)*10)+indexPath.row+1)"
         
+            cell.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+            
             return cell
         }
     }
