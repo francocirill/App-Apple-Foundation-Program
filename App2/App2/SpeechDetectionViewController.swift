@@ -139,6 +139,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         pulse.backgroundColor = UIColor(named: "Color3")?.cgColor
         
         self.view.layer.insertSublayer(pulse, below: microphone.layer)
+        //ff
     }
     
     func speak(_ msg : String) {
@@ -218,7 +219,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
             self.view.backgroundColor = UIColor.white
         }
 
-        
+         
 
     }
     
