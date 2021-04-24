@@ -1072,6 +1072,7 @@
                                     <outlet property="avatarImage" destination="ZwD-Qd-woA" id="PrX-nv-Ca9"/>
                                     <outlet property="levelImage" destination="h69-9q-By2" id="4xR-Nt-fAu"/>
                                     <outlet property="levelLabel" destination="Va0-0p-qWu" id="f02-3l-qzd"/>
+                                    <segue destination="Hzt-IN-R1K" kind="show" identifier="selectedLevel" id="0sK-bv-6uh"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellOdd" rowHeight="150" id="qiH-VC-scD" userLabel="cellOdd" customClass="LevelsTableViewCell" customModule="App2" customModuleProvider="target">
@@ -1326,7 +1327,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Zjd-wb-BA4"/>
-        <segue reference="5BW-Vx-www"/>
+        <segue reference="0sK-bv-6uh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1f5e3" width="512" height="512"/>
