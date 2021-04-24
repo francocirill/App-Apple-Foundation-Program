@@ -107,25 +107,35 @@ class SelectWorldViewController: UIViewController {
             switch user.lastLevel+1 {
             case  1..<11:
                 avatar2.isHidden = true
+                world2Image.isEnabled = false
                 avatar3.isHidden = true
+                world3Image.isEnabled = false
                 avatar4.isHidden = true
+                world4Image.isEnabled = false
                 avatar5.isHidden = true
+                world5Image.isEnabled = false
                 
             case  11..<21:
                 avatar1.isHidden = true
                 avatar3.isHidden = true
+                world3Image.isEnabled = false
                 avatar4.isHidden = true
+                world4Image.isEnabled = false
                 avatar5.isHidden = true
+                world5Image.isEnabled = false
             case  21..<31:
                 avatar1.isHidden = true
                 avatar2.isHidden = true
                 avatar4.isHidden = true
+                world4Image.isEnabled = false
                 avatar5.isHidden = true
+                world5Image.isEnabled = false
             case  31..<41:
                 avatar1.isHidden = true
                 avatar2.isHidden = true
                 avatar3.isHidden = true
                 avatar5.isHidden = true
+                world4Image.isEnabled = false
             case  41..<51:
                 avatar1.isHidden = true
                 avatar2.isHidden = true
