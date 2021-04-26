@@ -15,54 +15,6 @@ class MondoViewController: UIViewController {
             
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationBar.isTranslucent = true
-        
-        switch worldNumber {
-        case 1:
-            mondo.text="Bosco delle T"
-            UIGraphicsBeginImageContext(self.view.frame.size)
-            UIImage(named: "mondo1.jpg")?.draw(in: self.view.bounds)
-            let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-                UIGraphicsEndImageContext()
-            self.view.backgroundColor = UIColor(patternImage: image)
-            mondo.textColor = UIColor.white
-        case 2:
-            mondo.text="Isola delle R"
-            UIGraphicsBeginImageContext(self.view.frame.size)
-            UIImage(named: "mondo2.jpg")?.draw(in: self.view.bounds)
-            let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-                UIGraphicsEndImageContext()
-            self.view.backgroundColor = UIColor(patternImage: image)
-            mondo.textColor = UIColor.white
-        case 3:
-            mondo.text="Precipizio delle S"
-            UIGraphicsBeginImageContext(self.view.frame.size)
-            UIImage(named: "mondo3.jpg")?.draw(in: self.view.bounds)
-            let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-                UIGraphicsEndImageContext()
-            self.view.backgroundColor = UIColor(patternImage: image)
-            mondo.textColor = UIColor.red
-        case 4:
-            mondo.text="Abisso delle GN"
-            UIGraphicsBeginImageContext(self.view.frame.size)
-            UIImage(named: "mondo4.jpg")?.draw(in: self.view.bounds)
-            let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-                UIGraphicsEndImageContext()
-            self.view.backgroundColor = UIColor(patternImage: image)
-            mondo.textColor = UIColor.white
-        case 5:
-            mondo.text="Foresta delle SC"
-            UIGraphicsBeginImageContext(self.view.frame.size)
-            UIImage(named: "mondo5.jpg")?.draw(in: self.view.bounds)
-            let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-                UIGraphicsEndImageContext()
-            self.view.backgroundColor = UIColor(patternImage: image)
-            mondo.textColor = UIColor.red
-        default:
-            mondo.text="Other"
-        }
-        
 
         self.navigationItem.leftBarButtonItem = nil;
         self.navigationItem.hidesBackButton = true;
@@ -71,6 +23,7 @@ class MondoViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [unowned self] in
                     self.performSegue(withIdentifier: "start", sender: nil)
                 }
@@ -79,11 +32,53 @@ class MondoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: false)
-        navigationController?.navigationBar.isTranslucent = true
         if PersistenceManager.fetchData().count != 0 {
             print("mondo view world choosen: \(worldNumber)")
             print("mondo view level choosen: \(levelNumber)")
-
+            switch worldNumber {
+            case 1:
+                mondo.text="Bosco delle T"
+                UIGraphicsBeginImageContext(self.view.frame.size)
+                UIImage(named: "mondo1.jpg")?.draw(in: self.view.bounds)
+                let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                self.view.backgroundColor = UIColor(patternImage: image)
+                mondo.textColor = UIColor.white
+            case 2:
+                mondo.text="Isola delle R"
+                UIGraphicsBeginImageContext(self.view.frame.size)
+                UIImage(named: "mondo2.jpg")?.draw(in: self.view.bounds)
+                let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                self.view.backgroundColor = UIColor(patternImage: image)
+                mondo.textColor = UIColor.white
+            case 3:
+                mondo.text="Precipizio delle S"
+                UIGraphicsBeginImageContext(self.view.frame.size)
+                UIImage(named: "mondo3.jpg")?.draw(in: self.view.bounds)
+                let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                self.view.backgroundColor = UIColor(patternImage: image)
+                mondo.textColor = UIColor.red
+            case 4:
+                mondo.text="Abisso delle GN"
+                UIGraphicsBeginImageContext(self.view.frame.size)
+                UIImage(named: "mondo4.jpg")?.draw(in: self.view.bounds)
+                let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                self.view.backgroundColor = UIColor(patternImage: image)
+                mondo.textColor = UIColor.white
+            case 5:
+                mondo.text="Foresta delle SC"
+                UIGraphicsBeginImageContext(self.view.frame.size)
+                UIImage(named: "mondo5.jpg")?.draw(in: self.view.bounds)
+                let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                self.view.backgroundColor = UIColor(patternImage: image)
+                mondo.textColor = UIColor.red
+            default:
+                mondo.text="Other"
+            }
 //            var user = PersistenceManager.fetchData()[0]
 //            switch user.lastLevel+1 {
 //            case  1..<11:

@@ -40,12 +40,7 @@ class SelectWorldViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.isTranslucent = true
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "green3.jpg")?.draw(in: self.view.bounds)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-            UIGraphicsEndImageContext()
-        self.view.backgroundColor = UIColor(patternImage: image)
+        
         if PersistenceManager.fetchData().count == 0 {let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "TutorialViewController")
             //self.newViewController?.isModalInPresentation = true
@@ -92,8 +87,11 @@ class SelectWorldViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        navigationController?.navigationBar.isTranslucent = true
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "green3.jpg")?.draw(in: self.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "green3.jpg")!)
         if PersistenceManager.fetchData().count != 0 {
             var user = PersistenceManager.fetchData()[0]
