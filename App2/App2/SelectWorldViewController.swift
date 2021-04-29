@@ -21,6 +21,12 @@ class SelectWorldViewController: UIViewController {
     @IBOutlet weak var world3Image: UIButton!
     @IBOutlet weak var world2Image: UIButton!
     @IBOutlet weak var world1Image: UIButton!
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    @IBOutlet weak var label4: UILabel!
+    @IBOutlet weak var label5: UILabel!
+    
     var user : UserProfile!
     
     
@@ -41,10 +47,35 @@ class SelectWorldViewController: UIViewController {
         super.viewDidLoad()
         
         UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "green3.jpg")?.draw(in: self.view.bounds)
+        UIImage(named: "sfondo_mondi.PNG.png")?.draw(in: self.view.bounds)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
             UIGraphicsEndImageContext()
         self.view.backgroundColor = UIColor(patternImage: image)
+        
+        label1.layer.cornerRadius = 18
+        label1.layer.borderWidth = 2
+        label1.layer.masksToBounds = true
+        label1.layer.borderColor = UIColor.white.cgColor
+        
+        label2.layer.cornerRadius = 18
+        label2.layer.borderWidth = 2
+        label2.layer.masksToBounds = true
+        label2.layer.borderColor = UIColor.white.cgColor
+        
+        label3.layer.cornerRadius = 18
+        label3.layer.borderWidth = 2
+        label3.layer.masksToBounds = true
+        label3.layer.borderColor = UIColor.white.cgColor
+        
+        label4.layer.cornerRadius = 18
+        label4.layer.borderWidth = 2
+        label4.layer.masksToBounds = true
+        label4.layer.borderColor = UIColor.white.cgColor
+        
+        label5.layer.cornerRadius = 18
+        label5.layer.borderWidth = 2
+        label5.layer.masksToBounds = true
+        label5.layer.borderColor = UIColor.white.cgColor
         
         
         if PersistenceManager.fetchData().count == 0 {let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -94,6 +125,8 @@ class SelectWorldViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isTranslucent = true
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
 
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "green3.jpg")!)
         if PersistenceManager.fetchData().count != 0 {
@@ -182,6 +215,11 @@ class SelectWorldViewController: UIViewController {
         default:
             print(#function)
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     @IBAction func unwind( _ seg: UIStoryboardSegue) {

@@ -710,7 +710,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjM-Qj-e2b">
-                                <rect key="frame" x="247" y="719" width="116" height="116"/>
+                                <rect key="frame" x="52" y="721" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="mondo1"/>
                                 <connections>
@@ -719,7 +719,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJK-rX-dqQ">
-                                <rect key="frame" x="52" y="288" width="116" height="116"/>
+                                <rect key="frame" x="212" y="206" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="mondo4"/>
                                 <connections>
@@ -728,7 +728,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhB-IU-L1o">
-                                <rect key="frame" x="52" y="576" width="116" height="116"/>
+                                <rect key="frame" x="108" y="528" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="mondo2"/>
                                 <connections>
@@ -737,7 +737,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5En-Au-RBY">
-                                <rect key="frame" x="247" y="431" width="116" height="116"/>
+                                <rect key="frame" x="252" y="384" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="mondo3"/>
                                 <connections>
@@ -746,7 +746,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz7-6k-49h">
-                                <rect key="frame" x="247" y="147" width="116" height="116"/>
+                                <rect key="frame" x="68" y="67" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="mondo5"/>
                                 <connections>
@@ -755,80 +755,97 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FjU-X2-qIq">
-                                <rect key="frame" x="206" y="777" width="85" height="73"/>
+                                <rect key="frame" x="60" y="735" width="85" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Psh-sr-7Qt">
-                                <rect key="frame" x="125" y="634" width="85" height="73"/>
+                                <rect key="frame" x="116" y="542" width="85" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RpZ-Gj-0p3">
-                                <rect key="frame" x="206" y="490" width="85" height="73"/>
+                                <rect key="frame" x="260" y="397" width="85" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Bg-dA-1Rf">
-                                <rect key="frame" x="125" y="346" width="85" height="73"/>
+                                <rect key="frame" x="220" y="220" width="85" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stella piena" translatesAutoresizingMaskIntoConstraints="NO" id="TVK-Sb-hUR">
-                                <rect key="frame" x="73" y="155" width="37" height="37"/>
+                                <rect key="frame" x="357" y="44" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bosco delle T" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="NJ3-n5-7wq" userLabel="LabelW1">
-                                <rect key="frame" x="247" y="694" width="116" height="28"/>
+                                <rect key="frame" x="44" y="822" width="116" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="23"/>
+                                <color key="textColor" name="Color1"/>
                                 <color key="highlightedColor" name="Color1"/>
                                 <color key="shadowColor" name="Color1"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Isola delle R" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="otz-lg-dtd" userLabel="LabelW2">
-                                <rect key="frame" x="52" y="552" width="116" height="28"/>
+                                <rect key="frame" x="100" y="629" width="116" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="23"/>
+                                <color key="textColor" name="Color1"/>
                                 <color key="highlightedColor" name="Color1"/>
                                 <color key="shadowColor" name="Color1"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precipizio delle S" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="oso-XK-KBR" userLabel="LabelW3">
-                                <rect key="frame" x="247" y="406" width="116" height="28"/>
+                                <rect key="frame" x="232" y="485" width="140" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="23"/>
+                                <color key="textColor" name="Color1"/>
                                 <color key="highlightedColor" name="Color1"/>
                                 <color key="shadowColor" name="Color1"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Abisso delle GN" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="IOq-ZH-Pn6" userLabel="LabelW4">
-                                <rect key="frame" x="52" y="262" width="116" height="28"/>
+                                <rect key="frame" x="192" y="305" width="140" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="23"/>
-                                <color key="highlightedColor" name="Color1"/>
-                                <color key="shadowColor" name="Color1"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Foresta delle SC" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="BrC-Vv-RKt" userLabel="LabelW5">
-                                <rect key="frame" x="247" y="122" width="116" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="23"/>
+                                <color key="textColor" name="Color1"/>
                                 <color key="highlightedColor" name="Color1"/>
                                 <color key="shadowColor" name="Color1"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YE0-6S-H68">
-                                <rect key="frame" x="206" y="203" width="85" height="73"/>
+                                <rect key="frame" x="76" y="81" width="85" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3p0-Bm-2cw">
-                                <rect key="frame" x="33" y="113" width="199" height="47"/>
+                                <rect key="frame" x="176" y="44" width="199" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaF-Td-Tg9">
-                                <rect key="frame" x="24" y="155" width="53" height="57"/>
+                                <rect key="frame" x="307" y="44" width="53" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Foresta delle SC" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="BrC-Vv-RKt" userLabel="LabelW5">
+                                <rect key="frame" x="48" y="168" width="140" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="23"/>
+                                <color key="textColor" name="Color1"/>
+                                <color key="highlightedColor" name="Color1"/>
+                                <color key="shadowColor" name="Color1"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vsl-x5-skf"/>
@@ -847,6 +864,11 @@
                         <outlet property="avatar3" destination="RpZ-Gj-0p3" id="ah1-Y0-PFn"/>
                         <outlet property="avatar4" destination="9Bg-dA-1Rf" id="nJD-8J-3iV"/>
                         <outlet property="avatar5" destination="YE0-6S-H68" id="kaV-Om-ICV"/>
+                        <outlet property="label1" destination="NJ3-n5-7wq" id="Z1n-U2-pXP"/>
+                        <outlet property="label2" destination="otz-lg-dtd" id="9fk-3f-I12"/>
+                        <outlet property="label3" destination="oso-XK-KBR" id="5pf-UC-tYd"/>
+                        <outlet property="label4" destination="IOq-ZH-Pn6" id="tPp-7d-kIj"/>
+                        <outlet property="label5" destination="BrC-Vv-RKt" id="HP1-qb-uIv"/>
                         <outlet property="name" destination="3p0-Bm-2cw" id="Py7-dH-z5p"/>
                         <outlet property="startsNumber" destination="EaF-Td-Tg9" id="lCE-KP-ro4"/>
                         <outlet property="world1Image" destination="qjM-Qj-e2b" id="4SL-Yp-rMH"/>
@@ -858,7 +880,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hZ-66-pqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1386" y="-245"/>
+            <point key="canvasLocation" x="-1386.9565217391305" y="-245.08928571428569"/>
         </scene>
         <!--Mondo View Controller-->
         <scene sceneID="V01-h3-HN9">
@@ -1309,7 +1331,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Zjd-wb-BA4"/>
+        <segue reference="D1i-Sn-O0d"/>
         <segue reference="78x-aX-HJA"/>
     </inferredMetricsTieBreakers>
     <resources>
