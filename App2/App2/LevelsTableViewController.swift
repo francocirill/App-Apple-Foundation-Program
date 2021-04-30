@@ -22,9 +22,11 @@ class LevelsTableViewController: UITableViewController {
         
         
         let bgImage = UIImageView()
-        bgImage.image = UIImage(named: "green3.jpg")
+        bgImage.image = UIImage(named: "greenscreen")
         bgImage.contentMode = .scaleToFill
         self.tableView?.backgroundView = bgImage
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -48,6 +50,8 @@ class LevelsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
+        
+        
         if(indexPath.row % 2 == 0){
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellOdd", for: indexPath) as! LevelsTableViewCell
 
@@ -63,6 +67,18 @@ class LevelsTableViewController: UITableViewController {
             }
             cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*10)+indexPath.row+1)")
             cell.levelLabel.text = "Livello \(((worldNumber-1)*10)+indexPath.row+1)"
+            
+            if(indexPath.row == 0){
+                let backImage = UIImageView()
+                backImage.image = UIImage(named: "level1cell")
+                cell.backgroundView = backImage
+            }
+            else{
+                let backImage = UIImageView()
+                backImage.image = UIImage(named: "livellidispari")
+                cell.backgroundView = backImage
+            }
+            
             
             cell.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         
@@ -84,6 +100,17 @@ class LevelsTableViewController: UITableViewController {
             cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*10)+indexPath.row+1)")
             cell.levelLabel.text = "Livello \(((worldNumber-1)*10)+indexPath.row+1)"
         
+            if(indexPath.row == 9){
+                let backImage = UIImageView()
+                backImage.image = UIImage(named: "level10cell")
+                cell.backgroundView = backImage
+            }
+            else{
+                let backImage = UIImageView()
+                backImage.image = UIImage(named: "livellipari")
+                cell.backgroundView = backImage
+            }
+            
             cell.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
             
             return cell
