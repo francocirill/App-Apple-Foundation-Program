@@ -30,18 +30,23 @@ class LivelloSuperatoViewController: UIViewController {
             case 10:
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
+                newViewController.levelNumber = Int(lastlevel+1)
             case 20:
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
+                newViewController.levelNumber = Int(lastlevel+1)
             case 30:
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
+                newViewController.levelNumber = Int(lastlevel+1)
             case 40:
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
+                newViewController.levelNumber = Int(lastlevel+1)
             default:
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "SpeechDetectionViewController") as! SpeechDetectionViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
+                newViewController.levelNumber = Int(lastlevel+1)
             }
             
             //self.newViewController?.isModalInPresentation = true
