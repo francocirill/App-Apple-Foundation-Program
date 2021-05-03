@@ -56,17 +56,25 @@ class LevelsTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellOdd", for: indexPath) as! LevelsTableViewCell
 
             // Configure the cell...
+            
+            cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*10)+indexPath.row+1)")
+            cell.levelLabel.text = "Livello \(((worldNumber-1)*10)+indexPath.row+1)"
+            
             if PersistenceManager.fetchData().count != 0 {
                 var user = PersistenceManager.fetchData()[0]
-                            
+                
+                        
                 if(user.lastLevel+1 <= worldNumber*10){
-                    if(indexPath.row == user.lastLevel%10+1){
+                    if(indexPath.row == user.lastLevel%10){
                         cell.avatarImage.image = UIImage(named: user.avatar!)
+                    }
+                    if(user.lastLevel%10 < indexPath.row){
+                        cell.isUserInteractionEnabled = false
+                        cell.levelImage.isHidden = true
+                        cell.levelLabel.alpha = 0.5
                     }
                 }
             }
-            cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*10)+indexPath.row+1)")
-            cell.levelLabel.text = "Livello \(((worldNumber-1)*10)+indexPath.row+1)"
             
             if(indexPath.row == 0){
                 let backImage = UIImageView()
@@ -88,17 +96,25 @@ class LevelsTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellEven", for: indexPath) as! LevelsTableViewCell
 
             // Configure the cell...
+            
+            cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*10)+indexPath.row+1)")
+            cell.levelLabel.text = "Livello \(((worldNumber-1)*10)+indexPath.row+1)"
+            
             if PersistenceManager.fetchData().count != 0 {
                 var user = PersistenceManager.fetchData()[0]
+                
                             
                 if(user.lastLevel+1 <= worldNumber*10){
-                    if(indexPath.row == user.lastLevel%10+1){
+                    if(indexPath.row == user.lastLevel%10){
                         cell.avatarImage.image = UIImage(named: user.avatar!)
+                    }
+                    if(user.lastLevel%10 < indexPath.row){
+                        cell.isUserInteractionEnabled = false
+                        cell.levelImage.isHidden = true
+                        cell.levelLabel.alpha = 0.5
                     }
                 }
             }
-            cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*10)+indexPath.row+1)")
-            cell.levelLabel.text = "Livello \(((worldNumber-1)*10)+indexPath.row+1)"
         
             if(indexPath.row == 9){
                 let backImage = UIImageView()

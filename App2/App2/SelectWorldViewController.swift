@@ -131,13 +131,13 @@ class SelectWorldViewController: UIViewController {
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "green3.jpg")!)
         if PersistenceManager.fetchData().count != 0 {
             var user = PersistenceManager.fetchData()[0]
-            print("select world last level: \(user.lastLevel)")
             startsNumber.text = String(user.points)
             avatar1.image = UIImage(named: user.avatar!)
             avatar2.image = UIImage(named: user.avatar!)
             avatar3.image = UIImage(named: user.avatar!)
             avatar4.image = UIImage(named: user.avatar!)
             avatar5.image = UIImage(named: user.avatar!)
+            print(user.lastLevel+1)
             switch user.lastLevel+1 {
             case  1..<11:
                 avatar2.isHidden = true

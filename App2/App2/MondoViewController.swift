@@ -81,9 +81,7 @@ class MondoViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
         navigationController?.navigationBar.isTranslucent = true
         if PersistenceManager.fetchData().count != 0 {
-            print("mondo view world choosen: \(worldNumber)")
-            print("mondo view level choosen: \(levelNumber)")
-
+            
 //            var user = PersistenceManager.fetchData()[0]
 //            switch user.lastLevel+1 {
 //            case  1..<11:
