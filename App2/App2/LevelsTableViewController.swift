@@ -43,7 +43,8 @@ class LevelsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return 8
+        
     }
 
     
@@ -73,6 +74,81 @@ class LevelsTableViewController: UITableViewController {
                         cell.levelImage.isHidden = true
                         cell.levelLabel.alpha = 0.5
                     }
+                }
+                
+                switch indexPath.row {
+                case 0:
+                    switch StarsManager.fetchData()[0].level1 {
+                    case 0:
+                        cell.star1.isHidden = true
+                        cell.star2.isHidden = true
+                        cell.star3.isHidden = true
+                    case 1:
+                        cell.star2.isHidden = true
+                        cell.star3.isHidden = true
+                    case 2:
+                        cell.star3.isHidden = true
+                    default:
+                        print(#function)
+                    }
+                case 2:
+                    switch StarsManager.fetchData()[0].level3 {
+                    case 0:
+                        cell.star1.isHidden = true
+                        cell.star2.isHidden = true
+                        cell.star3.isHidden = true
+                    case 1:
+                        cell.star2.isHidden = true
+                        cell.star3.isHidden = true
+                    case 2:
+                        cell.star3.isHidden = true
+                    default:
+                        print(#function)
+                    }
+                case 4:
+                    switch StarsManager.fetchData()[0].level5 {
+                    case 0:
+                        cell.star1.isHidden = true
+                        cell.star2.isHidden = true
+                        cell.star3.isHidden = true
+                    case 1:
+                        cell.star2.isHidden = true
+                        cell.star3.isHidden = true
+                    case 2:
+                        cell.star3.isHidden = true
+                    default:
+                        print(#function)
+                    }
+                case 6:
+                    switch StarsManager.fetchData()[0].level7 {
+                    case 0:
+                        cell.star1.isHidden = true
+                        cell.star2.isHidden = true
+                        cell.star3.isHidden = true
+                    case 1:
+                        cell.star2.isHidden = true
+                        cell.star3.isHidden = true
+                    case 2:
+                        cell.star3.isHidden = true
+                    default:
+                        print(#function)
+                    }
+                case 8:
+                    switch StarsManager.fetchData()[0].level9 {
+                    case 0:
+                        cell.star1.isHidden = true
+                        cell.star2.isHidden = true
+                        cell.star3.isHidden = true
+                    case 1:
+                        cell.star2.isHidden = true
+                        cell.star3.isHidden = true
+                    case 2:
+                        cell.star3.isHidden = true
+                    default:
+                        print(#function)
+                    }
+                default:
+                    print(#function)
                 }
             }
             
@@ -115,6 +191,82 @@ class LevelsTableViewController: UITableViewController {
                     }
                 }
             }
+            
+            switch indexPath.row {
+            case 1:
+                switch StarsManager.fetchData()[0].level2 {
+                case 0:
+                    cell.star1.isHidden = true
+                    cell.star2.isHidden = true
+                    cell.star3.isHidden = true
+                case 1:
+                    cell.star2.isHidden = true
+                    cell.star3.isHidden = true
+                case 2:
+                    cell.star3.isHidden = true
+                default:
+                    print(#function)
+                }
+            case 3:
+                switch StarsManager.fetchData()[0].level4 {
+                case 0:
+                    cell.star1.isHidden = true
+                    cell.star2.isHidden = true
+                    cell.star3.isHidden = true
+                case 1:
+                    cell.star2.isHidden = true
+                    cell.star3.isHidden = true
+                case 2:
+                    cell.star3.isHidden = true
+                default:
+                    print(#function)
+                }
+            case 5:
+                switch StarsManager.fetchData()[0].level6 {
+                case 0:
+                    cell.star1.isHidden = true
+                    cell.star2.isHidden = true
+                    cell.star3.isHidden = true
+                case 1:
+                    cell.star2.isHidden = true
+                    cell.star3.isHidden = true
+                case 2:
+                    cell.star3.isHidden = true
+                default:
+                    print(#function)
+                }
+            case 7:
+                switch StarsManager.fetchData()[0].level8 {
+                case 0:
+                    cell.star1.isHidden = true
+                    cell.star2.isHidden = true
+                    cell.star3.isHidden = true
+                case 1:
+                    cell.star2.isHidden = true
+                    cell.star3.isHidden = true
+                case 2:
+                    cell.star3.isHidden = true
+                default:
+                    print(#function)
+                }
+            case 9:
+                switch StarsManager.fetchData()[0].level10 {
+                case 0:
+                    cell.star1.isHidden = true
+                    cell.star2.isHidden = true
+                    cell.star3.isHidden = true
+                case 1:
+                    cell.star2.isHidden = true
+                    cell.star3.isHidden = true
+                case 2:
+                    cell.star3.isHidden = true
+                default:
+                    print(#function)
+                }
+            default:
+                print(#function)
+            }
+                
         
             if(indexPath.row == 9){
                 let backImage = UIImageView()

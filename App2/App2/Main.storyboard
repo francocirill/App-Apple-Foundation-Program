@@ -1081,6 +1081,9 @@
                                     <outlet property="avatarImage" destination="ZwD-Qd-woA" id="PrX-nv-Ca9"/>
                                     <outlet property="levelImage" destination="h69-9q-By2" id="4xR-Nt-fAu"/>
                                     <outlet property="levelLabel" destination="Va0-0p-qWu" id="f02-3l-qzd"/>
+                                    <outlet property="star1" destination="asM-Q9-Ru7" id="jH3-Js-wKt"/>
+                                    <outlet property="star2" destination="nCS-E4-Vlk" id="aak-ER-wOx"/>
+                                    <outlet property="star3" destination="fcp-hA-Oi3" id="A6O-Ja-0UH"/>
                                     <segue destination="Hzt-IN-R1K" kind="show" identifier="selectedLevel" id="0sK-bv-6uh"/>
                                 </connections>
                             </tableViewCell>
@@ -1125,6 +1128,9 @@
                                     <outlet property="avatarImage" destination="EL7-fh-UdY" id="IqY-FJ-VqA"/>
                                     <outlet property="levelImage" destination="9cx-E2-zk5" id="B3e-Xm-yyU"/>
                                     <outlet property="levelLabel" destination="82z-gI-PwL" id="fKm-du-AjP"/>
+                                    <outlet property="star1" destination="gk9-Bp-wXo" id="oLP-Dm-efm"/>
+                                    <outlet property="star2" destination="8rT-af-jVD" id="nft-sq-Ych"/>
+                                    <outlet property="star3" destination="0Do-ie-rto" id="2pH-4v-9QE"/>
                                     <segue destination="Hzt-IN-R1K" kind="show" identifier="selectedLevel" id="5BW-Vx-www"/>
                                 </connections>
                             </tableViewCell>
@@ -1344,8 +1350,8 @@
         <image name="avanti" width="1240" height="698"/>
         <image name="avatar-default" width="150" height="150"/>
         <image name="continua" width="1190" height="604"/>
-        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="gearshape" width="600" height="600"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="imgpsh_fullsize (4)" width="789" height="1732"/>
         <image name="imgpsh_fullsize (5)" width="779" height="1733"/>
         <image name="imgpsh_fullsize (6)" width="790" height="1706"/>

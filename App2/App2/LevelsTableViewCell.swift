@@ -12,6 +12,9 @@ class LevelsTableViewCell: UITableViewCell {
     @IBOutlet weak var levelImage: UIImageView!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var star1: UIImageView!
+    @IBOutlet weak var star2: UIImageView!
+    @IBOutlet weak var star3: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,7 +23,7 @@ class LevelsTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
 

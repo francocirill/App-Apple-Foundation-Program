@@ -330,16 +330,144 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                                     let cont = self.newViewController as! LivelloSuperatoViewController
                                     switch self.tentativi {
                                     case 1:
-                                        cont.numero = 3
-                                        PersistenceManager.fetchData()[0].points +=  3
+                                        switch self.levelNumber-1 {
+                                        case 0:
+                                            cont.numero = 3
+                                            PersistenceManager.fetchData()[0].points +=  3
+                                            StarsManager.fetchData()[0].level1 = 3
+                                        case 1:
+                                            cont.numero = 3
+                                            PersistenceManager.fetchData()[0].points +=  3
+                                            StarsManager.fetchData()[0].level2 = 3
+                                        case 2:
+                                            cont.numero = 3
+                                            PersistenceManager.fetchData()[0].points +=  3
+                                            StarsManager.fetchData()[0].level3 = 3
+                                        case 3:
+                                            cont.numero = 3
+                                            PersistenceManager.fetchData()[0].points +=  3
+                                            StarsManager.fetchData()[0].level4 = 3
+                                        case 4:
+                                            cont.numero = 3
+                                            PersistenceManager.fetchData()[0].points +=  3
+                                            StarsManager.fetchData()[0].level5 = 3
+                                        case 5:
+                                            cont.numero = 3
+                                            PersistenceManager.fetchData()[0].points +=  3
+                                            StarsManager.fetchData()[0].level6 = 3
+                                        case 6:
+                                            cont.numero = 3
+                                            PersistenceManager.fetchData()[0].points +=  3
+                                            StarsManager.fetchData()[0].level7 = 3
+                                        case 7:
+                                            cont.numero = 3
+                                            PersistenceManager.fetchData()[0].points +=  3
+                                            StarsManager.fetchData()[0].level8 = 3
+                                        case 8:
+                                            cont.numero = 3
+                                            PersistenceManager.fetchData()[0].points +=  3
+                                            StarsManager.fetchData()[0].level9 = 3
+                                        case 9:
+                                            cont.numero = 3
+                                            PersistenceManager.fetchData()[0].points +=  3
+                                            StarsManager.fetchData()[0].level10 = 3
+                                        default:
+                                            print(#function)
+                                        }
+                                        
                                     case 2, 3:
-                                        cont.numero = 2
-                                        PersistenceManager.fetchData()[0].points +=  2
+                                        switch self.levelNumber-1 {
+                                        case 0:
+                                            cont.numero = 2
+                                            PersistenceManager.fetchData()[0].points +=  2
+                                            StarsManager.fetchData()[0].level1 = 2
+                                        case 1:
+                                            cont.numero = 2
+                                            PersistenceManager.fetchData()[0].points +=  2
+                                            StarsManager.fetchData()[0].level2 = 2
+                                        case 2:
+                                            cont.numero = 2
+                                            PersistenceManager.fetchData()[0].points +=  2
+                                            StarsManager.fetchData()[0].level3 = 2
+                                        case 3:
+                                            cont.numero = 2
+                                            PersistenceManager.fetchData()[0].points +=  2
+                                            StarsManager.fetchData()[0].level4 = 2
+                                        case 4:
+                                            cont.numero = 2
+                                            PersistenceManager.fetchData()[0].points +=  2
+                                            StarsManager.fetchData()[0].level5 = 2
+                                        case 5:
+                                            cont.numero = 2
+                                            PersistenceManager.fetchData()[0].points +=  2
+                                            StarsManager.fetchData()[0].level6 = 2
+                                        case 6:
+                                            cont.numero = 2
+                                            PersistenceManager.fetchData()[0].points +=  2
+                                            StarsManager.fetchData()[0].level7 = 2
+                                        case 7:
+                                            cont.numero = 2
+                                            PersistenceManager.fetchData()[0].points +=  2
+                                            StarsManager.fetchData()[0].level8 = 2
+                                        case 8:
+                                            cont.numero = 2
+                                            PersistenceManager.fetchData()[0].points +=  2
+                                            StarsManager.fetchData()[0].level9 = 2
+                                        case 9:
+                                            cont.numero = 2
+                                            PersistenceManager.fetchData()[0].points +=  2
+                                            StarsManager.fetchData()[0].level10 = 2
+                                        default:
+                                            print(#function)
+                                        }
                                     default:
-                                        cont.numero = 1
-                                        PersistenceManager.fetchData()[0].points +=  1
+                                        switch self.levelNumber-1 {
+                                        case 0:
+                                            cont.numero = 1
+                                            PersistenceManager.fetchData()[0].points +=  1
+                                            StarsManager.fetchData()[0].level1 = 1
+                                        case 1:
+                                            cont.numero = 1
+                                            PersistenceManager.fetchData()[0].points +=  1
+                                            StarsManager.fetchData()[0].level2 = 1
+                                        case 2:
+                                            cont.numero = 1
+                                            PersistenceManager.fetchData()[0].points +=  1
+                                            StarsManager.fetchData()[0].level3 = 1
+                                        case 3:
+                                            cont.numero = 1
+                                            PersistenceManager.fetchData()[0].points +=  1
+                                            StarsManager.fetchData()[0].level4 = 1
+                                        case 4:
+                                            cont.numero = 1
+                                            PersistenceManager.fetchData()[0].points +=  1
+                                            StarsManager.fetchData()[0].level5 = 1
+                                        case 5:
+                                            cont.numero = 1
+                                            PersistenceManager.fetchData()[0].points +=  1
+                                            StarsManager.fetchData()[0].level6 = 1
+                                        case 6:
+                                            cont.numero = 1
+                                            PersistenceManager.fetchData()[0].points +=  1
+                                            StarsManager.fetchData()[0].level7 = 1
+                                        case 7:
+                                            cont.numero = 1
+                                            PersistenceManager.fetchData()[0].points +=  1
+                                            StarsManager.fetchData()[0].level8 = 1
+                                        case 8:
+                                            cont.numero = 1
+                                            PersistenceManager.fetchData()[0].points +=  1
+                                            StarsManager.fetchData()[0].level9 = 1
+                                        case 9:
+                                            cont.numero = 1
+                                            PersistenceManager.fetchData()[0].points +=  1
+                                            StarsManager.fetchData()[0].level10 = 1
+                                        default:
+                                            print(#function)
+                                        }
                                     }
                                     PersistenceManager.saveContext()
+                                    StarsManager.saveContext()
                                     self.navigationController?.pushViewController(self.newViewController!, animated: true)
                                     })
                             } else {

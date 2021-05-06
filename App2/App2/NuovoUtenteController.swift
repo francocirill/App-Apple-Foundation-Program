@@ -86,6 +86,9 @@ class NuovoUtenteController: UIViewController {
         case "create":
             PersistenceManager.newProfile(name: userNameTextField.text!, outLoud: speechSwitch.isOn, showPics: pictureSwitch.isOn, avatar: (avatar!.str))
             PersistenceManager.saveContext()
+            
+            StarsManager.newStarsManager()
+            StarsManager.saveContext()
         default: print(#function)
             
         }
