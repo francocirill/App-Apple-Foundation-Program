@@ -39,7 +39,7 @@ class CollectionViewController: UICollectionViewController{
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         let bgImage = UIImageView()
-        bgImage.image = UIImage(named: "green3.jpg")
+        bgImage.image = UIImage(named: "greenscreen")
         bgImage.contentMode = .scaleToFill
         self.collectionView?.backgroundView = bgImage
 

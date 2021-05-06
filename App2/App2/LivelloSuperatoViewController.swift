@@ -69,7 +69,7 @@ class LivelloSuperatoViewController: UIViewController {
         avatarImage.setImage(UIImage(named: user.avatar!), for: .normal)
         nameLabel.text = "\(user.name!)!"
         UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "green3.jpg")?.draw(in: self.view.bounds)
+        UIImage(named: "greenscreen")?.draw(in: self.view.bounds)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
             UIGraphicsEndImageContext()
         self.view.backgroundColor = UIColor(patternImage: image)
