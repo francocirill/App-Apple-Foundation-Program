@@ -61,7 +61,6 @@ class LevelsTableViewController: UITableViewController {
             cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*10)+indexPath.row+1)")
             cell.levelLabel.text = "Livello \(((worldNumber-1)*10)+indexPath.row+1)"
             
-            let prova = PersistenceManager.fetchData()
             
             if PersistenceManager.fetchData().count != 0 {
                 var user = PersistenceManager.fetchData()[0]
