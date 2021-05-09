@@ -24,6 +24,8 @@ class NuovoUtenteController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         // Do any additional setup after loading the view.
@@ -62,6 +64,7 @@ class NuovoUtenteController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        navigationController?.setNavigationBarHidden(true, animated: animated)
         
         if avatar!.str != "" {
             avatarbutton.setImage(UIImage(named: avatar!.str) , for: .normal)
