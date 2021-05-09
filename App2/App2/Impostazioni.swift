@@ -17,6 +17,9 @@ class Impostazioni: UIViewController {
      }
      */
     
+    
+    
+    
     @IBOutlet weak var nome: UITextField!
     @IBOutlet weak var avatar: UIButton!
     @IBOutlet weak var showPics: UISwitch!
@@ -50,6 +53,7 @@ class Impostazioni: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         var user = PersistenceManager.fetchData()[0]
+        navigationController?.setNavigationBarHidden(true, animated: animated)
         nome.text = user.name
         showPics.isOn = user.showPics
         outLoud.isOn = user.outLoud
@@ -59,13 +63,27 @@ class Impostazioni: UIViewController {
         salvabutton.isEnabled = nome.text != ""
     }
     
-    @IBAction func salvaButton(_ sender: Any) {
+    /*@IBAction func salvaButton(_ sender: Any) {
         var user = PersistenceManager.fetchData()[0]
         user.name = nome.text
         user.avatar = avatarString?.str
         user.showPics = showPics.isOn
         user.outLoud = outLoud.isOn
         PersistenceManager.saveContext()
+        performSegue(withIdentifier: "backHomeFromLevel", sender: self)
+    }*/
+    
+    @IBAction func saveButton(_ sender: Any) {
+        var user = PersistenceManager.fetchData()[0]
+        user.name = nome.text
+        user.avatar = avatarString?.str
+        user.showPics = showPics.isOn
+        user.outLoud = outLoud.isOn
+        PersistenceManager.saveContext()
+        performSegue(withIdentifier: "backHomeFromLevel", sender: self)
+    }
+    
+    @IBAction func homeButton(_ sender: Any) {
         performSegue(withIdentifier: "backHomeFromLevel", sender: self)
     }
     

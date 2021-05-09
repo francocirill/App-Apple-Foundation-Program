@@ -38,6 +38,8 @@ class CollectionViewController: UICollectionViewController{
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
         let bgImage = UIImageView()
         bgImage.image = UIImage(named: "greenscreen")
         bgImage.contentMode = .scaleToFill

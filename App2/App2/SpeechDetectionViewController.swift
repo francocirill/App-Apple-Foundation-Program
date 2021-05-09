@@ -17,9 +17,12 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     
     var player: AVAudioPlayer?
     
-    @IBAction func backHome(_ sender: UIBarButtonItem) {
+    @IBAction func backHome2(_ sender: UIButton) {
         performSegue(withIdentifier: "backHomeFromLevel", sender: self)
     }
+    /*@IBAction func backHome(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "backHomeFromLevel", sender: self)
+    }*/
     @IBOutlet weak var navigation: UINavigationItem!
     let audioEngine = AVAudioEngine()
     //Riconosce le parole
@@ -163,7 +166,9 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        
         livello = levelNumber + (worldNumber-1)*10
         user = PersistenceManager.fetchData()[0]
         image.isHidden = !user.showPics

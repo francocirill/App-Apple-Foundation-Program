@@ -269,7 +269,7 @@ class LevelsTableViewController: UITableViewController {
             }
                 
         
-            if(indexPath.row == 9){
+            if(indexPath.row == 7){
                 let backImage = UIImageView()
                 backImage.image = UIImage(named: "level10cell")
                 cell.backgroundView = backImage
