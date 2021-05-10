@@ -750,7 +750,7 @@
                                 <state key="normal" backgroundImage="mondo1"/>
                                 <connections>
                                     <action selector="wolrd1:" destination="bQV-87-oiB" eventType="touchUpInside" id="IAg-ah-w5g"/>
-                                    <segue destination="5Qg-pD-Noi" kind="show" identifier="world1" id="pAB-oe-8kq"/>
+                                    <segue destination="5Qg-pD-Noi" kind="show" identifier="world1" id="qCd-g2-30m"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJK-rX-dqQ">
@@ -1413,7 +1413,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Zjd-wb-BA4"/>
+        <segue reference="qCd-g2-30m"/>
         <segue reference="knv-1m-VfJ"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -1423,8 +1423,8 @@
         <image name="avatar-default" width="150" height="150"/>
         <image name="avatarDefault" width="180" height="180"/>
         <image name="continua" width="1190" height="604"/>
-        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="gearshape" width="600" height="600"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="home" width="512" height="512"/>
         <image name="imgpsh_fullsize (4)" width="789" height="1732"/>
         <image name="imgpsh_fullsize (5)" width="779" height="1733"/>
