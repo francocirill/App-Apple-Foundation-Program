@@ -240,7 +240,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="avatarbutton" destination="kb3-lZ-MdK" id="Bn9-nN-ZwZ"/>
-                        <outlet property="creaButton" destination="5CM-E7-7TD" id="349-H3-GlK"/>
+                        <outlet property="creaButton" destination="97O-AT-QWr" id="TQo-y3-Web"/>
                         <outlet property="pictureSwitch" destination="ZcU-FO-ve3" id="ViP-PO-kKl"/>
                         <outlet property="speechSwitch" destination="bu8-R2-xXz" id="9DD-fN-dnl"/>
                         <outlet property="userNameTextField" destination="VGz-Be-GxL" id="6z2-bX-f1N"/>

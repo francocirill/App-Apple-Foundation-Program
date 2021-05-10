@@ -15,7 +15,8 @@ class NuovoUtenteController: UIViewController {
     
     
     
-    @IBOutlet weak var creaButton: UIBarButtonItem!
+    @IBOutlet weak var creaButton1: UIBarButtonItem!
+    @IBOutlet weak var creaButton: UIButton!
     
     var avatar: MyString?
     var textChanged = false
