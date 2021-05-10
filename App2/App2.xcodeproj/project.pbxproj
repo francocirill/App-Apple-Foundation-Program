@@ -31,7 +31,6 @@
 		DC2954F725DC213B0087907E /* LivelloSuperatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2954F625DC213B0087907E /* LivelloSuperatoViewController.swift */; };
 		DC66D96C25E2696D0028DC3E /* zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC66D96A25E2696D0028DC3E /* zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3 */; };
 		DC66D96D25E2696D0028DC3E /* mixkit-game-level-completed-2059.wav in Resources */ = {isa = PBXBuildFile; fileRef = DC66D96B25E2696D0028DC3E /* mixkit-game-level-completed-2059.wav */; };
-		DC66D97125E269C60028DC3E /* imgpsh_fullsize (1).jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DC66D97025E269C60028DC3E /* imgpsh_fullsize (1).jpeg */; };
 		DC92936D25DD3A4000311BA4 /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92936C25DD3A4000311BA4 /* Pulsing.swift */; };
 		DC92937225DD5F6700311BA4 /* SpeechDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92937125DD5F6700311BA4 /* SpeechDetectionViewController.swift */; };
 		DC92937525DD661300311BA4 /* ShakingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92937425DD661300311BA4 /* ShakingLabel.swift */; };
@@ -42,6 +41,7 @@
 		DC92939625E18E0200311BA4 /* Impostazioni.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92939525E18E0200311BA4 /* Impostazioni.swift */; };
 		EF2E3B5B262836E200C72655 /* LevelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E3B5A262836E200C72655 /* LevelCollectionViewController.swift */; };
 		EF2E3B5E2628920600C72655 /* LevelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E3B5D2628920600C72655 /* LevelCollectionViewCell.swift */; };
+		EFBDFD9D2649392B005AEAD5 /* iconaOKK.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EFBDFD9C2649392B005AEAD5 /* iconaOKK.jpeg */; };
 		EFC91F96262A08CF00832A17 /* LevelsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC91F95262A08CF00832A17 /* LevelsTableViewController.swift */; };
 		EFC91F99262A08EA00832A17 /* LevelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC91F98262A08EA00832A17 /* LevelsTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -73,7 +73,6 @@
 		DC2954F625DC213B0087907E /* LivelloSuperatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivelloSuperatoViewController.swift; sourceTree = "<group>"; };
 		DC66D96A25E2696D0028DC3E /* zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3; sourceTree = "<group>"; };
 		DC66D96B25E2696D0028DC3E /* mixkit-game-level-completed-2059.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "mixkit-game-level-completed-2059.wav"; sourceTree = "<group>"; };
-		DC66D97025E269C60028DC3E /* imgpsh_fullsize (1).jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "imgpsh_fullsize (1).jpeg"; sourceTree = "<group>"; };
 		DC92936C25DD3A4000311BA4 /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
 		DC92937125DD5F6700311BA4 /* SpeechDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechDetectionViewController.swift; sourceTree = "<group>"; };
 		DC92937425DD661300311BA4 /* ShakingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakingLabel.swift; sourceTree = "<group>"; };
@@ -84,6 +83,7 @@
 		DC92939525E18E0200311BA4 /* Impostazioni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Impostazioni.swift; sourceTree = "<group>"; };
 		EF2E3B5A262836E200C72655 /* LevelCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCollectionViewController.swift; sourceTree = "<group>"; };
 		EF2E3B5D2628920600C72655 /* LevelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCollectionViewCell.swift; sourceTree = "<group>"; };
+		EFBDFD9C2649392B005AEAD5 /* iconaOKK.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = iconaOKK.jpeg; path = ../../../../Desktop/iconaOKK.jpeg; sourceTree = "<group>"; };
 		EFC91F95262A08CF00832A17 /* LevelsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsTableViewController.swift; sourceTree = "<group>"; };
 		EFC91F98262A08EA00832A17 /* LevelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,7 +124,7 @@
 		0467032325D693A7001BE5C2 /* App2 */ = {
 			isa = PBXGroup;
 			children = (
-				DC66D97025E269C60028DC3E /* imgpsh_fullsize (1).jpeg */,
+				EFBDFD9C2649392B005AEAD5 /* iconaOKK.jpeg */,
 				DC92937125DD5F6700311BA4 /* SpeechDetectionViewController.swift */,
 				DC2954EF25DAD0380087907E /* NuovoUtenteController.swift */,
 				0467032425D693A7001BE5C2 /* AppDelegate.swift */,
@@ -220,8 +220,8 @@
 				DC2954F425DC0F210087907E /* Localizable.strings in Resources */,
 				DC66D96D25E2696D0028DC3E /* mixkit-game-level-completed-2059.wav in Resources */,
 				DC66D96C25E2696D0028DC3E /* zapsplat_multimedia_game_sound_wooden_bright_mallet_style_negative_tone_001_62381.mp3 in Resources */,
-				DC66D97125E269C60028DC3E /* imgpsh_fullsize (1).jpeg in Resources */,
 				DC2954E725DAC8410087907E /* App2.xcdatamodeld in Resources */,
+				EFBDFD9D2649392B005AEAD5 /* iconaOKK.jpeg in Resources */,
 				0467033425D693A8001BE5C2 /* LaunchScreen.storyboard in Resources */,
 				8B2890B62637779F001CFAD2 /* Main.storyboard in Resources */,
 				0467033125D693A8001BE5C2 /* Assets.xcassets in Resources */,

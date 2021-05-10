@@ -16,26 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgpsh_fullsize (3)" translatesAutoresizingMaskIntoConstraints="NO" id="fIG-O7-i9o">
-                                <rect key="frame" x="0.0" y="196" width="414" height="700"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launchs" translatesAutoresizingMaskIntoConstraints="NO" id="fIG-O7-i9o">
+                                <rect key="frame" x="0.0" y="30" width="414" height="866"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdh-0L-NSO">
-                                <rect key="frame" x="121.5" y="91" width="171" height="117"/>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="100"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="Color5"/>
-                        <color key="tintColor" name="Color5"/>
+                        <color key="backgroundColor" name="Color2"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fIG-O7-i9o" secondAttribute="trailing" id="HS1-Po-3ay"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="fIG-O7-i9o" secondAttribute="bottom" constant="-34" id="HbA-ak-106"/>
-                            <constraint firstItem="fIG-O7-i9o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oah-6h-Vaz"/>
-                            <constraint firstItem="Jdh-0L-NSO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="TuB-mb-Ldh"/>
-                            <constraint firstItem="fIG-O7-i9o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="152" id="baD-ir-zag"/>
-                            <constraint firstItem="Jdh-0L-NSO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="w2O-wt-QKO"/>
+                            <constraint firstItem="fIG-O7-i9o" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ctk-pH-AcV"/>
+                            <constraint firstAttribute="bottom" secondItem="fIG-O7-i9o" secondAttribute="bottom" id="aNW-be-bX3"/>
+                            <constraint firstItem="fIG-O7-i9o" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="30" id="kah-Ub-uLF"/>
+                            <constraint firstItem="fIG-O7-i9o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xCz-RE-rGM"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -45,9 +36,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="imgpsh_fullsize (3)" width="1668" height="2154"/>
-        <namedColor name="Color5">
-            <color red="0.2627450980392157" green="0.70980392156862748" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="Launchs" width="760" height="1652"/>
+        <namedColor name="Color2">
+            <color red="0.027450980392156862" green="0.4823529411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

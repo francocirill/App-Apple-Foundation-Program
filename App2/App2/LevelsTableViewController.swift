@@ -5,15 +5,19 @@
 //  Created by Giuseppe Pio D'Ambrosio on 16/04/21.
 //
 
+
 import UIKit
 
-class LevelsTableViewController: UITableViewController {
+class LevelsTableViewController: UITableViewController, UIGestureRecognizerDelegate {
 
     var worldNumber: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        
         navigationController?.navigationBar.isTranslucent = false
 
         self.tableView.separatorStyle = .none
@@ -342,4 +346,5 @@ class LevelsTableViewController: UITableViewController {
     }
     
 
+    
 }

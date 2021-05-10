@@ -10,7 +10,7 @@
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>imgpsh_fullsize (1).jpeg</string>
+		<string>iconaOKK.jpeg</string>
 	</array>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
