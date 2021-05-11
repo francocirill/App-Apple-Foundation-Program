@@ -142,8 +142,7 @@ class SelectWorldViewController: UIViewController {
             print(user.lastLevel+1)
             switch user.lastLevel+1 {
             case  1..<9:
-                print("VIEW WILL APPEAR, lastlevel: \(user.lastLevel)")
-
+                
                 avatar2.isHidden = true
                 world2Image.isEnabled = false
                 avatar3.isHidden = true
@@ -154,7 +153,9 @@ class SelectWorldViewController: UIViewController {
                 world5Image.isEnabled = false
                 
             case  9..<17:
-                print("VIEW WILL APPEAR, lastlevel: \(user.lastLevel)")
+                avatar2.isHidden = false
+                world2Image.isEnabled = true
+                
                 avatar1.isHidden = true
                 avatar3.isHidden = true
                 world3Image.isEnabled = false
@@ -163,7 +164,9 @@ class SelectWorldViewController: UIViewController {
                 avatar5.isHidden = true
                 world5Image.isEnabled = false
             case  17..<25:
-                print("VIEW WILL APPEAR, lastlevel: \(user.lastLevel)")
+                avatar3.isHidden = false
+                world3Image.isEnabled = true
+                
                 avatar1.isHidden = true
                 avatar2.isHidden = true
                 avatar4.isHidden = true
@@ -171,14 +174,18 @@ class SelectWorldViewController: UIViewController {
                 avatar5.isHidden = true
                 world5Image.isEnabled = false
             case  25..<33:
-                print("VIEW WILL APPEAR, lastlevel: \(user.lastLevel)")
+                avatar4.isHidden = false
+                world4Image.isEnabled = true
+                
                 avatar1.isHidden = true
                 avatar2.isHidden = true
                 avatar3.isHidden = true
                 avatar5.isHidden = true
                 world5Image.isEnabled = false
             case  33..<41:
-                print("VIEW WILL APPEAR, lastlevel: \(user.lastLevel)")
+                avatar5.isHidden = false
+                world5Image.isEnabled = true
+                
                 avatar1.isHidden = true
                 avatar2.isHidden = true
                 avatar3.isHidden = true
