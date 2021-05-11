@@ -142,6 +142,8 @@ class SelectWorldViewController: UIViewController {
             print(user.lastLevel+1)
             switch user.lastLevel+1 {
             case  1..<9:
+                print("VIEW WILL APPEAR, lastlevel: \(user.lastLevel)")
+
                 avatar2.isHidden = true
                 world2Image.isEnabled = false
                 avatar3.isHidden = true
@@ -152,6 +154,7 @@ class SelectWorldViewController: UIViewController {
                 world5Image.isEnabled = false
                 
             case  9..<17:
+                print("VIEW WILL APPEAR, lastlevel: \(user.lastLevel)")
                 avatar1.isHidden = true
                 avatar3.isHidden = true
                 world3Image.isEnabled = false
@@ -160,6 +163,7 @@ class SelectWorldViewController: UIViewController {
                 avatar5.isHidden = true
                 world5Image.isEnabled = false
             case  17..<25:
+                print("VIEW WILL APPEAR, lastlevel: \(user.lastLevel)")
                 avatar1.isHidden = true
                 avatar2.isHidden = true
                 avatar4.isHidden = true
@@ -167,12 +171,14 @@ class SelectWorldViewController: UIViewController {
                 avatar5.isHidden = true
                 world5Image.isEnabled = false
             case  25..<33:
+                print("VIEW WILL APPEAR, lastlevel: \(user.lastLevel)")
                 avatar1.isHidden = true
                 avatar2.isHidden = true
                 avatar3.isHidden = true
                 avatar5.isHidden = true
-                world4Image.isEnabled = false
+                world5Image.isEnabled = false
             case  33..<41:
+                print("VIEW WILL APPEAR, lastlevel: \(user.lastLevel)")
                 avatar1.isHidden = true
                 avatar2.isHidden = true
                 avatar3.isHidden = true

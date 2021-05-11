@@ -329,12 +329,16 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                             if self.frase.text?.lowercased() == self.pronunciata.text {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: { [self] in
                                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                    self.newViewController = storyBoard.instantiateViewController(withIdentifier: "LivelloSuperatoViewController") as! LivelloSuperatoViewController
+                                    /*self.newViewController = storyBoard.instantiateViewController(withIdentifier: "LivelloSuperatoViewController") as! LivelloSuperatoViewController*/
+                                    
+                                    let new = storyboard?.instantiateViewController(withIdentifier: "LivelloSuperatoViewController") as! LivelloSuperatoViewController
+                                    
+                                    new.levelNumber = self.levelNumber + (self.worldNumber-1)*8
                                     //self.newViewController?.isModalInPresentation = true
                                     if(PersistenceManager.fetchData()[0].lastLevel+1 == ((self.worldNumber-1)*8)+self.levelNumber){
                                         PersistenceManager.fetchData()[0].lastLevel += 1
                                     }
-                                    let cont = self.newViewController as! LivelloSuperatoViewController
+                                    let cont = new as! LivelloSuperatoViewController
                                     switch self.tentativi {
                                     case 1:
                                         cont.numero = 3
@@ -508,7 +512,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                                     }
                                     PersistenceManager.saveContext()
                                     StarsManager.saveContext()
-                                    self.navigationController?.pushViewController(self.newViewController!, animated: true)
+                                    self.navigationController?.pushViewController(new, animated: true)
                                     })
                             } else {
                                 self.pronunciata.textColor = UIColor.red

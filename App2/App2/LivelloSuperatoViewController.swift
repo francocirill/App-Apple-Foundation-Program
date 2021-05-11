@@ -27,23 +27,23 @@ class LivelloSuperatoViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let lastlevel = PersistenceManager.fetchData()[0].lastLevel
-            switch lastlevel {
+            switch self.levelNumber {
             case 8:
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
-                newViewController.levelNumber = Int(lastlevel+1)
+                newViewController.worldNumber = 2
             case 16:
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
-                newViewController.levelNumber = Int(lastlevel+1)
+                newViewController.worldNumber = 3
             case 24:
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
-                newViewController.levelNumber = Int(lastlevel+1)
+                newViewController.worldNumber = 4
             case 32:
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
-                newViewController.levelNumber = Int(lastlevel+1)
+                newViewController.worldNumber = 5
             default:
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "SpeechDetectionViewController") as! SpeechDetectionViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
@@ -181,6 +181,7 @@ class LivelloSuperatoViewController: UIViewController {
             self.nextmondo.alpha = 1.0
         })
     }
+    
     /*
     // MARK: - Navigation
 
@@ -188,7 +189,17 @@ class LivelloSuperatoViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
-    */
+        switch segue.identifier{
+        case "MondoViewController":
+            if let currentIndex = tableView.indexPathForSelectedRow?.row{
+                let level = currentIndex+1
+                let dstView = segue.destination as! MondoViewController
+                dstView.levelNumber = level
+                dstView.worldNumber = worldNumber
+            }
+        default: print(#function)
+        }
+    }*/
+    
 
 }
