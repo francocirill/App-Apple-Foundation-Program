@@ -62,26 +62,42 @@ class LevelsTableViewController: UITableViewController, UIGestureRecognizerDeleg
 
             // Configure the cell...
             
-            cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*10)+indexPath.row+1)")
-            cell.levelLabel.text = "Livello \(((worldNumber-1)*10)+indexPath.row+1)"
+            cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*8)+indexPath.row+1)")
+            cell.levelLabel.text = "Livello \(((worldNumber-1)*8)+indexPath.row+1)"
             
             
             if PersistenceManager.fetchData().count != 0 {
                 var user = PersistenceManager.fetchData()[0]
                 
                         
-                if(user.lastLevel+1 <= worldNumber*10){
-                    if(indexPath.row == user.lastLevel%10){
+                if(user.lastLevel+1 <= worldNumber*8){
+                    if(indexPath.row == user.lastLevel%8){
                         cell.avatarImage.image = UIImage(named: user.avatar!)
                     }
-                    if(user.lastLevel%10 < indexPath.row){
+                    if(user.lastLevel%8 < indexPath.row){
                         cell.isUserInteractionEnabled = false
                         cell.levelImage.isHidden = true
                         cell.levelLabel.alpha = 0.5
                     }
                 }
                 
-                switch indexPath.row {
+                
+                switch StarsManager.fetchData()[0].value(forKey: "level\(indexPath.row+1+(worldNumber-1)*8)") as! Int16 {
+                case 0:
+                    cell.star1.isHidden = true
+                    cell.star2.isHidden = true
+                    cell.star3.isHidden = true
+                case 1:
+                    cell.star2.isHidden = true
+                    cell.star3.isHidden = true
+                case 2:
+                    cell.star3.isHidden = true
+                default:
+                    print(#function)
+                }
+                
+                
+                /*switch indexPath.row {
                 case 0:
                     switch StarsManager.fetchData()[0].level1 {
                     case 0:
@@ -154,7 +170,7 @@ class LevelsTableViewController: UITableViewController, UIGestureRecognizerDeleg
                     }
                 default:
                     print(#function)
-                }
+                }*/
             }
             
             if(indexPath.row == 0){
@@ -178,18 +194,18 @@ class LevelsTableViewController: UITableViewController, UIGestureRecognizerDeleg
 
             // Configure the cell...
             
-            cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*10)+indexPath.row+1)")
-            cell.levelLabel.text = "Livello \(((worldNumber-1)*10)+indexPath.row+1)"
+            cell.levelImage.image = UIImage(named: "level\(((worldNumber-1)*8)+indexPath.row+1)")
+            cell.levelLabel.text = "Livello \(((worldNumber-1)*8)+indexPath.row+1)"
             
             if PersistenceManager.fetchData().count != 0 {
                 var user = PersistenceManager.fetchData()[0]
                 
                             
-                if(user.lastLevel+1 <= worldNumber*10){
-                    if(indexPath.row == user.lastLevel%10){
+                if(user.lastLevel+1 <= worldNumber*8){
+                    if(indexPath.row == user.lastLevel%8){
                         cell.avatarImage.image = UIImage(named: user.avatar!)
                     }
-                    if(user.lastLevel%10 < indexPath.row){
+                    if(user.lastLevel%8 < indexPath.row){
                         cell.isUserInteractionEnabled = false
                         cell.levelImage.isHidden = true
                         cell.levelLabel.alpha = 0.5
@@ -197,7 +213,21 @@ class LevelsTableViewController: UITableViewController, UIGestureRecognizerDeleg
                 }
             }
             
-            switch indexPath.row {
+            switch StarsManager.fetchData()[0].value(forKey: "level\(indexPath.row+1+(worldNumber-1)*8)") as! Int16 {
+            case 0:
+                cell.star1.isHidden = true
+                cell.star2.isHidden = true
+                cell.star3.isHidden = true
+            case 1:
+                cell.star2.isHidden = true
+                cell.star3.isHidden = true
+            case 2:
+                cell.star3.isHidden = true
+            default:
+                print(#function)
+            }
+            
+            /*switch indexPath.row {
             case 1:
                 switch StarsManager.fetchData()[0].level2 {
                 case 0:
@@ -270,7 +300,7 @@ class LevelsTableViewController: UITableViewController, UIGestureRecognizerDeleg
                 }
             default:
                 print(#function)
-            }
+            }*/
                 
         
             if(indexPath.row == 7){

@@ -17,6 +17,7 @@ class LivelloSuperatoViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var avatarImage: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
+    var levelNumber : Int = 1
     var player: AVAudioPlayer?
     var numero : Int = 0
     var user : UserProfile!
@@ -27,19 +28,19 @@ class LivelloSuperatoViewController: UIViewController {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let lastlevel = PersistenceManager.fetchData()[0].lastLevel
             switch lastlevel {
-            case 10:
+            case 8:
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
                 newViewController.levelNumber = Int(lastlevel+1)
-            case 20:
+            case 16:
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
                 newViewController.levelNumber = Int(lastlevel+1)
-            case 30:
+            case 24:
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
                 newViewController.levelNumber = Int(lastlevel+1)
-            case 40:
+            case 32:
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "MondoViewController") as! MondoViewController
                 self.navigationController?.pushViewController(newViewController, animated: true)
                 newViewController.levelNumber = Int(lastlevel+1)
@@ -92,21 +93,21 @@ class LivelloSuperatoViewController: UIViewController {
         complimenti.alpha = 0.0
         nextmondo.alpha = 0.0
         let lastlevel = PersistenceManager.fetchData()[0].lastLevel
-        if lastlevel == 50 {
+        if lastlevel == 40 {
             avantiButton.isHidden = true
         }
         
         switch lastlevel {
-        case 10:
+        case 8:
             nextmondo.text = "Isola delle R"
             tipLabel.isHidden = true
-        case 20:
+        case 16:
             nextmondo.text = "Precipizio delle S"
             tipLabel.isHidden = true
-        case 30:
+        case 24:
             nextmondo.text = "Abisso delle GN"
             tipLabel.isHidden = true
-        case 40:
+        case 32:
             nextmondo.text = "Foresta delle SC"
             tipLabel.isHidden = true
         default:

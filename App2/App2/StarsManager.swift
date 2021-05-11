@@ -29,6 +29,36 @@ class StarsManager{
         starsmanager.level8 = 0
         starsmanager.level9 = 0
         starsmanager.level10 = 0
+        starsmanager.level11 = 0
+        starsmanager.level12 = 0
+        starsmanager.level13 = 0
+        starsmanager.level14 = 0
+        starsmanager.level15 = 0
+        starsmanager.level16 = 0
+        starsmanager.level17 = 0
+        starsmanager.level18 = 0
+        starsmanager.level19 = 0
+        starsmanager.level20 = 0
+        starsmanager.level21 = 0
+        starsmanager.level22 = 0
+        starsmanager.level23 = 0
+        starsmanager.level24 = 0
+        starsmanager.level25 = 0
+        starsmanager.level26 = 0
+        starsmanager.level27 = 0
+        starsmanager.level28 = 0
+        starsmanager.level29 = 0
+        starsmanager.level30 = 0
+        starsmanager.level31 = 0
+        starsmanager.level32 = 0
+        starsmanager.level33 = 0
+        starsmanager.level34 = 0
+        starsmanager.level35 = 0
+        starsmanager.level36 = 0
+        starsmanager.level37 = 0
+        starsmanager.level38 = 0
+        starsmanager.level39 = 0
+        starsmanager.level40 = 0
                 
         saveContext()
         return starsmanager

@@ -169,7 +169,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         navigationController?.setNavigationBarHidden(true, animated: animated)
         
         
-        livello = levelNumber + (worldNumber-1)*10
+        livello = levelNumber + (worldNumber-1)*8
         user = PersistenceManager.fetchData()[0]
         image.isHidden = !user.showPics
         ripetiButton.isHidden = !user.outLoud
@@ -327,149 +327,184 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                             //self.num = 0
                             
                             if self.frase.text?.lowercased() == self.pronunciata.text {
-                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: { [self] in
                                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                     self.newViewController = storyBoard.instantiateViewController(withIdentifier: "LivelloSuperatoViewController") as! LivelloSuperatoViewController
                                     //self.newViewController?.isModalInPresentation = true
-                                    PersistenceManager.fetchData()[0].lastLevel += 1
+                                    if(PersistenceManager.fetchData()[0].lastLevel+1 == ((self.worldNumber-1)*8)+self.levelNumber){
+                                        PersistenceManager.fetchData()[0].lastLevel += 1
+                                    }
                                     let cont = self.newViewController as! LivelloSuperatoViewController
                                     switch self.tentativi {
                                     case 1:
-                                        switch self.levelNumber-1 {
+                                        cont.numero = 3
+                                        switch StarsManager.fetchData()[0].value(forKey: "level\(self.levelNumber+(self.worldNumber-1)*8)") as! Int16{
                                         case 0:
-                                            cont.numero = 3
-                                            PersistenceManager.fetchData()[0].points +=  3
-                                            StarsManager.fetchData()[0].level1 = 3
+                                            PersistenceManager.fetchData()[0].points += 3
                                         case 1:
-                                            cont.numero = 3
-                                            PersistenceManager.fetchData()[0].points +=  3
-                                            StarsManager.fetchData()[0].level2 = 3
+                                            PersistenceManager.fetchData()[0].points += 2
                                         case 2:
-                                            cont.numero = 3
-                                            PersistenceManager.fetchData()[0].points +=  3
-                                            StarsManager.fetchData()[0].level3 = 3
-                                        case 3:
-                                            cont.numero = 3
-                                            PersistenceManager.fetchData()[0].points +=  3
-                                            StarsManager.fetchData()[0].level4 = 3
-                                        case 4:
-                                            cont.numero = 3
-                                            PersistenceManager.fetchData()[0].points +=  3
-                                            StarsManager.fetchData()[0].level5 = 3
-                                        case 5:
-                                            cont.numero = 3
-                                            PersistenceManager.fetchData()[0].points +=  3
-                                            StarsManager.fetchData()[0].level6 = 3
-                                        case 6:
-                                            cont.numero = 3
-                                            PersistenceManager.fetchData()[0].points +=  3
-                                            StarsManager.fetchData()[0].level7 = 3
-                                        case 7:
-                                            cont.numero = 3
-                                            PersistenceManager.fetchData()[0].points +=  3
-                                            StarsManager.fetchData()[0].level8 = 3
-                                        case 8:
-                                            cont.numero = 3
-                                            PersistenceManager.fetchData()[0].points +=  3
-                                            StarsManager.fetchData()[0].level9 = 3
-                                        case 9:
-                                            cont.numero = 3
-                                            PersistenceManager.fetchData()[0].points +=  3
-                                            StarsManager.fetchData()[0].level10 = 3
+                                            PersistenceManager.fetchData()[0].points += 1
+                                        default:
+                                            print(#function)
+                                        }
+                                        StarsManager.fetchData()[0].setValue(3, forKeyPath: "level\(self.levelNumber+(self.worldNumber-1)*8)")
+                                        
+//                                        switch self.levelNumber-1 {
+//                                        case 0:
+//                                            cont.numero = 3
+//                                            PersistenceManager.fetchData()[0].points +=  3
+//                                            StarsManager.fetchData()[0].level1 = 3
+//                                        case 1:
+//                                            cont.numero = 3
+//                                            PersistenceManager.fetchData()[0].points +=  3
+//                                            StarsManager.fetchData()[0].level2 = 3
+//                                        case 2:
+//                                            cont.numero = 3
+//                                            PersistenceManager.fetchData()[0].points +=  3
+//                                            StarsManager.fetchData()[0].level3 = 3
+//                                        case 3:
+//                                            cont.numero = 3
+//                                            PersistenceManager.fetchData()[0].points +=  3
+//                                            StarsManager.fetchData()[0].level4 = 3
+//                                        case 4:
+//                                            cont.numero = 3
+//                                            PersistenceManager.fetchData()[0].points +=  3
+//                                            StarsManager.fetchData()[0].level5 = 3
+//                                        case 5:
+//                                            cont.numero = 3
+//                                            PersistenceManager.fetchData()[0].points +=  3
+//                                            StarsManager.fetchData()[0].level6 = 3
+//                                        case 6:
+//                                            cont.numero = 3
+//                                            PersistenceManager.fetchData()[0].points +=  3
+//                                            StarsManager.fetchData()[0].level7 = 3
+//                                        case 7:
+//                                            cont.numero = 3
+//                                            PersistenceManager.fetchData()[0].points +=  3
+//                                            StarsManager.fetchData()[0].level8 = 3
+//                                        case 8:
+//                                            cont.numero = 3
+//                                            PersistenceManager.fetchData()[0].points +=  3
+//                                            StarsManager.fetchData()[0].level9 = 3
+//                                        case 9:
+//                                            cont.numero = 3
+//                                            PersistenceManager.fetchData()[0].points +=  3
+//                                            StarsManager.fetchData()[0].level10 = 3
+//                                        default:
+//                                            print(#function)
+//                                        }
+                                        
+                                    case 2, 3:
+                                        cont.numero = 2
+                                        switch StarsManager.fetchData()[0].value(forKey: "level\(self.levelNumber+(self.worldNumber-1)*8)") as! Int16{
+                                        case 0:
+                                            PersistenceManager.fetchData()[0].points += 2
+                                            StarsManager.fetchData()[0].setValue(2, forKeyPath: "level\(self.levelNumber+(self.worldNumber-1)*8)")
+                                        case 1:
+                                            PersistenceManager.fetchData()[0].points += 1
+                                            StarsManager.fetchData()[0].setValue(2, forKeyPath: "level\(self.levelNumber+(self.worldNumber-1)*8)")
                                         default:
                                             print(#function)
                                         }
                                         
-                                    case 2, 3:
-                                        switch self.levelNumber-1 {
-                                        case 0:
-                                            cont.numero = 2
-                                            PersistenceManager.fetchData()[0].points +=  2
-                                            StarsManager.fetchData()[0].level1 = 2
-                                        case 1:
-                                            cont.numero = 2
-                                            PersistenceManager.fetchData()[0].points +=  2
-                                            StarsManager.fetchData()[0].level2 = 2
-                                        case 2:
-                                            cont.numero = 2
-                                            PersistenceManager.fetchData()[0].points +=  2
-                                            StarsManager.fetchData()[0].level3 = 2
-                                        case 3:
-                                            cont.numero = 2
-                                            PersistenceManager.fetchData()[0].points +=  2
-                                            StarsManager.fetchData()[0].level4 = 2
-                                        case 4:
-                                            cont.numero = 2
-                                            PersistenceManager.fetchData()[0].points +=  2
-                                            StarsManager.fetchData()[0].level5 = 2
-                                        case 5:
-                                            cont.numero = 2
-                                            PersistenceManager.fetchData()[0].points +=  2
-                                            StarsManager.fetchData()[0].level6 = 2
-                                        case 6:
-                                            cont.numero = 2
-                                            PersistenceManager.fetchData()[0].points +=  2
-                                            StarsManager.fetchData()[0].level7 = 2
-                                        case 7:
-                                            cont.numero = 2
-                                            PersistenceManager.fetchData()[0].points +=  2
-                                            StarsManager.fetchData()[0].level8 = 2
-                                        case 8:
-                                            cont.numero = 2
-                                            PersistenceManager.fetchData()[0].points +=  2
-                                            StarsManager.fetchData()[0].level9 = 2
-                                        case 9:
-                                            cont.numero = 2
-                                            PersistenceManager.fetchData()[0].points +=  2
-                                            StarsManager.fetchData()[0].level10 = 2
-                                        default:
-                                            print(#function)
-                                        }
+//                                        switch self.levelNumber-1 {
+//                                        case 0:
+//                                            cont.numero = 2
+//                                            PersistenceManager.fetchData()[0].points +=  2
+//                                            StarsManager.fetchData()[0].setValue(2, forKeyPath: "level\(1)")
+//                                        case 1:
+//                                            cont.numero = 2
+//                                            PersistenceManager.fetchData()[0].points +=  2
+//                                            StarsManager.fetchData()[0].level2 = 2
+//                                        case 2:
+//                                            cont.numero = 2
+//                                            PersistenceManager.fetchData()[0].points +=  2
+//                                            StarsManager.fetchData()[0].level3 = 2
+//                                        case 3:
+//                                            cont.numero = 2
+//                                            PersistenceManager.fetchData()[0].points +=  2
+//                                            StarsManager.fetchData()[0].level4 = 2
+//                                        case 4:
+//                                            cont.numero = 2
+//                                            PersistenceManager.fetchData()[0].points +=  2
+//                                            StarsManager.fetchData()[0].level5 = 2
+//                                        case 5:
+//                                            cont.numero = 2
+//                                            PersistenceManager.fetchData()[0].points +=  2
+//                                            StarsManager.fetchData()[0].level6 = 2
+//                                        case 6:
+//                                            cont.numero = 2
+//                                            PersistenceManager.fetchData()[0].points +=  2
+//                                            StarsManager.fetchData()[0].level7 = 2
+//                                        case 7:
+//                                            cont.numero = 2
+//                                            PersistenceManager.fetchData()[0].points +=  2
+//                                            StarsManager.fetchData()[0].level8 = 2
+//                                        case 8:
+//                                            cont.numero = 2
+//                                            PersistenceManager.fetchData()[0].points +=  2
+//                                            StarsManager.fetchData()[0].level9 = 2
+//                                        case 9:
+//                                            cont.numero = 2
+//                                            PersistenceManager.fetchData()[0].points +=  2
+//                                            StarsManager.fetchData()[0].level10 = 2
+//                                        default:
+//                                            print(#function)
+//                                        }
                                     default:
-                                        switch self.levelNumber-1 {
+                                        cont.numero = 1
+                                        switch StarsManager.fetchData()[0].value(forKey: "level\(self.levelNumber+(self.worldNumber-1)*8)") as! Int16{
                                         case 0:
-                                            cont.numero = 1
-                                            PersistenceManager.fetchData()[0].points +=  1
-                                            StarsManager.fetchData()[0].level1 = 1
-                                        case 1:
-                                            cont.numero = 1
-                                            PersistenceManager.fetchData()[0].points +=  1
-                                            StarsManager.fetchData()[0].level2 = 1
-                                        case 2:
-                                            cont.numero = 1
-                                            PersistenceManager.fetchData()[0].points +=  1
-                                            StarsManager.fetchData()[0].level3 = 1
-                                        case 3:
-                                            cont.numero = 1
-                                            PersistenceManager.fetchData()[0].points +=  1
-                                            StarsManager.fetchData()[0].level4 = 1
-                                        case 4:
-                                            cont.numero = 1
-                                            PersistenceManager.fetchData()[0].points +=  1
-                                            StarsManager.fetchData()[0].level5 = 1
-                                        case 5:
-                                            cont.numero = 1
-                                            PersistenceManager.fetchData()[0].points +=  1
-                                            StarsManager.fetchData()[0].level6 = 1
-                                        case 6:
-                                            cont.numero = 1
-                                            PersistenceManager.fetchData()[0].points +=  1
-                                            StarsManager.fetchData()[0].level7 = 1
-                                        case 7:
-                                            cont.numero = 1
-                                            PersistenceManager.fetchData()[0].points +=  1
-                                            StarsManager.fetchData()[0].level8 = 1
-                                        case 8:
-                                            cont.numero = 1
-                                            PersistenceManager.fetchData()[0].points +=  1
-                                            StarsManager.fetchData()[0].level9 = 1
-                                        case 9:
-                                            cont.numero = 1
-                                            PersistenceManager.fetchData()[0].points +=  1
-                                            StarsManager.fetchData()[0].level10 = 1
+                                            PersistenceManager.fetchData()[0].points += 1
+                                            StarsManager.fetchData()[0].setValue(1, forKeyPath: "level\(self.levelNumber+(self.worldNumber-1)*8)")
                                         default:
                                             print(#function)
                                         }
+//                                        switch self.levelNumber-1 {
+//                                        case 0:
+//                                            cont.numero = 1
+//                                            PersistenceManager.fetchData()[0].points +=  1
+//                                            StarsManager.fetchData()[0].level1 = 1
+//                                        case 1:
+//                                            cont.numero = 1
+//                                            PersistenceManager.fetchData()[0].points +=  1
+//                                            StarsManager.fetchData()[0].level2 = 1
+//                                        case 2:
+//                                            cont.numero = 1
+//                                            PersistenceManager.fetchData()[0].points +=  1
+//                                            StarsManager.fetchData()[0].level3 = 1
+//                                        case 3:
+//                                            cont.numero = 1
+//                                            PersistenceManager.fetchData()[0].points +=  1
+//                                            StarsManager.fetchData()[0].level4 = 1
+//                                        case 4:
+//                                            cont.numero = 1
+//                                            PersistenceManager.fetchData()[0].points +=  1
+//                                            StarsManager.fetchData()[0].level5 = 1
+//                                        case 5:
+//                                            cont.numero = 1
+//                                            PersistenceManager.fetchData()[0].points +=  1
+//                                            StarsManager.fetchData()[0].level6 = 1
+//                                        case 6:
+//                                            cont.numero = 1
+//                                            PersistenceManager.fetchData()[0].points +=  1
+//                                            StarsManager.fetchData()[0].level7 = 1
+//                                        case 7:
+//                                            cont.numero = 1
+//                                            PersistenceManager.fetchData()[0].points +=  1
+//                                            StarsManager.fetchData()[0].level8 = 1
+//                                        case 8:
+//                                            cont.numero = 1
+//                                            PersistenceManager.fetchData()[0].points +=  1
+//                                            StarsManager.fetchData()[0].level9 = 1
+//                                        case 9:
+//                                            cont.numero = 1
+//                                            PersistenceManager.fetchData()[0].points +=  1
+//                                            StarsManager.fetchData()[0].level10 = 1
+//                                        default:
+//                                            print(#function)
+//                                        }
                                     }
                                     PersistenceManager.saveContext()
                                     StarsManager.saveContext()
@@ -535,14 +570,16 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        switch segue.identifier {
-//        case "backHomeFromLevel" :
-//            
-//        default: print(#function)
-//            
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "sendLevel" :
+            let dstView = segue.destination as! LivelloSuperatoViewController
+            dstView.levelNumber = (worldNumber-1)*8+levelNumber
+            
+        default: print(#function)
+            
+        }
+    }
 
 }
     /*
@@ -552,27 +589,16 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        print("Tentativi \(tentativi)")
-        if let controller = newViewController {
-            let cont = controller as! LivelloSuperatoViewController
-            switch tentativi {
-            case 1:
-                cont.numero = 3
-            case 2, 3:
-                cont.numero = 2
-            default:
-                cont.numero = 1
-            }
-        }/*
+        
         switch segue.identifier {
-        case "showAvatar" :
-            let dstView = segue.destination as! CollectionViewController
-            dstView.user = userProfile
+        case "sendLevel" :
+            let dstView = segue.destination as! LivelloSuperatoViewController
+            dstView.levelNumber =
         default: print(#function)
             
         }
 
-    }
+    }*/
     
 
- }*/*/
+

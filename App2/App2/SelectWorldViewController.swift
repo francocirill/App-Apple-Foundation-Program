@@ -129,6 +129,8 @@ class SelectWorldViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: animated)
 
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "green3.jpg")!)
+        
+        print("VIEW WILL APPEAR")
         if PersistenceManager.fetchData().count != 0 {
             var user = PersistenceManager.fetchData()[0]
             startsNumber.text = String(user.points)
@@ -139,7 +141,7 @@ class SelectWorldViewController: UIViewController {
             avatar5.image = UIImage(named: user.avatar!)
             print(user.lastLevel+1)
             switch user.lastLevel+1 {
-            case  1..<11:
+            case  1..<9:
                 avatar2.isHidden = true
                 world2Image.isEnabled = false
                 avatar3.isHidden = true
@@ -149,7 +151,7 @@ class SelectWorldViewController: UIViewController {
                 avatar5.isHidden = true
                 world5Image.isEnabled = false
                 
-            case  11..<21:
+            case  9..<17:
                 avatar1.isHidden = true
                 avatar3.isHidden = true
                 world3Image.isEnabled = false
@@ -157,20 +159,20 @@ class SelectWorldViewController: UIViewController {
                 world4Image.isEnabled = false
                 avatar5.isHidden = true
                 world5Image.isEnabled = false
-            case  21..<31:
+            case  17..<25:
                 avatar1.isHidden = true
                 avatar2.isHidden = true
                 avatar4.isHidden = true
                 world4Image.isEnabled = false
                 avatar5.isHidden = true
                 world5Image.isEnabled = false
-            case  31..<41:
+            case  25..<33:
                 avatar1.isHidden = true
                 avatar2.isHidden = true
                 avatar3.isHidden = true
                 avatar5.isHidden = true
                 world4Image.isEnabled = false
-            case  41..<51:
+            case  33..<41:
                 avatar1.isHidden = true
                 avatar2.isHidden = true
                 avatar3.isHidden = true
