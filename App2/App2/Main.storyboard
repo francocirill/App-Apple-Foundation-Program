@@ -892,9 +892,15 @@
                                 <color key="shadowColor" name="Color1"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Liv-yo-P0m">
+                                <rect key="frame" x="13" y="109" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="watch"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vsl-x5-skf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                     </view>
                     <navigationItem key="navigationItem" title=" " id="6QW-LF-VBx">
                         <barButtonItem key="backBarButtonItem" title=" " id="rN1-5C-yc2"/>
@@ -1438,6 +1444,7 @@
         <image name="save" width="256" height="256"/>
         <image name="stella piena" width="330.33334350585938" height="310"/>
         <image name="stella_vuota" width="372.66665649414062" height="342.66665649414062"/>
+        <image name="watch" width="452" height="452"/>
         <namedColor name="Color1">
             <color red="0.15686274509803921" green="0.41960784313725491" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -1449,6 +1456,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
