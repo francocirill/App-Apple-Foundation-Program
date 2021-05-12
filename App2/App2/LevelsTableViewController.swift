@@ -10,6 +10,7 @@ import UIKit
 
 class LevelsTableViewController: UITableViewController, UIGestureRecognizerDelegate {
 
+    
     var worldNumber: Int = 1
     
     override func viewDidLoad() {
@@ -18,8 +19,22 @@ class LevelsTableViewController: UITableViewController, UIGestureRecognizerDeleg
         //navigationController?.setNavigationBarHidden(true, animated: true)
         
         
-        navigationController?.navigationBar.isTranslucent = false
+        //navigationController?.navigationBar.isTranslucent = false
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+        let insets = UIEdgeInsets(top: -80, left: 0, bottom: 20, right: 0)
+        self.tableView.contentInset = insets
+        
+        var backImage = UIImage(named: "indietrook")
+        backImage = resizeImage(image: backImage!, newWidth: 40)
+        self.navigationController?.navigationBar.backIndicatorImage = backImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
+        self.navigationController?.navigationBar.tintColor = UIColor.white;
 
+        
         self.tableView.separatorStyle = .none
         
         self.tableView.transform = CGAffineTransform(rotationAngle: -(CGFloat)(Double.pi))
@@ -318,6 +333,19 @@ class LevelsTableViewController: UITableViewController, UIGestureRecognizerDeleg
             
             return cell
         }
+    }
+    
+    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage? {
+
+        let scale = newWidth / image.size.width
+        let newHeight = image.size.height * scale
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return newImage
     }
     
 

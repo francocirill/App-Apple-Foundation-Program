@@ -6,14 +6,15 @@
   
 */
 
-"level1" = "topo";
-"level2" = "gatto";
-"level3" = "notte";
-"level4" = "tavolo";
-"level5" = "dottore";
-"level6" = "telefono";
-"level7" = "tesoro";
-"level8" = "torta";
+
+"level1" = "gatto";
+"level2" = "tavolo";
+"level3" = "temporale";
+"level4" = "dottore";
+"level5" = "telefono";
+"level6" = "tesoro";
+"level7" = "torta";
+"level8" = "trattore";
 
 "level9" = "cuore";
 "level10" = "scarpe";
@@ -27,12 +28,11 @@
 "level17" = "osso";
 "level18" = "sirena";
 "level19" = "soffiare";
-"level20" = "CASA";
+"level20" = "messaggio";
 "level21" = "suora";
 "level22" = "tosse";
 "level23" = "girasole";
 "level24" = "bussola";
-
 
 "level25" = "gnomo";
 "level26" = "legna";
