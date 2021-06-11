@@ -30,6 +30,10 @@
 	<string>Your speech will be detected after tapping the start button</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Speak and watch your words become text or say a color to see the box change colors</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Want to access health app to read heart rate</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Want to access health app to read heart rate</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

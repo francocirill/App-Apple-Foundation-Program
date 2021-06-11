@@ -121,7 +121,7 @@
         <scene sceneID="8tk-rL-2O3">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="ZQe-Hd-bRQ" userLabel=" " customClass="NuovoUtenteController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="WDG-PN-PvN">
+                    <view key="view" contentMode="scaleToFill" id="WDG-PN-PvN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -264,15 +264,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iniziamo con un tutorial." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKl-Ip-Qdj">
-                                <rect key="frame" x="65" y="474.5" width="284" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comincia a creare un profilo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKl-Ip-Qdj">
+                                <rect key="frame" x="40" y="474.5" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h0I-Eq-dx0"/>
-                        <color key="backgroundColor" name="Color2"/>
+                        <color key="backgroundColor" name="Color1"/>
                         <constraints>
                             <constraint firstItem="PKl-Ip-Qdj" firstAttribute="centerX" secondItem="WyF-Cb-v51" secondAttribute="centerX" id="GzU-qI-tpS"/>
                             <constraint firstItem="PKl-Ip-Qdj" firstAttribute="top" secondItem="JjY-wW-4lZ" secondAttribute="bottom" constant="5" id="Psa-yv-nFa"/>
@@ -283,7 +283,7 @@
                     <navigationItem key="navigationItem" id="Fpw-WT-iJ2">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="TzZ-Va-a36">
                             <connections>
-                                <segue destination="1cW-lW-rCm" kind="show" id="wfy-2j-CXV"/>
+                                <segue destination="ZQe-Hd-bRQ" kind="show" id="3j2-Lo-aE6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -301,17 +301,17 @@
             <objects>
                 <viewController id="1cW-lW-rCm" customClass="Tutorial1ViewController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lcO-kX-4vA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lo scopo del gioco è pronunciare correttamente le parole suggerite." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEe-dU-1v4">
-                                <rect key="frame" x="20" y="672" width="374" height="55"/>
+                                <rect key="frame" x="20" y="716" width="374" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" name="Color5"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgpsh_fullsize (5)" translatesAutoresizingMaskIntoConstraints="NO" id="Ad2-6V-LhC">
-                                <rect key="frame" x="57" y="72" width="300" height="600"/>
+                                <rect key="frame" x="57" y="116" width="300" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="GLb-QR-Awp"/>
                                     <constraint firstAttribute="height" constant="600" id="tGZ-bL-tYM"/>
@@ -420,11 +420,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tutorial" id="rm1-pp-nme">
-                        <barButtonItem key="rightBarButtonItem" title="Inizia" id="vue-Zd-P0G">
-                            <connections>
-                                <segue destination="ZQe-Hd-bRQ" kind="show" id="8CI-Xp-nrQ"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Inizia" id="vue-Zd-P0G"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rOu-X8-e5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1418,7 +1414,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="dFj-IX-vhn"/>
-        <segue reference="0sK-bv-6uh"/>
+        <segue reference="knv-1m-VfJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1f5e3" width="512" height="512"/>
@@ -1446,7 +1442,7 @@
         <image name="stella_vuota" width="372.66665649414062" height="342.66665649414062"/>
         <image name="watch" width="452" height="452"/>
         <namedColor name="Color1">
-            <color red="0.15686274509803921" green="0.41960784313725491" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.039215686274509803" green="0.61568627450980395" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Color2">
             <color red="0.027450980392156862" green="0.4823529411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

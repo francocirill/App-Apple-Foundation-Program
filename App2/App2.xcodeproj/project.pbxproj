@@ -41,6 +41,7 @@
 		DC92939625E18E0200311BA4 /* Impostazioni.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC92939525E18E0200311BA4 /* Impostazioni.swift */; };
 		EF2E3B5B262836E200C72655 /* LevelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E3B5A262836E200C72655 /* LevelCollectionViewController.swift */; };
 		EF2E3B5E2628920600C72655 /* LevelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E3B5D2628920600C72655 /* LevelCollectionViewCell.swift */; };
+		EF52E6762673AC78003FA4FA /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF52E6752673AC78003FA4FA /* HealthKit.framework */; };
 		EF5F63A126499C1100C7CD6D /* iconaOKK.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EF5F63A026499C1100C7CD6D /* iconaOKK.jpeg */; };
 		EFC91F96262A08CF00832A17 /* LevelsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC91F95262A08CF00832A17 /* LevelsTableViewController.swift */; };
 		EFC91F99262A08EA00832A17 /* LevelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC91F98262A08EA00832A17 /* LevelsTableViewCell.swift */; };
@@ -83,6 +84,8 @@
 		DC92939525E18E0200311BA4 /* Impostazioni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Impostazioni.swift; sourceTree = "<group>"; };
 		EF2E3B5A262836E200C72655 /* LevelCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCollectionViewController.swift; sourceTree = "<group>"; };
 		EF2E3B5D2628920600C72655 /* LevelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF52E6732673AC78003FA4FA /* App2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App2.entitlements; sourceTree = "<group>"; };
+		EF52E6752673AC78003FA4FA /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		EF5F63A026499C1100C7CD6D /* iconaOKK.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iconaOKK.jpeg; sourceTree = "<group>"; };
 		EFC91F95262A08CF00832A17 /* LevelsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsTableViewController.swift; sourceTree = "<group>"; };
 		EFC91F98262A08EA00832A17 /* LevelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsTableViewCell.swift; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF52E6762673AC78003FA4FA /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +114,7 @@
 				DC92939125E17A1500311BA4 /* UserProfile+CoreDataProperties.swift */,
 				0467032325D693A7001BE5C2 /* App2 */,
 				0467032225D693A7001BE5C2 /* Products */,
+				EF52E6742673AC78003FA4FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +129,7 @@
 		0467032325D693A7001BE5C2 /* App2 */ = {
 			isa = PBXGroup;
 			children = (
+				EF52E6732673AC78003FA4FA /* App2.entitlements */,
 				EF5F63A026499C1100C7CD6D /* iconaOKK.jpeg */,
 				DC92937125DD5F6700311BA4 /* SpeechDetectionViewController.swift */,
 				DC2954EF25DAD0380087907E /* NuovoUtenteController.swift */,
@@ -158,6 +164,14 @@
 				8BA7D1642641BEC900301766 /* StarsManager.swift */,
 			);
 			path = App2;
+			sourceTree = "<group>";
+		};
+		EF52E6742673AC78003FA4FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF52E6752673AC78003FA4FA /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App2/App2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7R4L95XK49;
 				INFOPLIST_FILE = App2/Info.plist;
@@ -421,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App2/App2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7R4L95XK49;
 				INFOPLIST_FILE = App2/Info.plist;

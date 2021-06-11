@@ -13,6 +13,11 @@ class TutorialViewController: UIViewController {
     
     override func viewDidLoad() {
         navigationItem.hidesBackButton = true;
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.white;
     }
     /*
     // Only override draw() if you perform custom drawing.
@@ -21,5 +26,6 @@ class TutorialViewController: UIViewController {
         // Drawing code
     }
      */
+
 
 }

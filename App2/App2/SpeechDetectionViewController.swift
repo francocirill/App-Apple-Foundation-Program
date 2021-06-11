@@ -8,10 +8,13 @@
 import UIKit
 import Speech
 import AVFoundation
+import HealthKit
 
 class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegate{
     //Processa lo stream audio
   
+    let healthStore = HKHealthStore()
+    
     var worldNumber : Int = 1
     var levelNumber : Int = 1
     
@@ -120,6 +123,8 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         microphone.layer.shadowRadius = 13.0
         microphone.clipsToBounds = false
         microphone.layer.masksToBounds = false
+        
+        authorizeHealthkit()
 //        microphone.isUserInteractionEnabled = true
 //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SpeechDetectionViewController.addPulse))
 //        tapGestureRecognizer.numberOfTouchesRequired = 1
@@ -583,6 +588,54 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         default: print(#function)
             
         }
+    }
+    
+    func authorizeHealthkit(){
+        let read = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!])
+        let share = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!])
+        healthStore.requestAuthorization(toShare: share, read: read) { (chk, error) in
+            if(chk){
+                print("ok")
+                self.latestHeartRate()
+            }
+                
+        }
+    }
+    
+    func latestHeartRate(){
+        
+        guard let sampleType = HKObjectType.quantityType(forIdentifier: .heartRate) else{
+            return
+        }
+        
+        let startDate = Calendar.current.date(byAdding: .month, value: -1, to: Date())
+        
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options: .strictEndDate)
+        
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
+        
+        let query = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit: Int(HKObjectQueryNoLimit), sortDescriptors: [sortDescriptor]) { (sample, result, error) in
+            guard error == nil else{
+                return
+            }
+            let data = result![0] as! HKQuantitySample
+            let unit = HKUnit(from: "count/min")
+            let latestHr = data.quantity.doubleValue(for: unit)
+            print("Lastest Hr\(latestHr) BPM")
+            
+            let dateFormator = DateFormatter()
+            
+            dateFormator.dateFormat = "dd/MM/yyyy hh:mm s"
+            
+            let StartDate = dateFormator.string(from: data.startDate)
+            
+            let EndDate = dateFormator.string(from: data.endDate)
+            
+            print("StartDate \(StartDate) : EndDate \(EndDate)")
+            
+        }
+        
+        healthStore.execute(query)
     }
 
 }
