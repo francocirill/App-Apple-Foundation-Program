@@ -14,7 +14,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     //Processa lo stream audio
   
     let healthStore = HKHealthStore()
-    
+    var timer : Timer?
     var worldNumber : Int = 1
     var levelNumber : Int = 1
     
@@ -96,6 +96,8 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        authorizeHealthkit()
+        
         // Do any additional setup after loading the view.
         self.navigationItem.hidesBackButton = true
         do {
@@ -124,7 +126,8 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         microphone.clipsToBounds = false
         microphone.layer.masksToBounds = false
         
-        authorizeHealthkit()
+        
+
 //        microphone.isUserInteractionEnabled = true
 //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SpeechDetectionViewController.addPulse))
 //        tapGestureRecognizer.numberOfTouchesRequired = 1
@@ -235,6 +238,14 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     
     override func viewDidAppear(_ animated: Bool) {
         speak(frase.text!)
+        
+        
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(SpeechDetectionViewController.latestHeartRate), userInfo: nil, repeats: true)
+
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        timer?.invalidate()
     }
     
     func recordAndRecognizeSpeech(){
@@ -595,14 +606,12 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         let share = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!])
         healthStore.requestAuthorization(toShare: share, read: read) { (chk, error) in
             if(chk){
-                print("ok")
-                self.latestHeartRate()
+                print("OK")
             }
-                
         }
     }
-    
-    func latestHeartRate(){
+
+    @objc func latestHeartRate(){
         
         guard let sampleType = HKObjectType.quantityType(forIdentifier: .heartRate) else{
             return
@@ -622,6 +631,13 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
             let unit = HKUnit(from: "count/min")
             let latestHr = data.quantity.doubleValue(for: unit)
             print("Lastest Hr\(latestHr) BPM")
+            
+            if(latestHr > 110.0){
+                let alert = UIAlertController(title: "Rilassati", message: "Riposa 10 secondi, il tuo battito cardiaco è troppo accelerato", preferredStyle: .alert)
+                let OKAction = UIAlertAction(title: "Sono pronto", style: .default, handler: nil)
+                alert.addAction(OKAction)
+                self.present(alert, animated: true, completion: nil)
+            }
             
             let dateFormator = DateFormatter()
             
