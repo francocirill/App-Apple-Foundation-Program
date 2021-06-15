@@ -653,6 +653,10 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
         
         healthStore.execute(query)
     }
+    
+   
+    
+    
 
 }
     /*

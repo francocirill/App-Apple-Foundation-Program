@@ -42,10 +42,71 @@
 		EF2E3B5B262836E200C72655 /* LevelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E3B5A262836E200C72655 /* LevelCollectionViewController.swift */; };
 		EF2E3B5E2628920600C72655 /* LevelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2E3B5D2628920600C72655 /* LevelCollectionViewCell.swift */; };
 		EF52E6762673AC78003FA4FA /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF52E6752673AC78003FA4FA /* HealthKit.framework */; };
+		EF52E6C026790B1B003FA4FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF52E6BF26790B1B003FA4FA /* Assets.xcassets */; };
+		EF52E6C726790B1C003FA4FA /* MyWorkouts Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EF52E6C626790B1C003FA4FA /* MyWorkouts Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EF52E6CE26790B1C003FA4FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E6CD26790B1C003FA4FA /* ContentView.swift */; };
+		EF52E6D026790B1C003FA4FA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E6CF26790B1C003FA4FA /* NotificationController.swift */; };
+		EF52E6D226790B1C003FA4FA /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E6D126790B1C003FA4FA /* NotificationView.swift */; };
+		EF52E6D426790B1C003FA4FA /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E6D326790B1C003FA4FA /* ComplicationController.swift */; };
+		EF52E6D626790B1C003FA4FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF52E6D526790B1C003FA4FA /* Assets.xcassets */; };
+		EF52E6D926790B1C003FA4FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF52E6D826790B1C003FA4FA /* Preview Assets.xcassets */; };
+		EF52E6DE26790B1C003FA4FA /* MyWorkouts.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EF52E6BD26790B1A003FA4FA /* MyWorkouts.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EF52E71026791061003FA4FA /* App2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E6CB26790B1C003FA4FA /* App2App.swift */; };
+		EF52E7172679107A003FA4FA /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E7162679107A003FA4FA /* WorkoutManager.swift */; };
+		EF52E71F26791164003FA4FA /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E71E26791164003FA4FA /* SummaryView.swift */; };
+		EF52E72B267911D4003FA4FA /* ActivityRingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E72A267911D4003FA4FA /* ActivityRingsView.swift */; };
+		EF52E7322679122A003FA4FA /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E7312679122A003FA4FA /* ElapsedTimeView.swift */; };
+		EF52E73926791272003FA4FA /* SessionPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E73826791272003FA4FA /* SessionPagingView.swift */; };
+		EF52E740267912B0003FA4FA /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E73F267912B0003FA4FA /* ControlsView.swift */; };
+		EF52E74726791320003FA4FA /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E74626791320003FA4FA /* StartView.swift */; };
+		EF52E74E2679151F003FA4FA /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E74D2679151F003FA4FA /* MetricsView.swift */; };
+		EF52E755267916BE003FA4FA /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF52E6A62678F7FC003FA4FA /* HealthKit.framework */; };
 		EF5F63A126499C1100C7CD6D /* iconaOKK.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EF5F63A026499C1100C7CD6D /* iconaOKK.jpeg */; };
 		EFC91F96262A08CF00832A17 /* LevelsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC91F95262A08CF00832A17 /* LevelsTableViewController.swift */; };
 		EFC91F99262A08EA00832A17 /* LevelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC91F98262A08EA00832A17 /* LevelsTableViewCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF52E6C826790B1C003FA4FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0467031925D693A7001BE5C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF52E6C526790B1C003FA4FA;
+			remoteInfo = "MyWorkouts Extension";
+		};
+		EF52E6DC26790B1C003FA4FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0467031925D693A7001BE5C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF52E6BC26790B1A003FA4FA;
+			remoteInfo = MyWorkouts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF52E69A2678F246003FA4FA /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				EF52E6DE26790B1C003FA4FA /* MyWorkouts.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF52E6E226790B1D003FA4FA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EF52E6C726790B1C003FA4FA /* MyWorkouts Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0467032125D693A7001BE5C2 /* App2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +147,29 @@
 		EF2E3B5D2628920600C72655 /* LevelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF52E6732673AC78003FA4FA /* App2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App2.entitlements; sourceTree = "<group>"; };
 		EF52E6752673AC78003FA4FA /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		EF52E6A62678F7FC003FA4FA /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		EF52E6BD26790B1A003FA4FA /* MyWorkouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWorkouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF52E6BF26790B1B003FA4FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF52E6C126790B1B003FA4FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF52E6C626790B1C003FA4FA /* MyWorkouts Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MyWorkouts Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF52E6CB26790B1C003FA4FA /* App2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App2App.swift; sourceTree = "<group>"; };
+		EF52E6CD26790B1C003FA4FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EF52E6CF26790B1C003FA4FA /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		EF52E6D126790B1C003FA4FA /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		EF52E6D326790B1C003FA4FA /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		EF52E6D526790B1C003FA4FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF52E6D826790B1C003FA4FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF52E6DA26790B1C003FA4FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF52E6DB26790B1C003FA4FA /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		EF52E7162679107A003FA4FA /* WorkoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		EF52E71E26791164003FA4FA /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		EF52E72A267911D4003FA4FA /* ActivityRingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingsView.swift; sourceTree = "<group>"; };
+		EF52E7312679122A003FA4FA /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
+		EF52E73826791272003FA4FA /* SessionPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPagingView.swift; sourceTree = "<group>"; };
+		EF52E73F267912B0003FA4FA /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		EF52E74626791320003FA4FA /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		EF52E74D2679151F003FA4FA /* MetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsView.swift; sourceTree = "<group>"; };
+		EF52E754267916BE003FA4FA /* MyWorkouts ExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyWorkouts ExtensionRelease.entitlements"; sourceTree = "<group>"; };
 		EF5F63A026499C1100C7CD6D /* iconaOKK.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iconaOKK.jpeg; sourceTree = "<group>"; };
 		EFC91F95262A08CF00832A17 /* LevelsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsTableViewController.swift; sourceTree = "<group>"; };
 		EFC91F98262A08EA00832A17 /* LevelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsTableViewCell.swift; sourceTree = "<group>"; };
@@ -97,6 +181,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF52E6762673AC78003FA4FA /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF52E6C326790B1C003FA4FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF52E755267916BE003FA4FA /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +205,8 @@
 				DC2954DE25DAC5250087907E /* UserProfile+CoreDataClass.swift */,
 				DC92939125E17A1500311BA4 /* UserProfile+CoreDataProperties.swift */,
 				0467032325D693A7001BE5C2 /* App2 */,
+				EF52E6BE26790B1A003FA4FA /* MyWorkouts */,
+				EF52E6CA26790B1C003FA4FA /* MyWorkouts Extension */,
 				0467032225D693A7001BE5C2 /* Products */,
 				EF52E6742673AC78003FA4FA /* Frameworks */,
 			);
@@ -122,6 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				0467032125D693A7001BE5C2 /* App2.app */,
+				EF52E6BD26790B1A003FA4FA /* MyWorkouts.app */,
+				EF52E6C626790B1C003FA4FA /* MyWorkouts Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,9 +265,68 @@
 		EF52E6742673AC78003FA4FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF52E6A62678F7FC003FA4FA /* HealthKit.framework */,
 				EF52E6752673AC78003FA4FA /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF52E6BE26790B1A003FA4FA /* MyWorkouts */ = {
+			isa = PBXGroup;
+			children = (
+				EF52E6BF26790B1B003FA4FA /* Assets.xcassets */,
+				EF52E6C126790B1B003FA4FA /* Info.plist */,
+			);
+			path = MyWorkouts;
+			sourceTree = "<group>";
+		};
+		EF52E6CA26790B1C003FA4FA /* MyWorkouts Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EF52E754267916BE003FA4FA /* MyWorkouts ExtensionRelease.entitlements */,
+				EF52E71D2679113D003FA4FA /* Views */,
+				EF52E6F226790E73003FA4FA /* Controller */,
+				EF52E6CB26790B1C003FA4FA /* App2App.swift */,
+				EF52E6CD26790B1C003FA4FA /* ContentView.swift */,
+				EF52E6CF26790B1C003FA4FA /* NotificationController.swift */,
+				EF52E6D126790B1C003FA4FA /* NotificationView.swift */,
+				EF52E6D326790B1C003FA4FA /* ComplicationController.swift */,
+				EF52E6D526790B1C003FA4FA /* Assets.xcassets */,
+				EF52E6DA26790B1C003FA4FA /* Info.plist */,
+				EF52E6DB26790B1C003FA4FA /* PushNotificationPayload.apns */,
+				EF52E6D726790B1C003FA4FA /* Preview Content */,
+			);
+			path = "MyWorkouts Extension";
+			sourceTree = "<group>";
+		};
+		EF52E6D726790B1C003FA4FA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EF52E6D826790B1C003FA4FA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF52E6F226790E73003FA4FA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF52E7162679107A003FA4FA /* WorkoutManager.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF52E71D2679113D003FA4FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF52E71E26791164003FA4FA /* SummaryView.swift */,
+				EF52E72A267911D4003FA4FA /* ActivityRingsView.swift */,
+				EF52E7312679122A003FA4FA /* ElapsedTimeView.swift */,
+				EF52E73826791272003FA4FA /* SessionPagingView.swift */,
+				EF52E73F267912B0003FA4FA /* ControlsView.swift */,
+				EF52E74D2679151F003FA4FA /* MetricsView.swift */,
+				EF52E74626791320003FA4FA /* StartView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,15 +339,51 @@
 				0467031D25D693A7001BE5C2 /* Sources */,
 				0467031E25D693A7001BE5C2 /* Frameworks */,
 				0467031F25D693A7001BE5C2 /* Resources */,
+				EF52E69A2678F246003FA4FA /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EF52E6DD26790B1C003FA4FA /* PBXTargetDependency */,
 			);
 			name = App2;
 			productName = App2;
 			productReference = 0467032125D693A7001BE5C2 /* App2.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EF52E6BC26790B1A003FA4FA /* MyWorkouts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF52E6E326790B1D003FA4FA /* Build configuration list for PBXNativeTarget "MyWorkouts" */;
+			buildPhases = (
+				EF52E6BB26790B1A003FA4FA /* Resources */,
+				EF52E6E226790B1D003FA4FA /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF52E6C926790B1C003FA4FA /* PBXTargetDependency */,
+			);
+			name = MyWorkouts;
+			productName = MyWorkouts;
+			productReference = EF52E6BD26790B1A003FA4FA /* MyWorkouts.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		EF52E6C526790B1C003FA4FA /* MyWorkouts Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF52E6DF26790B1D003FA4FA /* Build configuration list for PBXNativeTarget "MyWorkouts Extension" */;
+			buildPhases = (
+				EF52E6C226790B1C003FA4FA /* Sources */,
+				EF52E6C326790B1C003FA4FA /* Frameworks */,
+				EF52E6C426790B1C003FA4FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MyWorkouts Extension";
+			productName = "MyWorkouts Extension";
+			productReference = EF52E6C626790B1C003FA4FA /* MyWorkouts Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -200,11 +391,17 @@
 		0467031925D693A7001BE5C2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					0467032025D693A7001BE5C2 = {
 						CreatedOnToolsVersion = 12.2;
+					};
+					EF52E6BC26790B1A003FA4FA = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					EF52E6C526790B1C003FA4FA = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
@@ -222,6 +419,8 @@
 			projectRoot = "";
 			targets = (
 				0467032025D693A7001BE5C2 /* App2 */,
+				EF52E6BC26790B1A003FA4FA /* MyWorkouts */,
+				EF52E6C526790B1C003FA4FA /* MyWorkouts Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -239,6 +438,23 @@
 				0467033425D693A8001BE5C2 /* LaunchScreen.storyboard in Resources */,
 				8B2890B62637779F001CFAD2 /* Main.storyboard in Resources */,
 				0467033125D693A8001BE5C2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF52E6BB26790B1A003FA4FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF52E6C026790B1B003FA4FA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF52E6C426790B1C003FA4FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF52E6D926790B1C003FA4FA /* Preview Assets.xcassets in Resources */,
+				EF52E6D626790B1C003FA4FA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +497,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF52E6C226790B1C003FA4FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF52E6D026790B1C003FA4FA /* NotificationController.swift in Sources */,
+				EF52E71F26791164003FA4FA /* SummaryView.swift in Sources */,
+				EF52E6CE26790B1C003FA4FA /* ContentView.swift in Sources */,
+				EF52E74726791320003FA4FA /* StartView.swift in Sources */,
+				EF52E6D426790B1C003FA4FA /* ComplicationController.swift in Sources */,
+				EF52E6D226790B1C003FA4FA /* NotificationView.swift in Sources */,
+				EF52E72B267911D4003FA4FA /* ActivityRingsView.swift in Sources */,
+				EF52E71026791061003FA4FA /* App2App.swift in Sources */,
+				EF52E73926791272003FA4FA /* SessionPagingView.swift in Sources */,
+				EF52E7322679122A003FA4FA /* ElapsedTimeView.swift in Sources */,
+				EF52E74E2679151F003FA4FA /* MetricsView.swift in Sources */,
+				EF52E7172679107A003FA4FA /* WorkoutManager.swift in Sources */,
+				EF52E740267912B0003FA4FA /* ControlsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF52E6C926790B1C003FA4FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF52E6C526790B1C003FA4FA /* MyWorkouts Extension */;
+			targetProxy = EF52E6C826790B1C003FA4FA /* PBXContainerItemProxy */;
+		};
+		EF52E6DD26790B1C003FA4FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF52E6BC26790B1A003FA4FA /* MyWorkouts */;
+			targetProxy = EF52E6DC26790B1C003FA4FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0467033225D693A8001BE5C2 /* LaunchScreen.storyboard */ = {
@@ -451,6 +700,95 @@
 			};
 			name = Release;
 		};
+		EF52E6E026790B1D003FA4FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MyWorkouts Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 7R4L95XK49;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "MyWorkouts Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.app23132.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		EF52E6E126790B1D003FA4FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "MyWorkouts Extension/MyWorkouts ExtensionRelease.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MyWorkouts Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 7R4L95XK49;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "MyWorkouts Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.app23132.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		EF52E6E426790B1D003FA4FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7R4L95XK49;
+				IBSC_MODULE = MyWorkouts_Extension;
+				INFOPLIST_FILE = MyWorkouts/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.app23132.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		EF52E6E526790B1D003FA4FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7R4L95XK49;
+				IBSC_MODULE = MyWorkouts_Extension;
+				INFOPLIST_FILE = MyWorkouts/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.app23132.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -468,6 +806,24 @@
 			buildConfigurations = (
 				0467033925D693A8001BE5C2 /* Debug */,
 				0467033A25D693A8001BE5C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF52E6DF26790B1D003FA4FA /* Build configuration list for PBXNativeTarget "MyWorkouts Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF52E6E026790B1D003FA4FA /* Debug */,
+				EF52E6E126790B1D003FA4FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF52E6E326790B1D003FA4FA /* Build configuration list for PBXNativeTarget "MyWorkouts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF52E6E426790B1D003FA4FA /* Debug */,
+				EF52E6E526790B1D003FA4FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
