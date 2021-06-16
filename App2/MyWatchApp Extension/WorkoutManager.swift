@@ -1,21 +1,22 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-The workout manager that interfaces with HealthKit.
-*/
+//
+//  WorkoutManager.swift
+//  MyWatchApp Extension
+//
+//  Created by Stefano D’Amato on 16/06/21.
+//
 
 import Foundation
 import HealthKit
 
-class WorkoutManager: NSObject, ObservableObject {
+class WorkoutManager: NSObject, ObservableObject{
+
     var selectedWorkout: HKWorkoutActivityType? {
         didSet {
             guard let selectedWorkout = selectedWorkout else { return }
             startWorkout(workoutType: selectedWorkout)
         }
     }
-
+    
     @Published var showingSummaryView: Bool = false {
         didSet {
             if showingSummaryView == false {
@@ -23,12 +24,11 @@ class WorkoutManager: NSObject, ObservableObject {
             }
         }
     }
-
+    
     let healthStore = HKHealthStore()
     var session: HKWorkoutSession?
     var builder: HKLiveWorkoutBuilder?
-
-    // Start the workout.
+    
     func startWorkout(workoutType: HKWorkoutActivityType) {
         let configuration = HKWorkoutConfiguration()
         configuration.activityType = workoutType
@@ -58,8 +58,7 @@ class WorkoutManager: NSObject, ObservableObject {
             // The workout has started.
         }
     }
-
-    // Request authorization to access HealthKit.
+    
     func requestAuthorization() {
         // The quantity type to write to the health store.
         let typesToShare: Set = [
@@ -80,11 +79,11 @@ class WorkoutManager: NSObject, ObservableObject {
             // Handle error.
         }
     }
-
+    
     // MARK: - Session State Control
 
     // The app's workout state.
-    @Published var running = true
+    @Published var running = false
 
     func togglePause() {
         if running == true {
@@ -106,14 +105,14 @@ class WorkoutManager: NSObject, ObservableObject {
         session?.end()
         showingSummaryView = true
     }
-
+    
     // MARK: - Workout Metrics
     @Published var averageHeartRate: Double = 0
     @Published var heartRate: Double = 0
     @Published var activeEnergy: Double = 0
     @Published var distance: Double = 0
     @Published var workout: HKWorkout?
-
+    
     func updateForStatistics(_ statistics: HKStatistics?) {
         guard let statistics = statistics else { return }
 
@@ -134,7 +133,7 @@ class WorkoutManager: NSObject, ObservableObject {
             }
         }
     }
-
+    
     func resetWorkout() {
         selectedWorkout = nil
         builder = nil

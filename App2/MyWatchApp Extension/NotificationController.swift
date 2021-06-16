@@ -1,6 +1,6 @@
 //
 //  NotificationController.swift
-//  MyWorkouts Extension
+//  MyWatchApp Extension
 //
 //  Created by Stefano D’Amato on 16/06/21.
 //

@@ -1,21 +1,20 @@
 //
-//  ContentView.swift
-//  MyWorkouts Extension
+//  NotificationView.swift
+//  MyWatchApp Extension
 //
 //  Created by Stefano D’Amato on 16/06/21.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct NotificationView: View {
     var body: some View {
         Text("Hello, World!")
-            .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct NotificationView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NotificationView()
     }
 }

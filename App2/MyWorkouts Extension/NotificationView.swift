@@ -2,7 +2,7 @@
 //  NotificationView.swift
 //  MyWorkouts Extension
 //
-//  Created by Giuseppe Pio D'Ambrosio on 15/06/21.
+//  Created by Stefano D’Amato on 16/06/21.
 //
 
 import SwiftUI
