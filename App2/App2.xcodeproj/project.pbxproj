@@ -15,6 +15,7 @@
 		8B05DF322624B7B300214B4C /* SelectWorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B05DF312624B7B300214B4C /* SelectWorldViewController.swift */; };
 		8B05DF352624D4C200214B4C /* SelectLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B05DF342624D4C200214B4C /* SelectLevelViewController.swift */; };
 		8B06AD49263756DB00987CF9 /* prova.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06AD48263756DB00987CF9 /* prova.swift */; };
+		8B190356267A5995001C39A8 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B190355267A5995001C39A8 /* WorkoutManager.swift */; };
 		8B24ABF6261E134900D4320C /* MondoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24ABF5261E134900D4320C /* MondoViewController.swift */; };
 		8B2890B62637779F001CFAD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2890B52637779F001CFAD2 /* Main.storyboard */; };
 		8BA7D15A2641BB4400301766 /* Stars+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7D1582641BB4400301766 /* Stars+CoreDataClass.swift */; };
@@ -52,7 +53,6 @@
 		EF52E6D926790B1C003FA4FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF52E6D826790B1C003FA4FA /* Preview Assets.xcassets */; };
 		EF52E6DE26790B1C003FA4FA /* MyWorkouts.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EF52E6BD26790B1A003FA4FA /* MyWorkouts.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EF52E71026791061003FA4FA /* App2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E6CB26790B1C003FA4FA /* App2App.swift */; };
-		EF52E7172679107A003FA4FA /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E7162679107A003FA4FA /* WorkoutManager.swift */; };
 		EF52E71F26791164003FA4FA /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E71E26791164003FA4FA /* SummaryView.swift */; };
 		EF52E72B267911D4003FA4FA /* ActivityRingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E72A267911D4003FA4FA /* ActivityRingsView.swift */; };
 		EF52E7322679122A003FA4FA /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52E7312679122A003FA4FA /* ElapsedTimeView.swift */; };
@@ -119,6 +119,7 @@
 		8B05DF312624B7B300214B4C /* SelectWorldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWorldViewController.swift; sourceTree = "<group>"; };
 		8B05DF342624D4C200214B4C /* SelectLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLevelViewController.swift; sourceTree = "<group>"; };
 		8B06AD48263756DB00987CF9 /* prova.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prova.swift; sourceTree = "<group>"; };
+		8B190355267A5995001C39A8 /* WorkoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		8B24ABF5261E134900D4320C /* MondoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondoViewController.swift; sourceTree = "<group>"; };
 		8B2890B52637779F001CFAD2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8BA7D1582641BB4400301766 /* Stars+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stars+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -161,7 +162,6 @@
 		EF52E6D826790B1C003FA4FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EF52E6DA26790B1C003FA4FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF52E6DB26790B1C003FA4FA /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		EF52E7162679107A003FA4FA /* WorkoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		EF52E71E26791164003FA4FA /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		EF52E72A267911D4003FA4FA /* ActivityRingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingsView.swift; sourceTree = "<group>"; };
 		EF52E7312679122A003FA4FA /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
@@ -262,6 +262,14 @@
 			path = App2;
 			sourceTree = "<group>";
 		};
+		8B190354267A5995001C39A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8B190355267A5995001C39A8 /* WorkoutManager.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		EF52E6742673AC78003FA4FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,8 +292,8 @@
 			isa = PBXGroup;
 			children = (
 				EF52E754267916BE003FA4FA /* MyWorkouts ExtensionRelease.entitlements */,
+				8B190354267A5995001C39A8 /* Controller */,
 				EF52E71D2679113D003FA4FA /* Views */,
-				EF52E6F226790E73003FA4FA /* Controller */,
 				EF52E6CB26790B1C003FA4FA /* App2App.swift */,
 				EF52E6CD26790B1C003FA4FA /* ContentView.swift */,
 				EF52E6CF26790B1C003FA4FA /* NotificationController.swift */,
@@ -305,14 +313,6 @@
 				EF52E6D826790B1C003FA4FA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		EF52E6F226790E73003FA4FA /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				EF52E7162679107A003FA4FA /* WorkoutManager.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		EF52E71D2679113D003FA4FA /* Views */ = {
@@ -512,7 +512,7 @@
 				EF52E73926791272003FA4FA /* SessionPagingView.swift in Sources */,
 				EF52E7322679122A003FA4FA /* ElapsedTimeView.swift in Sources */,
 				EF52E74E2679151F003FA4FA /* MetricsView.swift in Sources */,
-				EF52E7172679107A003FA4FA /* WorkoutManager.swift in Sources */,
+				8B190356267A5995001C39A8 /* WorkoutManager.swift in Sources */,
 				EF52E740267912B0003FA4FA /* ControlsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
