@@ -18,7 +18,7 @@ struct App2App: App {
                 
                 StartView()
             }
-            
+            .environmentObject(workoutManager)
         }
 
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")

@@ -14,6 +14,7 @@ struct StartView: View {
     var body: some View {
         
         NavigationLink("Inizia", destination: MetricsView())
+            
         
         .navigationBarTitle("Logos")
         .onAppear {

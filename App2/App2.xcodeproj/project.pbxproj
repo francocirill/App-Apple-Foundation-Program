@@ -120,6 +120,7 @@
 		8B05DF342624D4C200214B4C /* SelectLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLevelViewController.swift; sourceTree = "<group>"; };
 		8B06AD48263756DB00987CF9 /* prova.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prova.swift; sourceTree = "<group>"; };
 		8B190355267A5995001C39A8 /* WorkoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		8B190357267A636A001C39A8 /* MyWorkouts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyWorkouts.entitlements; sourceTree = "<group>"; };
 		8B24ABF5261E134900D4320C /* MondoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondoViewController.swift; sourceTree = "<group>"; };
 		8B2890B52637779F001CFAD2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8BA7D1582641BB4400301766 /* Stars+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stars+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -282,6 +283,7 @@
 		EF52E6BE26790B1A003FA4FA /* MyWorkouts */ = {
 			isa = PBXGroup;
 			children = (
+				8B190357267A636A001C39A8 /* MyWorkouts.entitlements */,
 				EF52E6BF26790B1B003FA4FA /* Assets.xcassets */,
 				EF52E6C126790B1B003FA4FA /* Info.plist */,
 			);
@@ -667,13 +669,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = App2/App2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7R4L95XK49;
+				DEVELOPMENT_TEAM = 5JDG4F562F;
 				INFOPLIST_FILE = App2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.app23132;
+				PRODUCT_BUNDLE_IDENTIFIER = com.applefoundation.logos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -687,13 +689,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = App2/App2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7R4L95XK49;
+				DEVELOPMENT_TEAM = 5JDG4F562F;
 				INFOPLIST_FILE = App2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.app23132;
+				PRODUCT_BUNDLE_IDENTIFIER = com.applefoundation.logos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -704,9 +706,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MyWorkouts Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 7R4L95XK49;
+				DEVELOPMENT_TEAM = 5JDG4F562F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MyWorkouts Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -714,8 +717,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.app23132.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.applefoundation.logos.watchkit.extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -729,9 +733,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "MyWorkouts Extension/MyWorkouts ExtensionRelease.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MyWorkouts Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 7R4L95XK49;
+				DEVELOPMENT_TEAM = 5JDG4F562F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MyWorkouts Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -739,8 +744,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.app23132.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.applefoundation.logos.watchkit.extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -755,11 +761,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyWorkouts/MyWorkouts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7R4L95XK49;
+				DEVELOPMENT_TEAM = 5JDG4F562F;
 				IBSC_MODULE = MyWorkouts_Extension;
 				INFOPLIST_FILE = MyWorkouts/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.app23132.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.applefoundation.logos.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -775,11 +782,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyWorkouts/MyWorkouts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7R4L95XK49;
+				DEVELOPMENT_TEAM = 5JDG4F562F;
 				IBSC_MODULE = MyWorkouts_Extension;
 				INFOPLIST_FILE = MyWorkouts/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.app23132.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.applefoundation.logos.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;

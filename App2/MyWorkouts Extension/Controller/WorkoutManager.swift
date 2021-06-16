@@ -84,7 +84,7 @@ class WorkoutManager: NSObject, ObservableObject {
     // MARK: - Session State Control
 
     // The app's workout state.
-    @Published var running = false
+    @Published var running = true
 
     func togglePause() {
         if running == true {

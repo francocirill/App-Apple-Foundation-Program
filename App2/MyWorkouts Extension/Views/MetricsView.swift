@@ -12,6 +12,7 @@ struct MetricsView: View {
     //@EnvironmentObject var workoutManager: WorkoutManager
     @StateObject private var workoutManager = WorkoutManager()
     
+    
     var body: some View {
             VStack(alignment: .leading) {
                 Text(String(format: "%.00f", workoutManager.heartRate) + " bpm")
