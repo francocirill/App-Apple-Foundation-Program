@@ -21,6 +21,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     var timer : Timer?
     var worldNumber : Int = 1
     var levelNumber : Int = 1
+    var indicator: Double = 0.0
     
     var player: AVAudioPlayer?
     
@@ -638,7 +639,11 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
             let latestHr = data.quantity.doubleValue(for: unit)
             print("Lastest Hr\(latestHr) BPM")
             
-            if(latestHr > 80.0){
+            if(latestHr > 80.0 && latestHr != self.indicator){
+                print("LatestHr: \(latestHr)")
+                print("Indicator: \(self.indicator)")
+                
+                self.indicator = latestHr
                 DispatchQueue.main.async {
 //                    let newViewController = self.storyboard?.instantiateViewController(withIdentifier: "HeartRateView") as! HeartRateController
 //                    self.navigationController?.pushViewController(newViewController, animated: true)
@@ -653,6 +658,8 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
                 alert.addAction(backhome)
                 self.present(alert, animated: true, completion: nil)
                 }
+                self.timer?.invalidate()
+                
                 
             }
             
