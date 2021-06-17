@@ -638,10 +638,17 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
             let latestHr = data.quantity.doubleValue(for: unit)
             print("Lastest Hr\(latestHr) BPM")
             
-            if(latestHr > 90.0){
+            if(latestHr > 80.0){
                 let alert = UIAlertController(title: "Rilassati", message: "Riposa 10 secondi, il tuo battito cardiaco è troppo accelerato", preferredStyle: .alert)
-                let OKAction = UIAlertAction(title: "Sono pronto", style: .default, handler: nil)
-                alert.addAction(OKAction)
+                let continua = UIAlertAction(title: "Continua", style: .default, handler: {(ACTION) -> Void in
+                    print("Continua")
+                })
+                let backhome = UIAlertAction(title: "Torna alla home", style: .default) {(ACTION) -> Void in
+                    let levelsTableViewController = self.storyboard?.instantiateViewController(withIdentifier: "levelsTableView")
+                    self.present(levelsTableViewController!, animated: true, completion: nil)
+                }
+                alert.addAction(continua)
+                alert.addAction(backhome)
                 self.present(alert, animated: true, completion: nil)
             }
             

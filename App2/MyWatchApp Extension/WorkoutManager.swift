@@ -8,6 +8,7 @@
 import Foundation
 import HealthKit
 import WatchConnectivity
+import WatchKit
 
 class WorkoutManager: NSObject, ObservableObject{
 
@@ -107,11 +108,12 @@ class WorkoutManager: NSObject, ObservableObject{
 
     func endWorkout() {
         session?.end()
+        WKInterfaceDevice.current().play(.failure)
         showingSummaryView = true
     }
     
     @objc func control(){
-        if(self.heartRate > 90.0){
+        if(self.heartRate > 80.0){
             endWorkout()
             if WCSession.default.isReachable {
                         let message = ["message": "Test"]
@@ -122,6 +124,8 @@ class WorkoutManager: NSObject, ObservableObject{
         }
         
     }
+    
+    
     
     // MARK: - Workout Metrics
     @Published var averageHeartRate: Double = 0
