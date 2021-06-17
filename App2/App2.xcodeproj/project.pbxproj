@@ -61,6 +61,8 @@
 		8BA7D15A2641BB4400301766 /* Stars+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7D1582641BB4400301766 /* Stars+CoreDataClass.swift */; };
 		8BA7D15B2641BB4400301766 /* Stars+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7D1592641BB4400301766 /* Stars+CoreDataProperties.swift */; };
 		8BA7D1652641BEC900301766 /* StarsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7D1642641BEC900301766 /* StarsManager.swift */; };
+		8BFF17D1267BA491008B3663 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFF17D0267BA491008B3663 /* ConnectivityManager.swift */; };
+		8BFF17D2267BA491008B3663 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFF17D0267BA491008B3663 /* ConnectivityManager.swift */; };
 		DC29548C25DA854B0087907E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC29548B25DA854B0087907E /* CollectionViewCell.swift */; };
 		DC29549325DA8C7F0087907E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC29549225DA8C7F0087907E /* CollectionViewController.swift */; };
 		DC2954B225DABD2E0087907E /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2954B125DABD2E0087907E /* PersistenceManager.swift */; };
@@ -196,6 +198,7 @@
 		8BA7D1582641BB4400301766 /* Stars+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stars+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8BA7D1592641BB4400301766 /* Stars+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stars+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8BA7D1642641BEC900301766 /* StarsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsManager.swift; sourceTree = "<group>"; };
+		8BFF17D0267BA491008B3663 /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
 		DC29548B25DA854B0087907E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		DC29549225DA8C7F0087907E /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		DC2954B125DABD2E0087907E /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
@@ -257,6 +260,7 @@
 				0467032325D693A7001BE5C2 /* App2 */,
 				8B1903B0267A755F001C39A8 /* MyWatchApp */,
 				8B1903BF267A7561001C39A8 /* MyWatchApp Extension */,
+				8BFF17CF267BA45A008B3663 /* Shared */,
 				0467032225D693A7001BE5C2 /* Products */,
 				EF52E6742673AC78003FA4FA /* Frameworks */,
 			);
@@ -411,6 +415,14 @@
 				8B4150A4267B634800D5EA16 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8BFF17CF267BA45A008B3663 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8BFF17D0267BA491008B3663 /* ConnectivityManager.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		EF52E6742673AC78003FA4FA /* Frameworks */ = {
@@ -584,6 +596,7 @@
 				EFC91F96262A08CF00832A17 /* LevelsTableViewController.swift in Sources */,
 				DC29548C25DA854B0087907E /* CollectionViewCell.swift in Sources */,
 				DC29549325DA8C7F0087907E /* CollectionViewController.swift in Sources */,
+				8BFF17D1267BA491008B3663 /* ConnectivityManager.swift in Sources */,
 				8BA7D15B2641BB4400301766 /* Stars+CoreDataProperties.swift in Sources */,
 				EF2E3B5B262836E200C72655 /* LevelCollectionViewController.swift in Sources */,
 				DC2954E025DAC5250087907E /* UserProfile+CoreDataClass.swift in Sources */,
@@ -614,6 +627,7 @@
 				8B1903C5267A7561001C39A8 /* ExtensionDelegate.swift in Sources */,
 				8B4150BC267B84C200D5EA16 /* ControlsView.swift in Sources */,
 				8B1903E8267AA826001C39A8 /* WorkoutManager.swift in Sources */,
+				8BFF17D2267BA491008B3663 /* ConnectivityManager.swift in Sources */,
 				8B4150AB267B634800D5EA16 /* ComplicationController.swift in Sources */,
 				8B1903C9267A7561001C39A8 /* NotificationView.swift in Sources */,
 				8B4150B3267B634800D5EA16 /* HostingController.swift in Sources */,

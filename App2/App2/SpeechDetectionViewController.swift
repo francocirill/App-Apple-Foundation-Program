@@ -639,17 +639,21 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
             print("Lastest Hr\(latestHr) BPM")
             
             if(latestHr > 80.0){
+                DispatchQueue.main.async {
+//                    let newViewController = self.storyboard?.instantiateViewController(withIdentifier: "HeartRateView") as! HeartRateController
+//                    self.navigationController?.pushViewController(newViewController, animated: true)
+//                }
+//
                 let alert = UIAlertController(title: "Rilassati", message: "Riposa 10 secondi, il tuo battito cardiaco è troppo accelerato", preferredStyle: .alert)
-                let continua = UIAlertAction(title: "Continua", style: .default, handler: {(ACTION) -> Void in
-                    print("Continua")
-                })
+                
                 let backhome = UIAlertAction(title: "Torna alla home", style: .default) {(ACTION) -> Void in
-                    let levelsTableViewController = self.storyboard?.instantiateViewController(withIdentifier: "levelsTableView")
-                    self.present(levelsTableViewController!, animated: true, completion: nil)
+                    let newView = self.storyboard?.instantiateViewController(withIdentifier: "Mondi") as! SelectWorldViewController
+                    self.navigationController?.pushViewController(newView, animated: true)
                 }
-                alert.addAction(continua)
                 alert.addAction(backhome)
                 self.present(alert, animated: true, completion: nil)
+                }
+                
             }
             
             let dateFormator = DateFormatter()
