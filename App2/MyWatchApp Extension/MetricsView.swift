@@ -21,10 +21,8 @@ struct MetricsView: View {
             )
             
         }
-        .font(.system(.title, design: .rounded)
-                .monospacedDigit()
-                .lowercaseSmallCaps()
-        )
+        
+        
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
         .ignoresSafeArea(edges: .bottom)
     }

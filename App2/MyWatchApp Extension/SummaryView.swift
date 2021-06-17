@@ -58,7 +58,6 @@ struct SummaryMetricView: View {
         Text(title)
 //            .foregroundColor(.foreground)
         Text(value)
-            .font(.system(.title2, design: .rounded).lowercaseSmallCaps())
         Divider()
     }
 }
