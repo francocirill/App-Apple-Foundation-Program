@@ -7,6 +7,7 @@
 
 import Foundation
 import HealthKit
+import WatchConnectivity
 
 class WorkoutManager: NSObject, ObservableObject{
 
@@ -28,6 +29,7 @@ class WorkoutManager: NSObject, ObservableObject{
     let healthStore = HKHealthStore()
     var session: HKWorkoutSession?
     var builder: HKLiveWorkoutBuilder?
+    var timer : Timer?
     
     func startWorkout(workoutType: HKWorkoutActivityType) {
         let configuration = HKWorkoutConfiguration()
@@ -57,6 +59,8 @@ class WorkoutManager: NSObject, ObservableObject{
         builder?.beginCollection(withStart: startDate) { (success, error) in
             // The workout has started.
         }
+        
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.control), userInfo: nil, repeats: true)
     }
     
     func requestAuthorization() {
@@ -106,6 +110,19 @@ class WorkoutManager: NSObject, ObservableObject{
         showingSummaryView = true
     }
     
+    @objc func control(){
+        if(self.heartRate > 90.0){
+            endWorkout()
+            if WCSession.default.isReachable {
+                        let message = ["message": "Test"]
+                        WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: { (err) in
+                            debugPrint(err)
+                        })
+                    }
+        }
+        
+    }
+    
     // MARK: - Workout Metrics
     @Published var averageHeartRate: Double = 0
     @Published var heartRate: Double = 0
@@ -152,8 +169,12 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
                         from fromState: HKWorkoutSessionState, date: Date) {
         DispatchQueue.main.async {
             self.running = toState == .running
+            if(self.heartRate > 80.0){
+                self.endWorkout()
+            }
         }
-
+        
+        
         // Wait for the session to transition states before ending the builder.
         if toState == .ended {
             builder?.endCollection(withEnd: date) { (success, error) in
@@ -167,14 +188,14 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
     }
 
     func workoutSession(_ workoutSession: HKWorkoutSession, didFailWithError error: Error) {
-
+        
     }
 }
 
 // MARK: - HKLiveWorkoutBuilderDelegate
 extension WorkoutManager: HKLiveWorkoutBuilderDelegate {
     func workoutBuilderDidCollectEvent(_ workoutBuilder: HKLiveWorkoutBuilder) {
-
+        
     }
 
     func workoutBuilder(_ workoutBuilder: HKLiveWorkoutBuilder, didCollectDataOf collectedTypes: Set<HKSampleType>) {

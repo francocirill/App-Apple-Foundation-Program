@@ -9,8 +9,12 @@ import UIKit
 import Speech
 import AVFoundation
 import HealthKit
+import WatchConnectivity
 
 class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegate{
+    
+    
+    
     //Processa lo stream audio
   
     let healthStore = HKHealthStore()
@@ -133,7 +137,9 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
 //        tapGestureRecognizer.numberOfTouchesRequired = 1
 //        microphone.addGestureRecognizer(tapGestureRecognizer)
            
+        
     }
+    
     @objc func pulseRipetiButton() {
         if PersistenceManager.fetchData()[0].outLoud {
             let pulse = Pulsing(numberOfPulses: 2, radius: 50, position: ripetiButton.center)
@@ -175,7 +181,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        
+                
         
         livello = levelNumber + (worldNumber-1)*8
         user = PersistenceManager.fetchData()[0]
@@ -632,7 +638,7 @@ class SpeechDetectionViewController: UIViewController, SFSpeechRecognizerDelegat
             let latestHr = data.quantity.doubleValue(for: unit)
             print("Lastest Hr\(latestHr) BPM")
             
-            if(latestHr > 110.0){
+            if(latestHr > 90.0){
                 let alert = UIAlertController(title: "Rilassati", message: "Riposa 10 secondi, il tuo battito cardiaco è troppo accelerato", preferredStyle: .alert)
                 let OKAction = UIAlertAction(title: "Sono pronto", style: .default, handler: nil)
                 alert.addAction(OKAction)
