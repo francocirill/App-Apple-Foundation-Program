@@ -26,11 +26,6 @@
 		8B1903CB267A7561001C39A8 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1903CA267A7561001C39A8 /* ComplicationController.swift */; };
 		8B1903CD267A7561001C39A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B1903CC267A7561001C39A8 /* Assets.xcassets */; };
 		8B1903D5267A7561001C39A8 /* MyWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8B1903AF267A755F001C39A8 /* MyWatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		8B1903DE267A7920001C39A8 /* SessionPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1903DD267A7920001C39A8 /* SessionPagingView.swift */; };
-		8B1903E0267A7A11001C39A8 /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1903DF267A7A11001C39A8 /* MetricsView.swift */; };
-		8B1903E2267A7BBA001C39A8 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1903E1267A7BBA001C39A8 /* ElapsedTimeView.swift */; };
-		8B1903E4267AA2F9001C39A8 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1903E3267AA2F9001C39A8 /* ControlsView.swift */; };
-		8B1903E6267AA52F001C39A8 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1903E5267AA52F001C39A8 /* SummaryView.swift */; };
 		8B1903E8267AA826001C39A8 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1903E7267AA826001C39A8 /* WorkoutManager.swift */; };
 		8B1903EA267AA8DF001C39A8 /* MyWatchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1903E9267AA8DF001C39A8 /* MyWatchAppApp.swift */; };
 		8B1903ED267AAC23001C39A8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1903EC267AAC23001C39A8 /* HealthKit.framework */; };
@@ -58,6 +53,11 @@
 		8B4150B1267B634800D5EA16 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4150A5267B634800D5EA16 /* ExtensionDelegate.swift */; };
 		8B4150B2267B634800D5EA16 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4150A6267B634800D5EA16 /* NotificationView.swift */; };
 		8B4150B3267B634800D5EA16 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4150A7267B634800D5EA16 /* HostingController.swift */; };
+		8B4150B6267B842100D5EA16 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4150B5267B842100D5EA16 /* SummaryView.swift */; };
+		8B4150B8267B847800D5EA16 /* SessionPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4150B7267B847800D5EA16 /* SessionPagingView.swift */; };
+		8B4150BA267B84A500D5EA16 /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4150B9267B84A500D5EA16 /* MetricsView.swift */; };
+		8B4150BC267B84C200D5EA16 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4150BB267B84C200D5EA16 /* ControlsView.swift */; };
+		8B4150BE267B84E100D5EA16 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4150BD267B84E100D5EA16 /* ElapsedTimeView.swift */; };
 		8BA7D15A2641BB4400301766 /* Stars+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7D1582641BB4400301766 /* Stars+CoreDataClass.swift */; };
 		8BA7D15B2641BB4400301766 /* Stars+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7D1592641BB4400301766 /* Stars+CoreDataProperties.swift */; };
 		8BA7D1652641BEC900301766 /* StarsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7D1642641BEC900301766 /* StarsManager.swift */; };
@@ -156,11 +156,6 @@
 		8B1903CF267A7561001C39A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8B1903D1267A7561001C39A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B1903D2267A7561001C39A8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		8B1903DD267A7920001C39A8 /* SessionPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionPagingView.swift; path = ../../../../SessionPagingView.swift; sourceTree = "<group>"; };
-		8B1903DF267A7A11001C39A8 /* MetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MetricsView.swift; path = ../../../../MetricsView.swift; sourceTree = "<group>"; };
-		8B1903E1267A7BBA001C39A8 /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ElapsedTimeView.swift; path = ../../../../ElapsedTimeView.swift; sourceTree = "<group>"; };
-		8B1903E3267AA2F9001C39A8 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ControlsView.swift; path = ../../../../ControlsView.swift; sourceTree = "<group>"; };
-		8B1903E5267AA52F001C39A8 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SummaryView.swift; path = ../../../../SummaryView.swift; sourceTree = "<group>"; };
 		8B1903E7267AA826001C39A8 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		8B1903E9267AA8DF001C39A8 /* MyWatchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWatchAppApp.swift; sourceTree = "<group>"; };
 		8B1903EB267AAC23001C39A8 /* MyWatchApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyWatchApp Extension.entitlements"; sourceTree = "<group>"; };
@@ -193,6 +188,11 @@
 		8B4150A6267B634800D5EA16 /* NotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		8B4150A7267B634800D5EA16 /* HostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		8B4150A8267B634800D5EA16 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B4150B5267B842100D5EA16 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		8B4150B7267B847800D5EA16 /* SessionPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPagingView.swift; sourceTree = "<group>"; };
+		8B4150B9267B84A500D5EA16 /* MetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsView.swift; sourceTree = "<group>"; };
+		8B4150BB267B84C200D5EA16 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		8B4150BD267B84E100D5EA16 /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
 		8BA7D1582641BB4400301766 /* Stars+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stars+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8BA7D1592641BB4400301766 /* Stars+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stars+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8BA7D1642641BEC900301766 /* StarsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsManager.swift; sourceTree = "<group>"; };
@@ -330,11 +330,6 @@
 				8B1903C0267A7561001C39A8 /* HostingController.swift */,
 				8B1903E9267AA8DF001C39A8 /* MyWatchAppApp.swift */,
 				8B1903C2267A7561001C39A8 /* StartView.swift */,
-				8B1903E5267AA52F001C39A8 /* SummaryView.swift */,
-				8B1903DD267A7920001C39A8 /* SessionPagingView.swift */,
-				8B1903DF267A7A11001C39A8 /* MetricsView.swift */,
-				8B1903E3267AA2F9001C39A8 /* ControlsView.swift */,
-				8B1903E1267A7BBA001C39A8 /* ElapsedTimeView.swift */,
 				8B1903C4267A7561001C39A8 /* ExtensionDelegate.swift */,
 				8B1903C6267A7561001C39A8 /* NotificationController.swift */,
 				8B1903C8267A7561001C39A8 /* NotificationView.swift */,
@@ -344,6 +339,11 @@
 				8B1903D2267A7561001C39A8 /* PushNotificationPayload.apns */,
 				8B41509A267B634800D5EA16 /* MyWatchApp Extension */,
 				8B1903CE267A7561001C39A8 /* Preview Content */,
+				8B4150B5267B842100D5EA16 /* SummaryView.swift */,
+				8B4150B7267B847800D5EA16 /* SessionPagingView.swift */,
+				8B4150B9267B84A500D5EA16 /* MetricsView.swift */,
+				8B4150BB267B84C200D5EA16 /* ControlsView.swift */,
+				8B4150BD267B84E100D5EA16 /* ElapsedTimeView.swift */,
 			);
 			path = "MyWatchApp Extension";
 			sourceTree = "<group>";
@@ -602,27 +602,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B1903DE267A7920001C39A8 /* SessionPagingView.swift in Sources */,
 				8B4150AA267B634800D5EA16 /* StartView.swift in Sources */,
 				8B1903C3267A7561001C39A8 /* StartView.swift in Sources */,
 				8B41508E267B60DE00D5EA16 /* ComplicationController.swift in Sources */,
+				8B4150BE267B84E100D5EA16 /* ElapsedTimeView.swift in Sources */,
 				8B1903C1267A7561001C39A8 /* HostingController.swift in Sources */,
 				8B4150AC267B634800D5EA16 /* MyWatchAppApp.swift in Sources */,
 				8B1903C7267A7561001C39A8 /* NotificationController.swift in Sources */,
 				8B415090267B60DE00D5EA16 /* WorkoutManager.swift in Sources */,
 				8B415091267B60DE00D5EA16 /* NotificationController.swift in Sources */,
 				8B1903C5267A7561001C39A8 /* ExtensionDelegate.swift in Sources */,
+				8B4150BC267B84C200D5EA16 /* ControlsView.swift in Sources */,
 				8B1903E8267AA826001C39A8 /* WorkoutManager.swift in Sources */,
 				8B4150AB267B634800D5EA16 /* ComplicationController.swift in Sources */,
 				8B1903C9267A7561001C39A8 /* NotificationView.swift in Sources */,
-				8B1903E0267A7A11001C39A8 /* MetricsView.swift in Sources */,
-				8B1903E2267A7BBA001C39A8 /* ElapsedTimeView.swift in Sources */,
 				8B4150B3267B634800D5EA16 /* HostingController.swift in Sources */,
 				8B415094267B60DE00D5EA16 /* ExtensionDelegate.swift in Sources */,
-				8B1903E4267AA2F9001C39A8 /* ControlsView.swift in Sources */,
+				8B4150B6267B842100D5EA16 /* SummaryView.swift in Sources */,
 				8B4150AD267B634800D5EA16 /* WorkoutManager.swift in Sources */,
 				8B1903CB267A7561001C39A8 /* ComplicationController.swift in Sources */,
-				8B1903E6267AA52F001C39A8 /* SummaryView.swift in Sources */,
 				8B4150B1267B634800D5EA16 /* ExtensionDelegate.swift in Sources */,
 				8B41508F267B60DE00D5EA16 /* MyWatchAppApp.swift in Sources */,
 				8B1903EA267AA8DF001C39A8 /* MyWatchAppApp.swift in Sources */,
@@ -631,6 +629,8 @@
 				8B415096267B60DE00D5EA16 /* HostingController.swift in Sources */,
 				8B41508D267B60DE00D5EA16 /* StartView.swift in Sources */,
 				8B415095267B60DE00D5EA16 /* NotificationView.swift in Sources */,
+				8B4150BA267B84A500D5EA16 /* MetricsView.swift in Sources */,
+				8B4150B8267B847800D5EA16 /* SessionPagingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
