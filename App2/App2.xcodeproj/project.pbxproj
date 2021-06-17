@@ -37,6 +37,18 @@
 		8B1903ED267AAC23001C39A8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1903EC267AAC23001C39A8 /* HealthKit.framework */; };
 		8B24ABF6261E134900D4320C /* MondoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24ABF5261E134900D4320C /* MondoViewController.swift */; };
 		8B2890B62637779F001CFAD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2890B52637779F001CFAD2 /* Main.storyboard */; };
+		8B41508C267B60DE00D5EA16 /* PushNotificationPayload.apns in Resources */ = {isa = PBXBuildFile; fileRef = 8B41507E267B60DE00D5EA16 /* PushNotificationPayload.apns */; };
+		8B41508D267B60DE00D5EA16 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B41507F267B60DE00D5EA16 /* StartView.swift */; };
+		8B41508E267B60DE00D5EA16 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B415080267B60DE00D5EA16 /* ComplicationController.swift */; };
+		8B41508F267B60DE00D5EA16 /* MyWatchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B415081267B60DE00D5EA16 /* MyWatchAppApp.swift */; };
+		8B415090267B60DE00D5EA16 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B415082267B60DE00D5EA16 /* WorkoutManager.swift */; };
+		8B415091267B60DE00D5EA16 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B415084267B60DE00D5EA16 /* NotificationController.swift */; };
+		8B415092267B60DE00D5EA16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B415085267B60DE00D5EA16 /* Assets.xcassets */; };
+		8B415093267B60DE00D5EA16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B415087267B60DE00D5EA16 /* Preview Assets.xcassets */; };
+		8B415094267B60DE00D5EA16 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B415088267B60DE00D5EA16 /* ExtensionDelegate.swift */; };
+		8B415095267B60DE00D5EA16 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B415089267B60DE00D5EA16 /* NotificationView.swift */; };
+		8B415096267B60DE00D5EA16 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B41508A267B60DE00D5EA16 /* HostingController.swift */; };
+		8B415097267B60DE00D5EA16 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B41508B267B60DE00D5EA16 /* Info.plist */; };
 		8BA7D15A2641BB4400301766 /* Stars+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7D1582641BB4400301766 /* Stars+CoreDataClass.swift */; };
 		8BA7D15B2641BB4400301766 /* Stars+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7D1592641BB4400301766 /* Stars+CoreDataProperties.swift */; };
 		8BA7D1652641BEC900301766 /* StarsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA7D1642641BEC900301766 /* StarsManager.swift */; };
@@ -146,6 +158,19 @@
 		8B1903EC267AAC23001C39A8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		8B24ABF5261E134900D4320C /* MondoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondoViewController.swift; sourceTree = "<group>"; };
 		8B2890B52637779F001CFAD2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8B41507E267B60DE00D5EA16 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8B41507F267B60DE00D5EA16 /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		8B415080267B60DE00D5EA16 /* ComplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		8B415081267B60DE00D5EA16 /* MyWatchAppApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWatchAppApp.swift; sourceTree = "<group>"; };
+		8B415082267B60DE00D5EA16 /* WorkoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		8B415083267B60DE00D5EA16 /* MyWatchApp Extension.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "MyWatchApp Extension.entitlements"; sourceTree = "<group>"; };
+		8B415084267B60DE00D5EA16 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		8B415085267B60DE00D5EA16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B415087267B60DE00D5EA16 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B415088267B60DE00D5EA16 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		8B415089267B60DE00D5EA16 /* NotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		8B41508A267B60DE00D5EA16 /* HostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		8B41508B267B60DE00D5EA16 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BA7D1582641BB4400301766 /* Stars+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stars+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8BA7D1592641BB4400301766 /* Stars+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stars+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8BA7D1642641BEC900301766 /* StarsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsManager.swift; sourceTree = "<group>"; };
@@ -288,6 +313,7 @@
 				8B1903DF267A7A11001C39A8 /* MetricsView.swift */,
 				8B1903E3267AA2F9001C39A8 /* ControlsView.swift */,
 				8B1903E1267A7BBA001C39A8 /* ElapsedTimeView.swift */,
+				8B41507D267B60DE00D5EA16 /* MyWatchApp Extension */,
 				8B1903C4267A7561001C39A8 /* ExtensionDelegate.swift */,
 				8B1903C6267A7561001C39A8 /* NotificationController.swift */,
 				8B1903C8267A7561001C39A8 /* NotificationView.swift */,
@@ -304,6 +330,34 @@
 			isa = PBXGroup;
 			children = (
 				8B1903CF267A7561001C39A8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8B41507D267B60DE00D5EA16 /* MyWatchApp Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8B41507E267B60DE00D5EA16 /* PushNotificationPayload.apns */,
+				8B41507F267B60DE00D5EA16 /* StartView.swift */,
+				8B415080267B60DE00D5EA16 /* ComplicationController.swift */,
+				8B415081267B60DE00D5EA16 /* MyWatchAppApp.swift */,
+				8B415082267B60DE00D5EA16 /* WorkoutManager.swift */,
+				8B415083267B60DE00D5EA16 /* MyWatchApp Extension.entitlements */,
+				8B415084267B60DE00D5EA16 /* NotificationController.swift */,
+				8B415085267B60DE00D5EA16 /* Assets.xcassets */,
+				8B415086267B60DE00D5EA16 /* Preview Content */,
+				8B415088267B60DE00D5EA16 /* ExtensionDelegate.swift */,
+				8B415089267B60DE00D5EA16 /* NotificationView.swift */,
+				8B41508A267B60DE00D5EA16 /* HostingController.swift */,
+				8B41508B267B60DE00D5EA16 /* Info.plist */,
+			);
+			name = "MyWatchApp Extension";
+			sourceTree = "<group>";
+		};
+		8B415086267B60DE00D5EA16 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8B415087267B60DE00D5EA16 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -445,6 +499,10 @@
 			files = (
 				8B1903D0267A7561001C39A8 /* Preview Assets.xcassets in Resources */,
 				8B1903CD267A7561001C39A8 /* Assets.xcassets in Resources */,
+				8B415097267B60DE00D5EA16 /* Info.plist in Resources */,
+				8B415093267B60DE00D5EA16 /* Preview Assets.xcassets in Resources */,
+				8B415092267B60DE00D5EA16 /* Assets.xcassets in Resources */,
+				8B41508C267B60DE00D5EA16 /* PushNotificationPayload.apns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,17 +551,25 @@
 			files = (
 				8B1903DE267A7920001C39A8 /* SessionPagingView.swift in Sources */,
 				8B1903C3267A7561001C39A8 /* StartView.swift in Sources */,
+				8B41508E267B60DE00D5EA16 /* ComplicationController.swift in Sources */,
 				8B1903C1267A7561001C39A8 /* HostingController.swift in Sources */,
 				8B1903C7267A7561001C39A8 /* NotificationController.swift in Sources */,
+				8B415090267B60DE00D5EA16 /* WorkoutManager.swift in Sources */,
+				8B415091267B60DE00D5EA16 /* NotificationController.swift in Sources */,
 				8B1903C5267A7561001C39A8 /* ExtensionDelegate.swift in Sources */,
 				8B1903E8267AA826001C39A8 /* WorkoutManager.swift in Sources */,
 				8B1903C9267A7561001C39A8 /* NotificationView.swift in Sources */,
 				8B1903E0267A7A11001C39A8 /* MetricsView.swift in Sources */,
 				8B1903E2267A7BBA001C39A8 /* ElapsedTimeView.swift in Sources */,
+				8B415094267B60DE00D5EA16 /* ExtensionDelegate.swift in Sources */,
 				8B1903E4267AA2F9001C39A8 /* ControlsView.swift in Sources */,
 				8B1903CB267A7561001C39A8 /* ComplicationController.swift in Sources */,
 				8B1903E6267AA52F001C39A8 /* SummaryView.swift in Sources */,
+				8B41508F267B60DE00D5EA16 /* MyWatchAppApp.swift in Sources */,
 				8B1903EA267AA8DF001C39A8 /* MyWatchAppApp.swift in Sources */,
+				8B415096267B60DE00D5EA16 /* HostingController.swift in Sources */,
+				8B41508D267B60DE00D5EA16 /* StartView.swift in Sources */,
+				8B415095267B60DE00D5EA16 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
