@@ -22,6 +22,7 @@ extension UserProfile {
     @NSManaged public var showPics: Bool
     @NSManaged public var lastLevel: Int16
     @NSManaged public var points: Int64
+    @NSManaged public var latestHeartRate: Double
 
 }
 

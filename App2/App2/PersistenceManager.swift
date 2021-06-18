@@ -23,6 +23,7 @@ class PersistenceManager {
         profile.avatar = avatar
         profile.lastLevel = 0
         profile.points = 0
+        profile.latestHeartRate = 0.0
         saveContext()
         return profile
     }

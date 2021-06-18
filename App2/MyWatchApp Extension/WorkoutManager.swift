@@ -113,7 +113,7 @@ class WorkoutManager: NSObject, ObservableObject{
     }
     
     @objc func control(){
-        if(self.heartRate > 80.0){
+        if(self.heartRate > 90.0){
             endWorkout()
             if WCSession.default.isReachable {
                         let message = ["message": "Test"]
@@ -173,7 +173,7 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
                         from fromState: HKWorkoutSessionState, date: Date) {
         DispatchQueue.main.async {
             self.running = toState == .running
-            if(self.heartRate > 80.0){
+            if(self.heartRate > 90.0){
                 self.endWorkout()
             }
         }

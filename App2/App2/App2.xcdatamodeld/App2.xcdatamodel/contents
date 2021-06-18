@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Stars" representedClassName="Stars" syncable="YES" codeGenerationType="class">
         <attribute name="level1" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="level2" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -46,6 +46,7 @@
     <entity name="UserProfile" representedClassName="UserProfile" syncable="YES" codeGenerationType="class">
         <attribute name="avatar" optional="YES" attributeType="String"/>
         <attribute name="lastLevel" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="latestHeartRate" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="level1stars" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="outLoud" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -54,6 +55,6 @@
     </entity>
     <elements>
         <element name="Stars" positionX="-6088.572021484375" positionY="115.4290161132812" width="128" height="644"/>
-        <element name="UserProfile" positionX="-5813.725158691406" positionY="34.559814453125" width="128" height="148"/>
+        <element name="UserProfile" positionX="-5813.725158691406" positionY="34.559814453125" width="128" height="149"/>
     </elements>
 </model>
