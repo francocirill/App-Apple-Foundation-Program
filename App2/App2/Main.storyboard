@@ -121,7 +121,7 @@
         <scene sceneID="8tk-rL-2O3">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="ZQe-Hd-bRQ" userLabel=" " customClass="NuovoUtenteController" customModule="App2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WDG-PN-PvN">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="WDG-PN-PvN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1417,8 +1417,8 @@
         <image name="avatar-default" width="150" height="150"/>
         <image name="avatarDefault" width="180" height="180"/>
         <image name="continua" width="1190" height="604"/>
-        <image name="gearshape" width="600" height="600"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="gearshape" width="600" height="600"/>
         <image name="home" width="512" height="512"/>
         <image name="imgpsh_fullsize (4)" width="789" height="1732"/>
         <image name="imgpsh_fullsize (5)" width="779" height="1733"/>

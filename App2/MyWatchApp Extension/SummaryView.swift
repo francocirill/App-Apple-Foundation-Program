@@ -20,18 +20,18 @@ struct SummaryView: View {
     
     var body: some View {
         if workoutManager.workout == nil {
-            ProgressView("Saving Workout")
+            ProgressView("Salvataggio")
                 .navigationBarHidden(true)
         } else {
             ScrollView {
                 VStack(alignment: .leading) {
                     
-                    SummaryMetricView(title: "Total Time",
+                    SummaryMetricView(title: "Tempo Totale",
                                       value: durationFormatter.string(from: workoutManager.workout?.duration ?? 0.0) ?? "")
                         .foregroundColor(.yellow)
                     
-                    SummaryMetricView(title: "Avg. Heart Rate",
-                                      value: String(format: "%.2f", workoutManager.averageHeartRate) + " bpm")
+                    SummaryMetricView(title: "Ultimo Battito rilevato",
+                                      value: String(format: "%.2f", workoutManager.heartRate) + " bpm")
                         .foregroundColor(.red)
                     
                     Button("Done") {

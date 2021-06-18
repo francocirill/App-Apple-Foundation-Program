@@ -13,9 +13,7 @@ struct MetricsView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            ElapsedTimeView(
-                elapsedTime: workoutManager.builder?.elapsedTime ?? 0, showSubsecond: true
-            ).foregroundColor(.yellow)
+            
             Text(
                 String(workoutManager.heartRate) + " bpm"
             )
